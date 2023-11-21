@@ -1,0 +1,12 @@
+<canvas 
+  canvas-id="mycanvas" 
+  bindtouchstart='touchstart' 
+  catchtouchmove='touchmove' 
+  class="mycanvas">
+</canvas>
+<view style="padding:16px; margin-bottom:40px">
+  <view>设置画笔颜色</view>
+  <color-slider bindchanging="handleSliderChange"></color-slider>
+  <view>设置画笔粗细</view>
+  <slider bindchange="handleLinewidth" show-value="{{true}}"  min="3" max="15"></slider>
+</view>

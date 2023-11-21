@@ -1,0 +1,21 @@
+<view class="head">
+ page2
+</view>
+<view class="section">component</view>
+<view class="container">
+  <navigator open-type="navigateBack">
+    <button type="primary">navigateBack</button>
+  </navigator>
+  <navigator url="/pages/page3/index?t={{t}}" open-type="redirect">
+    <button type="primary">redirect to page3</button>
+  </navigator>
+  <navigator url="/pages/page3/index?t={{t}}" open-type="navigate">
+    <button type="primary">navigate to page3</button>
+  </navigator>
+</view>
+<view class="section">api</view>
+<view class="container">
+  <button type="primary" bindtap="tyBack">navigateBack</button>
+  <button type="primary" bindtap="tyredirect">redirect to page3</button>
+  <button type="primary" bindtap="tynavigate">navigate to page4</button>
+</view>

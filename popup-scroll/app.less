@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  navigator {
+    margin-top: 16px;
+  }
+}
+
+.mask {
+  background-color: #00000070;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background: white;
+  border-radius: 16px;
+  width: 60vw;
+  height: 60vh;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+  .close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 80px;
+  }
+}
+
+.toggle {
+  width: 200px;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  margin-left: -100px;
+}

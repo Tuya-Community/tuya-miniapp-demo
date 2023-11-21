@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "layout": "/components/layout/index"
+  },
+  "navigationBarTitleText": "layout"
+}

@@ -1,0 +1,7 @@
+<view class="pageContainer">
+  <canvas
+    canvas-id="pageCanvas1"
+    style="width: 350px; height: 250px; margin-bottom:16px;"
+    bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
+  ></canvas>
+</view>

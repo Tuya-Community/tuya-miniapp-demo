@@ -1,0 +1,8 @@
+<view class="head">
+ page4
+</view>
+<view class="container">
+  <navigator url="/pages/page1/index?t={{t}}" open-type="reLaunch">
+    <button type="primary">reLaunch 关闭所有页面跳转page1</button>
+  </navigator>
+</view>

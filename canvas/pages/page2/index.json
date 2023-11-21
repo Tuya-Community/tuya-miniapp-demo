@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "canvas 画板",
+  "usingComponents": {
+    "color-slider": "../../components/colorSlider/index"
+  }
+}

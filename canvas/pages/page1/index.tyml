@@ -1,0 +1,15 @@
+<block ty:for="30">
+  <view style="height: 100px; background:#f6f6f6"></view>
+  <view style="height: 100px; background:#ffe2e2"></view>
+  <view style="height: 100px; background:#ffc7c7"></view>
+  <view style="height: 100px; background:#aaaaaa"></view>
+</block>
+<page-container show="true" custom-style="height: 80vh" catchtouchmove="catchEvent">
+  <scroll-view bindtouchmove="handlemove" scroll-y="{{true}}">
+    <diy-smear 
+    bindsmearChanged="getSmearChange" 
+    pixelColor="#ddd" 
+    width="300" height="300" 
+    pixelSize="20"></diy-smear>
+  </scroll-view>
+</page-container>

@@ -1,0 +1,24 @@
+<scroll-view scroll-y="{{!isShow}}" style="height:100vh">
+  <button type="primary" bindtap="toggleModal" class="toggle">show modal</button>
+  <block ty:for="{{30}}">
+    <view style="height: 100px; background:#ff5959"></view>
+    <view style="height: 100px; background:#ffad5a"></view>
+    <view style="height: 100px; background:#4f9da6"></view>
+    <view style="height: 100px; background:#1a0841"></view>
+  </block>
+  <page-container 
+    show="{{isShow}}" 
+    position="bottom"
+    custom-style="width: 60vw;height:60vh;top:50%;left:50%;margin-left:-30vw;margin-top:-30vh;border-radius:16px"
+    >
+    <scroll-view class="content" scroll-y="{{true}}">
+      <button class="close" size="mini" bindtap="toggleModal">close</button>
+      <block ty:for="{{30}}">
+        <view style="height: 60px; background:#4d77ff"></view>
+        <view style="height: 60px; background:#56bbf1"></view>
+        <view style="height: 60px; background:#5ee6eb"></view>
+        <view style="height: 60px; background:#f2fa5a"></view>
+      </block>
+    </scroll-view >
+  </page-container>
+</scroll-view>

@@ -1,0 +1,19 @@
+<view class="tab-title-wrp" scroll-x="{{true}}">
+  <button size="mini" 
+    ty:for="{{tabs}}" 
+    type="{{activeTab === index ? 'primary' : 'default'}}"
+    data-index="{{index}}"
+    bindtap="handleTabClick">
+    {{item.title}}
+  </button>
+</view >
+<swiper
+    class="{{swiperClass}}"
+    current="{{activeTab}}"
+    duration="{{duration}}"
+    bindchange="handleSwiperChange">
+  <swiper-item ty:for="{{tabs}}" ty:key="title">
+    <slot name="tab-content-{{index}}"></slot>
+    <!-- <view class="tab-content">{{item.title}}</view> -->
+  </swiper-item>
+</swiper>

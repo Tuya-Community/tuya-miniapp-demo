@@ -1,0 +1,19 @@
+<button type="primary" bindtap="toggleModal" class="toggle">show modal</button>
+<block ty:for="{{100}}">
+  <view style="height: 100px; background:#ff5959"></view>
+  <view style="height: 100px; background:#ffad5a"></view>
+  <view style="height: 100px; background:#4f9da6"></view>
+  <view style="height: 100px; background:#1a0841"></view>
+</block>
+<!-- 如果弹出层有滚动事件 -->
+<view class="mask" catchtouchmove="catchTouchmove" ty:if="{{isShow}}">
+  <scroll-view  class="content" scroll-y="{{true}}">
+    <button class="close" size="mini" bindtap="toggleModal">close</button>
+    <block ty:for="{{100}}">
+      <view style="height: 60px; background:#dcb5ff"></view>
+      <view style="height: 60px; background:#d9f2ff"></view>
+      <view style="height: 60px; background:#a5bdfd"></view>
+      <view style="height: 60px; background:#77529e"></view>
+    </block>
+  </scroll-view>
+</view>

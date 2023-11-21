@@ -1,0 +1,101 @@
+// index.rjs
+import uCharts from '@qiun/ucharts'
+let pixelRatio = getSystemInfo().pixelRatio || 2
+
+export default Render({
+  async drawCart1(data) {
+    let canvas = await getCanvasById('pageCanvas1')
+    let ctx = canvas.getContext('2d')
+    canvas.width = canvas.width * pixelRatio
+    canvas.height = canvas.height * pixelRatio
+    // Step 1: 创建 Chart 对象
+    this.uCharts = new uCharts({
+      type: 'candle',
+      context: ctx,
+      width: canvas.width,
+      height: canvas.height,
+      categories: data.categories,
+      series: data.series,
+      pixelRatio: pixelRatio,
+      animation: true,
+      rotate: false,
+      rotateLock: false,
+      background: '#FFFFFF',
+      color: [
+        '#1890FF',
+        '#91CB74',
+        '#FAC858',
+        '#EE6666',
+        '#73C0DE',
+        '#3CA272',
+        '#FC8452',
+        '#9A60B4',
+        '#ea7ccc',
+      ],
+      padding: [15, 15, 0, 15],
+      dataLabel: false,
+      enableScroll: true,
+      enableMarkLine: true,
+      legend: {},
+      xAxis: {
+        labelCount: 4,
+        itemCount: 40,
+        disableGrid: true,
+        gridColor: '#CCCCCC',
+        gridType: 'solid',
+        dashLength: 4,
+        scrollShow: false,
+        scrollAlign: 'left',
+      },
+      yAxis: {},
+      extra: {
+        candle: {
+          color: {
+            upLine: '#f04864',
+            upFill: '#f04864',
+            downLine: '#2fc25b',
+            downFill: '#2fc25b',
+          },
+          average: {
+            show: true,
+            name: ['MA5', 'MA10', 'MA30'],
+            day: [5, 10, 20],
+            color: ['#1890ff', '#2fc25b', '#facc14'],
+          },
+        },
+        markLine: {
+          type: 'dash',
+          dashLength: 5,
+          data: [
+            {
+              value: 2150,
+              lineColor: '#f04864',
+              showLabel: true,
+            },
+            {
+              value: 2350,
+              lineColor: '#f04864',
+              showLabel: true,
+            },
+          ],
+        },
+        tooltip: {
+          showCategory: true,
+        },
+      },
+    })
+  },
+
+  touchstart(e) {
+    this.uCharts.scrollStart(e)
+  },
+  touchmove(e) {
+    this.uCharts.scroll(e)
+    this.uCharts.dobuleZoom(e)
+  },
+  touchend(e) {
+    this.uCharts.scrollEnd(e)
+    this.uCharts.touchLegend(e)
+    this.uCharts.showToolTip(e)
+  },
+})

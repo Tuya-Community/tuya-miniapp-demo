@@ -1,0 +1,8 @@
+<view class="container">
+  <navigator url="/pages/page1/index" open-type="navigate">
+    <button type="primary">slot 用于页面布局</button>
+  </navigator>
+  <navigator url="/pages/page2/index" open-type="navigate">
+    <button type="primary">slot 用于自定义tab</button>
+  </navigator>
+</view>

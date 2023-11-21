@@ -1,0 +1,7 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/page1/index"
+  ]
+}

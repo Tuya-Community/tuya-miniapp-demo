@@ -1,0 +1,40 @@
+export default Render({
+  async initCanvas() {
+    let canvas = await getCanvasById('mycanvas')
+    let ctx = canvas.getContext('2d')
+    this.canvas = canvas
+    this.ctx = ctx
+    this.ctx.strokeStyle = '#ff0000' // 设置颜色
+    this.ctx.lineWidth = 3 // 设置笔触(笔的宽度)
+    this.ctx.lineCap = 'round'
+  },
+
+  touchstart(x, y) {
+    // 获取起点坐标位置
+    this.startX = x
+    this.startY = y
+    // 开始绘制
+    this.ctx.beginPath()
+  },
+
+  touchmove(x, y) {
+    let startX1 = x
+    let startY1 = y
+    this.ctx.moveTo(this.startX, this.startY)
+    // 绘制一条到x1，y1的直线
+    this.ctx.lineTo(startX1, startY1)
+    // 进行路径的描边
+    this.ctx.stroke()
+    // 重新设置坐标点
+    this.startX = startX1
+    this.startY = startY1
+  },
+
+  changeStrokeStyle(color) {
+    this.ctx.strokeStyle = color
+  },
+
+  changeLineWidth(width) {
+    this.ctx.lineWidth = width
+  },
+})

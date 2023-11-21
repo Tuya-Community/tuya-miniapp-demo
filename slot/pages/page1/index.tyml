@@ -1,0 +1,13 @@
+<layout>
+  <view slot="header" style="height:50px; background:#ffd8a9">header</view>
+  <view slot="main">
+    <view style="height:100px;background: #cfffdc">main</view>
+    <block ty:for="100" >
+      <view style="height:100px;background: #7900ff"></view>
+      <view style="height:100px;background: #548cff"></view>
+      <view style="height:100px;background: #93ffd8"></view>
+      <view style="height:100px;background: #cfffdc"></view>
+    </block>
+  </view>
+  <view style="height:50px; background:#e38b29" slot="footer">footer</view>
+</layout>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "canvas 涂抹",
+  "usingComponents": {
+    "diy-smear": "../../components/diySmear/index"
+  }
+}

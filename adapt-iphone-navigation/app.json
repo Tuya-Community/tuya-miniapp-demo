@@ -1,0 +1,7 @@
+{
+  "entryPagePath": "pages/setStyle/index",
+  "pages": [
+    "pages/setCss/index",
+    "pages/setStyle/index"
+  ]
+}

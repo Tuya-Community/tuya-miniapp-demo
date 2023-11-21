@@ -1,0 +1,33 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/page1/index",
+    "pages/page2/index",
+    "pages/page3/index",
+    "pages/page4/index",
+    "pages/page5/index",
+    "pages/page6/index",
+    "pages/page7/index",
+    "pages/page8/index",
+    "pages/page9/index",
+    "pages/page10/index",
+    "pages/page11/index",
+    "pages/page12/index",
+    "pages/page13/index",
+    "pages/page14/index",
+    "pages/page15/index",
+    "pages/page16/index",
+    "pages/page17/index",
+    "pages/page18/index",
+    "pages/page19/index",
+    "pages/page20/index",
+    "pages/page21/index",
+    "pages/page22/index",
+    "pages/page23/index",
+    "pages/page24/index"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff"
+  }
+}

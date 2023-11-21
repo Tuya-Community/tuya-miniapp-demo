@@ -1,0 +1,11 @@
+<tabs  
+  tabs="{{tabs}}"
+  activeTab="{{activeTab}}"
+  bind:tabclick="onTabCLick"
+  bind:change="onChange">
+  <view ty:for="{{tabs}}" ty:key="index" slot="tab-content-{{index}}">
+    <view class="tab-content" style="background: {{tabsContent[index].color}}">
+      {{tabsContent[index].content}}
+    </view>
+  </view>
+</tabs>

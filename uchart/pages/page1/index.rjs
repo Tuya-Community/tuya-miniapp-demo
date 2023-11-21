@@ -1,0 +1,170 @@
+// index.rjs
+import uCharts from '@qiun/ucharts'
+let chart
+let pixelRatio = getSystemInfo().pixelRatio || 2
+
+export default Render({
+  async drawCart1(data) {
+    let canvas = await getCanvasById('pageCanvas1')
+    let ctx = canvas.getContext('2d')
+    canvas.width = canvas.width * pixelRatio
+    canvas.height = canvas.height * pixelRatio
+    // Step 1: 创建 Chart 对象
+    chart = new uCharts({
+      animation: true,
+      background: '#FFFFFF',
+      canvas2d: true,
+      categories: data.categories,
+      color: [
+        '#1890FF',
+        '#91CB74',
+        '#FAC858',
+        '#EE6666',
+        '#73C0DE',
+        '#3CA272',
+        '#FC8452',
+        '#9A60B4',
+        '#ea7ccc',
+      ],
+      context: ctx,
+      extra: {
+        column: {
+          type: 'group',
+          width: 30,
+          activeBgColor: '#000000',
+          activeBgOpacity: 0.08,
+        },
+      },
+      legend: {},
+      padding: [15, 15, 0, 5],
+      pixelRatio: pixelRatio,
+      series: data.series,
+      type: 'column',
+      width: canvas.width,
+      height: canvas.height,
+      xAxis: {
+        disableGrid: true,
+      },
+      yAxis: {
+        data: [
+          {
+            min: 0,
+          },
+        ],
+      },
+    })
+  },
+
+  async drawCart2(data) {
+    let canvas = await getCanvasById('pageCanvas2')
+    let ctx = canvas.getContext('2d')
+    canvas.width = canvas.width * pixelRatio
+    canvas.height = canvas.height * pixelRatio
+    // Step 1: 创建 Chart 对象
+    chart = new uCharts({
+      type: 'column',
+      canvas2d: true,
+      context: ctx,
+      width: canvas.width,
+      height: canvas.height,
+      categories: data.categories,
+      series: data.series,
+      animation: true,
+      background: '#FFFFFF',
+      color: [
+        '#FAC858',
+        '#EE6666',
+        '#FAC858',
+        '#EE6666',
+        '#73C0DE',
+        '#3CA272',
+        '#FC8452',
+        '#9A60B4',
+        '#ea7ccc',
+      ],
+      padding: [15, 15, 0, 5],
+      pixelRatio: pixelRatio,
+      enableScroll: false,
+      legend: {},
+      xAxis: {
+        disableGrid: true,
+      },
+      yAxis: {
+        data: [
+          {
+            min: 0,
+          },
+        ],
+      },
+      extra: {
+        column: {
+          type: 'group',
+          width: 20,
+          activeBgColor: '#000000',
+          activeBgOpacity: 0.08,
+          linearType: 'custom',
+          seriesGap: 5,
+          linearOpacity: 0.5,
+          barBorderCircle: true,
+          customColor: ['#FA7D8D', '#EB88E2'],
+        },
+      },
+    })
+  },
+
+  async drawCart3(data) {
+    let canvas = await getCanvasById('pageCanvas3')
+    let ctx = canvas.getContext('2d')
+    canvas.width = 350 * pixelRatio
+    canvas.height = 250 * pixelRatio
+    // Step 1: 创建 Chart 对象
+    chart = new uCharts({
+      type: 'column',
+      context: ctx,
+      canvas2d: true,
+      width: canvas.width,
+      height: canvas.height,
+      categories: data.categories,
+      series: data.series,
+      pixelRatio: pixelRatio,
+      animation: true,
+      background: '#FFFFFF',
+      color: [
+        '#1890FF',
+        '#91CB74',
+        '#FAC858',
+        '#EE6666',
+        '#73C0DE',
+        '#3CA272',
+        '#FC8452',
+        '#9A60B4',
+        '#ea7ccc',
+      ],
+      padding: [15, 15, 0, 5],
+      enableScroll: false,
+      legend: {
+        show: false,
+      },
+      xAxis: {
+        disableGrid: true,
+      },
+      yAxis: {
+        data: [
+          {
+            min: 0,
+          },
+        ],
+      },
+      extra: {
+        column: {
+          type: 'meter',
+          width: 30,
+          activeBgColor: '#000000',
+          activeBgOpacity: 0.08,
+          meterBorder: 3,
+          meterFillColor: '#EBFBD6',
+        },
+      },
+    })
+  },
+})

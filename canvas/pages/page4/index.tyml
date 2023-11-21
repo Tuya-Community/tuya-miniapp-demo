@@ -1,0 +1,11 @@
+<!-- <sjs src="./column.sjs" module="column" /> -->
+<view class="pageContainer">
+  <view class="pageView">-------- 页面图表 ---------</view>
+  {{column.too}}
+  <canvas
+    class="canvasPageDom"
+    canvas-id="pageCanvas"
+    style="width: 100%; height: 250px;"
+  ></canvas>
+  <button bindtap="draw">重新渲染页面图表</button>
+</view>

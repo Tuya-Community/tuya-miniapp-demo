@@ -1,0 +1,17 @@
+<button type="primary" bindtap="toggleModal" class="toggle">show modal</button>
+<block ty:for="{{100}}">
+  <view style="height: 100px; background:#ff5959"></view>
+  <view style="height: 100px; background:#ffad5a"></view>
+  <view style="height: 100px; background:#4f9da6"></view>
+  <view style="height: 100px; background:#1a0841"></view>
+</block>
+<!-- 如果弹出层没有滚动事件，直接在mask上设置catchTouchmove -->
+<view class="mask" catchtouchmove="catchTouchmove" ty:if="{{isShow}}">
+  <view class="content">
+    <button class="close" size="mini" bindtap="toggleModal">close</button>
+    <view style="height: 60px; background:#f87d09"></view>
+    <view style="height: 60px; background:#f6f6f6"></view>
+    <view style="height: 60px; background:#a7cdcc"></view>
+    <view style="height: 60px; background:#004a55"></view>
+  </view>
+</view>

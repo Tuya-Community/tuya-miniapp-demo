@@ -1,0 +1,6 @@
+canvas {
+  background-color: #2f2f2f;
+  width: 100vw;
+  height: 80vh;
+  margin-bottom: 16px;
+}

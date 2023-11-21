@@ -1,0 +1,16 @@
+<view class="smear-wrap">
+  <canvas
+  type="2d"
+  canvas-id="canvas"
+  style="width: {{width}}px; height: {{height}}px" catchtouchmove="catchEvent" catchtouchstart="catchEvent"></canvas>
+  <view >
+    <color-slider bindchanging="handleSliderChange"></color-slider>
+  </view>
+  <view class="switch-wrap">
+    <switch  bindchange="toggleDragCanvas"></switch>是否拖拽画布
+  </view>
+  <button type="primary" style="margin-bottom: 16px" bindtap="shrinkCanvas">缩小canvas</button>
+  <button type="primary" style="margin-bottom: 16px" bindtap="magnifyCanvas">放大canvas</button>
+  <button type="primary" style="margin-bottom: 16px" bindtap="eraserCanvas">橡皮擦</button>
+  <button type="primary" style="margin-bottom: 16px" bindtap="clearCanvas">画布清除</button>
+</view>

@@ -1,0 +1,23 @@
+<view class="section">使用图片</view>
+<view class="container">
+  <view class="icon books small"></view>
+  <view class="icon photo"></view>
+  <image src="/assets/images/icon-books.png"></image>
+  <image src="/assets/images/icon-photo.png"></image>
+</view>
+<view class="section">使用css mask-image</view>
+<view class="container">
+  <view class="icon alert red small"></view>
+  <view class="icon alert orange"></view>
+</view>
+<view class="section">使用svg</view>
+<view class="container">
+  <view class="icon alert-svg red"></view>
+  <view class="icon alert-svg orange small"></view>
+</view>
+<view class="section">使用iconfont</view>
+<view class="container">
+  <view class="iconfont icon-a-cloudsleetfill red small"></view>
+  <view class="iconfont icon-a-cloudrainfill orange"></view>
+  <view class="iconfont icon-a-cloudsunboltfill red large"></view>
+</view>

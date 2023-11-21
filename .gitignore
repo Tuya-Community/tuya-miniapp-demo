@@ -1,0 +1,9 @@
+node_modules
+dist
+yarn.lock
+.idea
+.npmrc
+.DS_Store
+.vscode
+*.lock
+npm-debug.log 

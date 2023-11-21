@@ -1,0 +1,183 @@
+import Pixel from './Pixel'
+const pixelRatio = getSystemInfo().pixelRatio || 2 // 分辨率
+var scale = 1
+var X = 0 // 移动canvas x轴的偏移量
+var Y = 0 // 移动canvas y轴的偏移量
+var tempX = X // 中间态记录移动canvas x轴的偏移量
+var tempY = Y // 中间态记录移动canvas y轴的偏移量
+var box = []  // 个点数据
+var penColor = '#ff0000'
+var touchStartX = 0 // touchstart的XY
+var touchStartY = 0
+var lastX = 0 // 上一次移动的X和Y
+var lastY = 0
+
+export default Render({
+  isDrag: false,
+
+  /**
+   * @param  {} canvas
+   * @param  {} x
+   * @param  {} y
+   * @description 将鼠标位置定位到canvas坐标
+   */
+  WindowToCanvas(canvas, x, y) {
+    var canvasBox = canvas.getBoundingClientRect()
+    return {
+      x: x - canvasBox.left - X,
+      y: y - canvasBox.top - Y,
+    }
+  },
+
+  createPixel() {
+    let ctx = this.ctx
+    let pixelSize = Number(this.pixelSize)
+    let pixelShape = this.pixelShape
+    box = []
+    let count = 0
+    for (
+      let i = pixelSize / 2;
+      i < this.canvas.width / pixelRatio;
+      i = i + pixelSize + this.pixelGap
+    ) {
+      for (
+        let j = pixelSize / 2;
+        j < this.canvas.height / pixelRatio;
+        j = j + pixelSize + this.pixelGap
+      ) {
+        var pixel = new Pixel({
+          x: i,
+          y: j,
+          size: pixelSize,
+          shape: pixelShape,
+          isFill: true,
+          pixel: pixel,
+          fillStyle: this.pixelData.length ? this.pixelData[count].fillStyle : this.pixelColor,
+          pixelRatio: pixelRatio,
+        })
+        box.push(pixel)
+        pixel.draw(ctx)
+        count = count + 1
+      }
+    }
+  },
+
+  // 更新canvas
+  refresh() {
+    let ctx = this.ctx
+    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    for (var i = 0; i < box.length; i++) {
+      var pixel = box[i]
+      pixel.draw(ctx)
+    }
+  },
+
+  changeBg(color) {
+    this.pixelColor = color
+    this.createPixel()
+  },
+  async initPanel({ width, height, pixelSize, pixelShape, pixelColor, pixelGap, pixelData }) {
+    let canvas = await getCanvasById('canvas')
+    var ctx = canvas.getContext('2d')
+    this.canvas = canvas
+    this.ctx = ctx
+    this.pixelSize = pixelSize
+    this.pixelShape = pixelShape
+    this.pixelColor = pixelColor
+    this.pixelGap = pixelGap
+    this.pixelData = pixelData
+
+    canvas.width = width * pixelRatio
+    canvas.height = height * pixelRatio
+    ctx.scale(pixelRatio, pixelRatio)
+    canvas.style.width = `${width}px`
+    canvas.style.height = `${height}px`
+    const self = this
+    this.createPixel()
+    let handleCanvasEvent = function (e) {
+      if (self.isDrag) {
+        // 拖拽，不支持涂抹
+        touchStartX = e.touches[0].clientX
+        touchStartY = e.touches[0].clientY
+        lastX = e.touches[0].clientX
+        lastY = e.touches[0].clientY
+        tempX = X
+        tempY = Y
+      } else {
+        // 不支持拖拽，支持涂抹
+        let p1x = self.WindowToCanvas(canvas, e.touches[0].clientX + X, e.touches[0].clientY + Y)
+        // mousedown = true
+        for (var p = 0; p < box.length; p++) {
+          var pixel = box[p]
+          if (pixel.isPointInPath(ctx, p1x)) {
+            pixel.fillStyle = penColor
+            // 当点位需要绘制的时候，触发change事件，将box值返回
+            self.callMethod('getBoxData', box)
+          }
+        }
+        self.refresh()
+      }
+    }
+    let handleCanvasMoveEvent = function (e) {
+      e.preventDefault()
+      if (self.isDrag) {
+        // 拖拽，不支持涂抹
+        let deltaX = e.touches[0].clientX - lastX
+        let deltaY = e.touches[0].clientY - lastY
+        self.ctx.clearRect(0, 0, canvas.width, canvas.height) // 清除画布
+        self.ctx.translate(deltaX / scale, deltaY / scale)
+        X = tempX - (touchStartX - e.touches[0].clientX) / scale
+        Y = tempY - (touchStartY - e.touches[0].clientY) / scale
+        self.refresh()
+        lastX = e.touches[0].clientX
+        lastY = e.touches[0].clientY
+      } else {
+        // 不支持拖拽，支持涂抹
+        let p1x = self.WindowToCanvas(canvas, e.touches[0].clientX + X, e.touches[0].clientY + Y)
+        // mousedown = true
+        for (var p = 0; p < box.length; p++) {
+          var pixel = box[p]
+          if (pixel.isPointInPath(ctx, p1x)) {
+            pixel.fillStyle = penColor
+            self.callMethod('getBoxData', box)
+          }
+        }
+        self.refresh()
+      }
+    }
+    canvas.addEventListener('touchstart', handleCanvasEvent, false)
+    canvas.addEventListener('touchmove', handleCanvasMoveEvent, false)
+  },
+
+  // 缩小
+  shrink() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    scale = scale * 0.5
+    this.ctx.scale(0.5, 0.5)
+    this.refresh()
+  },
+  // 放大
+  magnify() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    scale = scale * 2
+    this.ctx.scale(2, 2)
+    this.refresh()
+  },
+  // 清除画布
+  clear() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    this.createPixel()
+  },
+  // 橡皮擦
+  eraser() {
+    penColor = this.pixelColor
+  },
+  // 更新画笔颜色
+  updateColor(color) {
+    penColor = color
+  },
+  //是否拖拽
+  updateIsDrag(canDrag) {
+    this.isDrag = canDrag
+  },
+})

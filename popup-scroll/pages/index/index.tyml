@@ -1,0 +1,14 @@
+<view class="container">
+  <navigator url="/pages/page1/index" open-type="navigate">
+    <button type="primary">弹窗内容不滚动</button>
+  </navigator>
+   <navigator url="/pages/page2/index" open-type="navigate">
+    <button type="primary">弹窗内容滚动</button>
+  </navigator>
+   <navigator url="/pages/page3/index" open-type="navigate">
+    <button type="primary">page-container弹窗内容滚动</button>
+  </navigator>
+   <navigator url="/pages/page4/index" open-type="navigate">
+    <button type="primary">最外层滚动切换</button>
+  </navigator>
+</view>

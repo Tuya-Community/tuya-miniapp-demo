@@ -1,0 +1,65 @@
+// index.rjs
+import uCharts from '@qiun/ucharts'
+let pixelRatio = getSystemInfo().pixelRatio || 2
+
+export default Render({
+  getUchartOption({ ctx, width, height, data }) {
+    return {
+      type: 'line',
+      context: ctx,
+      width: width,
+      height: height,
+      categories: data.categories,
+      series: data.series,
+      pixelRatio: pixelRatio,
+      animation: true,
+      background: '#FFFFFF',
+      color: [
+        '#1890FF',
+        '#91CB74',
+        '#FAC858',
+        '#EE6666',
+        '#73C0DE',
+        '#3CA272',
+        '#FC8452',
+        '#9A60B4',
+        '#ea7ccc',
+      ],
+      padding: [15, 10, 0, 15],
+      enableScroll: false,
+      legend: {},
+      xAxis: {
+        disableGrid: true,
+      },
+      yAxis: {
+        gridType: 'dash',
+        dashLength: 2,
+      },
+      extra: {
+        line: {
+          type: 'curve',
+          width: 2,
+          activeType: 'hollow',
+        },
+      },
+    }
+  },
+
+  async drawCart1(data) {
+    let canvas = await getCanvasById('pageCanvas1')
+    let ctx = canvas.getContext('2d')
+    canvas.width = canvas.width * pixelRatio
+    canvas.height = canvas.height * pixelRatio
+    // Step 1: 创建 Chart 对象
+    this.uCharts = new uCharts(
+      this.getUchartOption({ ctx, width: canvas.width, height: canvas.height, data })
+    )
+  },
+  tap(e) {
+    this.uCharts.touchLegend(e)
+    this.uCharts.showToolTip(e)
+  },
+  updateData(data) {
+    this.uCharts.updateData(data)
+  },
+})

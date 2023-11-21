@@ -1,0 +1,13 @@
+<view class="head">
+ page1
+</view>
+<view class="section">component</view>
+<view class="container">
+  <navigator url="/pages/page2/index?t={{t}}" open-type="navigate">
+    <button type="primary">navigate to page2</button>
+  </navigator>
+</view>
+<view class="section">api</view>
+<view class="container">
+  <button type="primary" bindtap="tynavigateTo">navigate to page2</button>
+</view>

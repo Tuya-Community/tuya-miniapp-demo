@@ -1,0 +1,27 @@
+.head {
+  height: 44px;
+  background-color: #ff000010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section {
+  height: 32px;
+  background-color: #0000ff10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  margin: 4px;
+}

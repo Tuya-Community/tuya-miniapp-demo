@@ -1,0 +1,8 @@
+<view class="pageContainer">
+  <text>点击底部图例可进行交互</text>
+  <canvas
+    canvas-id="pageCanvas1"
+    style="width: 350px; height: 250px; margin-bottom:16px;"
+    bindtap="tap"
+  ></canvas>
+</view>

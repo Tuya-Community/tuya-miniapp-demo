@@ -1,0 +1,14 @@
+<view class="container">
+  <navigator url="/pages/page1/index" open-type="navigate">
+    <button type="primary">canvas涂抹</button>
+  </navigator>
+  <navigator url="/pages/page2/index" open-type="navigate">
+    <button type="primary">canvas画板</button>
+  </navigator>
+  <navigator url="/pages/page3/index" open-type="navigate">
+    <button type="primary">lottie动画</button>
+  </navigator>
+  <navigator url="/pages/page4/index" open-type="navigate">
+    <button type="primary">f2柱状图</button>
+  </navigator>
+</view>

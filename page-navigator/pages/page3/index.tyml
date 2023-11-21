@@ -1,0 +1,8 @@
+<view class="head">
+ page3
+</view>
+<view class="container">
+  <navigator url="/pages/page4/index?t={{t}}" open-type="navigate">
+    <button type="primary">navigate to page4</button>
+  </navigator>
+</view>

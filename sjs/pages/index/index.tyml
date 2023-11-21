@@ -1,0 +1,5 @@
+<view class="container">
+  <navigator url="/pages/page1/index" open-type="navigate">
+    <button type="primary">数据格式化</button>
+  </navigator>
+</view>

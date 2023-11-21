@@ -1,0 +1,10 @@
+<sjs src="./index.sjs" module="m1" />
+
+<view class="text-area">
+  <!-- title 为当前页面 data 中定义的初始数据 -->
+  <text class="title">{{m1.capitalize(title1)}}</text>
+</view>
+<view class="text-area">
+  <!-- title 为当前页面 data 中定义的初始数据 -->
+  <text class="title">{{m1.capitalize(title2)}}</text>
+</view>

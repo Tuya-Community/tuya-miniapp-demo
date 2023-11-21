@@ -1,0 +1,10 @@
+<slider 
+  background-color="linear-gradient(to right, hsl(0, 100%, 50%), hsl(36, 100%, 50%), hsl(72, 100%, 50%), hsl(108, 100%, 50%), hsl(144, 100%, 50%), hsl(180, 100%, 50%), hsl(216, 100%, 50%), hsl(252, 100%, 50%), hsl(288, 100%, 50%), hsl(324, 100%, 50%), hsl(360, 100%, 50%))"
+  bindchange="handleChange"
+  bindchanging="handleChanging"
+  activeColor="transparent"
+  blockColor="{{blockColor}}"
+  min="0"
+  max="100"
+  step="1"
+></slider>

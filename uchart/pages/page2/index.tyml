@@ -1,0 +1,8 @@
+<view class="pageContainer">
+  <canvas
+    canvas-id="pageCanvas1"
+    style="width: 350px; height: 300px; margin-bottom:16px;"
+    disable-scroll="{{true}}"
+    bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
+  ></canvas>
+</view>

@@ -1,0 +1,11 @@
+<div class="container">
+  <view class="header">
+    <slot name="header"></slot>
+  </view>
+  <view class="main">
+    <slot name="main"></slot>
+  </view>
+  <view class="footer">
+    <slot name="footer"></slot>
+  </view>
+</div>
