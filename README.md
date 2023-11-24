@@ -14,13 +14,14 @@ English[](README.md) | [简体中文](README_zh.md)
 
 | time    | article                        |
 | ------- | ------------------------------ |
-| 2023/11 | [Adapt to iPhone navigation](https://github.com/tuya/miniapp-code-sample/tree/main/adapt-iphone-navigation)     |
-| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/tuya/miniapp-code-sample/tree/main/canvas) |
-| 2023/11 | [Navigator and intercept](https://github.com/tuya/miniapp-code-sample/tree/main/popup-scroll) |
-| 2023/11 | [Best practices for rolling through problems](https://github.com/tuya/miniapp-code-sample/tree/main/popup-scroll) |
-| 2023/11 | [Multiple implementations of ICONS](https://github.com/tuya/miniapp-code-sample/tree/main/icon) |
-| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/tuya/miniapp-code-sample/tree/main/slot) |
-| 2023/11 | [Chart](https://github.com/tuya/miniapp-code-sample/tree/main/uchart) |
+| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |
+| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |
+| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |
+| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |
+| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |
+| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) |
+| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |
+| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |
 
 
 ### Link

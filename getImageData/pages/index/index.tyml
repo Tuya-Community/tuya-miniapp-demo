@@ -1,0 +1,8 @@
+<view class="container">
+  <navigator url="/pages/page1/index" open-type="navigate">
+    <button type="primary">获取网络资源图片像素点信息</button>
+  </navigator>
+  <navigator url="/pages/page2/index" open-type="navigate">
+    <button type="primary">获取本地资源图片像素点信息</button>
+  </navigator>
+</view>

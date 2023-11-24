@@ -1,0 +1,22 @@
+export default Render({
+  async draw() {
+    // 注意：网络图片资源需要在开发者平台配置静态资源白名单
+    const path =
+      'https://static1.tuyacn.com/static/tuya-miniapp-doc/_next/static/images/logo-small.png'
+    let self = this
+    let myCanvas = await getCanvasById('myCanvas')
+    const ctx = myCanvas.getContext('2d')
+    const img = myCanvas.createImage()
+
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0, myCanvas.width, myCanvas.height)
+      self.callMethod('returnImageData', ctx.getImageData(0, 0, myCanvas.width, myCanvas.height))
+    }
+    // 配置图片跨域
+    img.crossOrigin = 'anonymous'
+    img.src = path
+    img.onerror = (e) => {
+      console.log('rjs image error', e, e.message)
+    }
+  },
+})
