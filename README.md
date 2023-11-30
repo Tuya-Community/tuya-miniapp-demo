@@ -12,6 +12,8 @@ English[](README.md) | [简体中文](README_zh.md)
 
 ### Samples
 
+#### MiniApp
+
 | time    | article                        |
 | ------- | ------------------------------ |
 | 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |
@@ -22,6 +24,10 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) |
 | 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |
 | 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |
+
+#### Panel MiniApp
+| time    | article                        |
+| ------- | ------------------------------ |
 
 
 ### Link
