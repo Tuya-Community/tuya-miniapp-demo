@@ -1,74 +1,74 @@
 <view class="container">
-  <navigator url="/pages/page1/index" open-type="navigate">
+  <navigator url="/pages/column/index" open-type="navigate">
     <button type="primary">柱状图</button>
   </navigator>
-  <navigator url="/pages/page2/index" open-type="navigate">
+  <navigator url="/pages/k-line/index" open-type="navigate">
     <button type="primary">k线图-滚动缩放</button>
   </navigator>
-  <navigator url="/pages/page3/index" open-type="navigate">
+  <navigator url="/pages/line1/index" open-type="navigate">
     <button type="primary">渐变色曲线图-图例点击交互</button>
   </navigator>
-  <navigator url="/pages/page4/index" open-type="navigate">
+  <navigator url="/pages/line2/index" open-type="navigate">
     <button type="primary">折线图滚动条</button>
   </navigator>
-  <navigator url="/pages/page5/index" open-type="navigate">
+  <navigator url="/pages/update/index" open-type="navigate">
     <button type="primary">刷新数据</button>
   </navigator>
-  <navigator url="/pages/page6/index" open-type="navigate">
+  <navigator url="/pages/mount/index" open-type="navigate">
     <button type="primary">圆角山峰图</button>
   </navigator>
-  <navigator url="/pages/page7/index" open-type="navigate">
+  <navigator url="/pages/line3/index" open-type="navigate">
     <button type="primary">基本折线图</button>
   </navigator>
-  <navigator url="/pages/page8/index" open-type="navigate">
+  <navigator url="/pages/line4/index" open-type="navigate">
     <button type="primary">基本折线区域图</button>
   </navigator>
-  <navigator url="/pages/page9/index" open-type="navigate">
+  <navigator url="/pages/dot/index" open-type="navigate">
     <button type="primary">散点图</button>
   </navigator>
-  <navigator url="/pages/page10/index" open-type="navigate">
+  <navigator url="/pages/pie/index" open-type="navigate">
     <button type="primary">基本饼状图</button>
   </navigator>
-  <navigator url="/pages/page11/index" open-type="navigate">
+  <navigator url="/pages/pie2/index" open-type="navigate">
     <button type="primary">渐变分割线饼状图</button>
   </navigator>
-  <navigator url="/pages/page12/index" open-type="navigate">
+  <navigator url="/pages/circle/index" open-type="navigate">
     <button type="primary">基本环形图</button>
   </navigator>
-  <navigator url="/pages/page13/index" open-type="navigate">
+  <navigator url="/pages/circle2/index" open-type="navigate">
     <button type="primary">渐变分割线环形图</button>
   </navigator>
-  <navigator url="/pages/page14/index" open-type="navigate">
-    <button type="primary">渐变分割线饼状图</button>
+  <navigator url="/pages/rose/index" open-type="navigate">
+    <button type="primary">玫瑰图</button>
   </navigator>
-  <navigator url="/pages/page15/index" open-type="navigate">
+  <navigator url="/pages/rose2/index" open-type="navigate">
     <button type="primary">半径玫瑰图+分割线+渐变色</button>
   </navigator>
-  <navigator url="/pages/page16/index" open-type="navigate">
+  <navigator url="/pages/radar/index" open-type="navigate">
     <button type="primary">雷达图</button>
   </navigator>
-  <navigator url="/pages/page17/index" open-type="navigate">
+  <navigator url="/pages/radar2/index" open-type="navigate">
     <button type="primary">圆形雷达图</button>
   </navigator>
-  <navigator url="/pages/page18/index" open-type="navigate">
+  <navigator url="/pages/progress/index" open-type="navigate">
     <button type="primary">圆弧进度条+渐变</button>
   </navigator>
-  <navigator url="/pages/page19/index" open-type="navigate">
+  <navigator url="/pages/progress2/index" open-type="navigate">
     <button type="primary">正圆进度条+逆时针</button>
   </navigator>
-  <navigator url="/pages/page20/index" open-type="navigate">
+  <navigator url="/pages/progress3/index" open-type="navigate">
     <button type="primary">多重圆进度条</button>
   </navigator>
-  <navigator url="/pages/page21/index" open-type="navigate">
+  <navigator url="/pages/board/index" open-type="navigate">
     <button type="primary">仪表盘</button>
   </navigator>
-  <navigator url="/pages/page22/index" open-type="navigate">
+  <navigator url="/pages/funnel/index" open-type="navigate">
     <button type="primary">漏斗图</button>
   </navigator>
-  <navigator url="/pages/page23/index" open-type="navigate">
+  <navigator url="/pages/word/index" open-type="navigate">
     <button type="primary">词云图</button>
   </navigator>
-  <navigator url="/pages/page24/index" open-type="navigate">
+  <navigator url="/pages/mix/index" open-type="navigate">
     <button type="primary">混合图</button>
   </navigator>
 </view>
