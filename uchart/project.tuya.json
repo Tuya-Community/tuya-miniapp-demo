@@ -1,7 +1,7 @@
 {
   "projectname": "uchart 图表组件",
   "i18n": false,
-  "description": "34",
+  "description": "",
   "baseversion": "2.14.3",
   "dependencies": {
     "BaseKit": "3.0.1",
