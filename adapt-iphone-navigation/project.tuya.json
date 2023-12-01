@@ -1,7 +1,7 @@
 {
   "projectname": "适配刘海屏",
   "i18n": false,
-  "description": "",
+  "description": "适配刘海屏",
   "baseversion": "2.14.3",
   "dependencies": {
     "BaseKit": "3.0.1",

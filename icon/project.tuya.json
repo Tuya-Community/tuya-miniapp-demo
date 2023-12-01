@@ -1,7 +1,7 @@
 {
   "projectname": "图标用法",
   "i18n": false,
-  "description": "34",
+  "description": "icon",
   "baseversion": "2.14.3",
   "dependencies": {
     "BaseKit": "3.0.1",

@@ -17,14 +17,14 @@ English[](README.md) | [简体中文](README_zh.md)
 
 | time    | article                        |  qrCode |
 | ------- | ------------------------------ | ------ |
-| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     | |
-| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) | |
-| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | |
-| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | |
-| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) | |
-| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | |
-| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |![图表](./qrCode/uchart.png) |
-| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) | |
+| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |![iOS](./qrCode/iOS.png)  |
+| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |![canvas](./qrCode/canvas.png) |
+| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |![navigator](./qrCode/navigator.png) |
+| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | ![scroll](./qrCode/scroll.png)|
+| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |![icon](./qrCode/icon.png) |
+| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | ![slot](./qrCode/slot.png)|
+| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |![chart](./qrCode/uchart.png) |
+| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |![getImageData](./qrCode/getImageData.png) |
 
 #### Panel MiniApp
 | time    | article                        |  qrCode |
