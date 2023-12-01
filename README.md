@@ -17,14 +17,15 @@ English[](README.md) | [简体中文](README_zh.md)
 
 | time    | article                        |  qrCode |
 | ------- | ------------------------------ | ------ |
-| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |![iOS](./qrCode/iOS.png)  |
-| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |![canvas](./qrCode/canvas.png) |
-| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |![navigator](./qrCode/navigator.png) |
-| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | ![scroll](./qrCode/scroll.png)|
-| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |![icon](./qrCode/icon.png) |
-| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | ![slot](./qrCode/slot.png)|
-| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |![chart](./qrCode/uchart.png) |
-| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |![getImageData](./qrCode/getImageData.png) |
+| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |<img src="./qrCode/iOS.png" width="100" height="100">  |
+| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |<img src="./qrCode/canvas.png" width="100" height="100"> |
+| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |<img src="./qrCode/navigator.png" width="100" height="100"> |
+| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | <img src="./qrCode/scroll.png" width="100" height="100">|
+| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |<img src="./qrCode/icon.png" width="100" height="100"> |
+| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | <img src="./qrCode/slot.png" width="100" height="100">|
+| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |<img src="./qrCode/uchart.png" width="100" height="100"> |
+| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |<img src="./qrCode/getImageData.png" width="100" height="100"> |
+
 
 #### Panel MiniApp
 | time    | article                        |  qrCode |

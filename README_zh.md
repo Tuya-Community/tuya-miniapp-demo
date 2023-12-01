@@ -22,14 +22,15 @@ English[](README.md) | [简体中文](README_zh.md)
 
 | time    | 文章               |  二维码 |
 | ------- | ------------------ | ------|
-| 2023/11 | [适配刘海屏](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |![iOS](./qrCode/iOS.png) |
-| 2023/11 | [canvas 涂抹，画板，F2，lottie，RJS最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |![canvas](./qrCode/canvas.png)|
-| 2023/11 | [页面跳转和拦截](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |![navigator](./qrCode/navigator.png)|
-| 2023/11 | [滚动穿透问题最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |![scroll](./qrCode/scroll.png)|
-| 2023/11 | [icon的多种实现方式](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |![icon](./qrCode/icon.png)|
-| 2023/11 | [slot 的多场景应用-最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) |![slot](./qrCode/slot.png)|
-| 2023/11 | [图表](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |![图表](./qrCode/uchart.png)|
-| 2023/11 | [获取图片像素点](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |![getImageData](./qrCode/getImageData.png)|
+| 2023/11 | [适配刘海屏](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |<img src="./qrCode/iOS.png" width="100" height="100"> |
+| 2023/11 | [canvas 涂抹，画板，F2，lottie，RJS最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |<img src="./qrCode/canvas.png" width="100" height="100">|
+| 2023/11 | [页面跳转和拦截](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |<img src="./qrCode/navigator.png" width="100" height="100">|
+| 2023/11 | [滚动穿透问题最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |<img src="./qrCode/scroll.png" width="100" height="100">|
+| 2023/11 | [icon的多种实现方式](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |<img src="./qrCode/icon.png" width="100" height="100">|
+| 2023/11 | [slot 的多场景应用-最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) |<img src="./qrCode/slot.png" width="100" height="100">|
+| 2023/11 | [图表](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |<img src="./qrCode/uchart.png" width="100" height="100">|
+| 2023/11 | [获取图片像素点](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |<img src="./qrCode/getImageData.png" width="100" height="100">|
+
 
 #### 面板小程序
 
