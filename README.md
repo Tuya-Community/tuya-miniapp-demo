@@ -30,7 +30,7 @@ English[](README.md) | [简体中文](README_zh.md)
 #### Panel MiniApp
 | time    | article                        |  qrCode |
 | ------- | ------------------------------ |  ------  |
-
+| 2023/12 | [recorderManager](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager) |<img src="./qrCode/recorder.png" width="100" height="100"> |
 
 ### Link
 

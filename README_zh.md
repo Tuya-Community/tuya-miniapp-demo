@@ -36,6 +36,7 @@ English[](README.md) | [简体中文](README_zh.md)
 
 | time    | 文章               |  二维码 |
 | ------- | ------------------ | --- |
+| 2023/12 | [recorderManager录音](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager) |<img src="./qrCode/recorder.png" width="100" height="100"> |
 
 
 ### 相关链接
