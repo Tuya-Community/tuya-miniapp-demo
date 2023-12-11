@@ -30,7 +30,7 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/11 | [slot 的多场景应用-最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) |<img src="./qrCode/slot.png" width="100" height="100">|
 | 2023/11 | [图表](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |<img src="./qrCode/uchart.png" width="100" height="100">|
 | 2023/11 | [获取图片像素点](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |<img src="./qrCode/getImageData.png" width="100" height="100">|
-| 2023/12 | [分享](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/apiShare) |<img src="./qrCode/share.png" width="100" height="100">|
+| 2023/12 | [分享](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share) |<img src="./qrCode/share.png" width="100" height="100">|
 
 
 #### 面板小程序
