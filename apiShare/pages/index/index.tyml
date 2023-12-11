@@ -1,0 +1,9 @@
+<view class="container">
+  <button bindtap="wxShareText">微信纯文本分享</button>
+  <button bindtap="wxShareImage">微信图片分享</button>
+  <button bindtap="shareText">纯文本分享</button>
+  <button bindtap="shareImage">图片分享</button>
+  <button bindtap="shareFile">文件分享</button>
+  <button bindtap="shareFileUS">文件分享（国际包）</button>
+  <button bindtap="shareWeb">web分享</button>
+</view>
