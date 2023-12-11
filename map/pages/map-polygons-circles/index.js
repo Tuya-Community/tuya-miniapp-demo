@@ -135,7 +135,6 @@ Page({
 
   updatePolygons: function () {
     let polygons = getPolygons(this.data.latitude, this.data.longitude, 3000, 4)
-    console.log('1111111', polygons)
     this.setData({
       polygons: polygons,
     })
