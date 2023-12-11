@@ -1,0 +1,47 @@
+<view class="tips">⚠️ map组件属于异层渲染的原生组件，需要遵循原生组件限制，map及其父节点均不能❌设置背景色、背景图等。 </view>
+<view class="tips">⚠️ map组件IDE展示效果与真机效果有差异，请以真机为准。</view>
+<view class="container">
+ <map
+    id="myMap"
+    class="myMap"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    border-width="{{5}}"
+    border-style="solid"
+    border-color="#007aff"
+    background-color="#ffc300"
+    border-radius="{{0}}"
+    border-radius-top-left="{{30}}"
+    border-radius-top-right="{{30}}"
+    border-radius-bottom-left="{{30}}"
+    border-radius-bottom-right="{{30}}"
+  >
+  </map>
+</view>
+
+<view class="tips">❌由于设置了背景色，导致map组件被覆盖，效果请以真机为准</view>
+<view class="container" style="background:#93b5c6">
+ <map
+    id="myMap2"
+    class="myMap"
+    style="border:10px solid red"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    border-width="{{5}}"
+    border-style="solid"
+    border-color="#007aff"
+    background-color="#ffc300"
+    border-radius="{{0}}"
+    border-radius-top-left="{{30}}"
+    border-radius-top-right="{{30}}"
+    border-radius-bottom-left="{{30}}"
+    border-radius-bottom-right="{{30}}"
+  >
+  </map>
+</view>
+
+

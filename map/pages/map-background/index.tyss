@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px 20px;
+}
+.myMap {
+  height: 300px;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+}
+
+.tips {
+  padding: 8px 16px;
+  color: red;
+}

@@ -1,0 +1,27 @@
+<view class="tips">❌不能将原生组件放在局部滚动区域中，外层不能嵌套如 scroll-view、swiper等可滚动的组件。 </view>
+<view class="container">
+  <block ty:for="20">
+    <view style="height: 100px; background:#f4bfbf;width: 100%"></view>
+    <view style="height: 100px; background:#ffd9c0;width: 100%"></view>
+    <view style="height: 100px; background:#faf0d7;width: 100%"></view>
+    <view style="height: 100px; background:#8cc0de;width: 100%"></view>
+  </block>
+  <map
+    id="myMap"
+    class="myMap"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    border-width="{{5}}"
+    border-style="solid"
+    border-color="#007aff"
+    background-color="#ffc300"
+    border-radius="{{0}}"
+    border-radius-top-left="{{30}}"
+    border-radius-top-right="{{30}}"
+    border-radius-bottom-left="{{30}}"
+    border-radius-bottom-right="{{30}}"
+  >
+  </map>
+</view>

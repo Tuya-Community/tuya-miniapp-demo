@@ -1,0 +1,11 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/map-background/index",
+    "pages/map-scroll/index",
+    "pages/map-scale/index",
+    "pages/map-polygons-circles/index",
+    "pages/map-all/index"
+  ]
+}

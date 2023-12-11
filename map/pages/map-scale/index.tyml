@@ -1,0 +1,24 @@
+<view class="tips">缩放范围 4-19</view>
+<view class="container">
+
+  <map
+    id="myMap"
+      class="myMap"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    border-width="{{5}}"
+    border-style="solid"
+    border-color="#007aff"
+    background-color="#ffc300"
+    border-radius="{{0}}"
+    border-radius-top-left="{{30}}"
+    border-radius-top-right="{{30}}"
+    border-radius-bottom-left="{{30}}"
+    border-radius-bottom-right="{{30}}"
+  >
+  </map>
+  <slider max="{{19}}" min="{{4}}" show-value="{{true}}" bind:change="sliderChange"></slider>
+</view>
+

@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="btn-box">
+    <button class="btn" bindtap="jumpToTab1" type="primary">跳转tab1</button>
+    <button class="btn" bindtap="jumpToTab2" type="primary">跳转tab2</button>
+    <button class="btn" bindtap="jumpToTab3" type="primary">跳转tab3</button>
+    <button class="btn" bindtap="jumpToMapTabs" type="primary">跳转map-tabs</button>
+    <button class="btn" bindtap="changeMapPos" type="primary">改变map位置</button>
+    <button class="btn" bindtap="changeTag2" type="primary">改变标签二位置</button>
+  </view>
+  <map
+    id="myMap"
+    class="myMap"
+    style="border:10px solid red;padding: {{tagTop}}px;marginTop: {{marginTop}}px;"
+    latitude="{{latitude1}}"
+    longitude="{{longitude1}}"
+    scale="{{scale1}}"
+    markers="{{markers1}}"
+    bindtap="handleTap"
+    bindmarkertap="handleMarkertap"
+    bindcallouttap="handleCallouttap"
+    border-width="{{5}}"
+    border-style="solid"
+    border-color="#007aff"
+    background-color="#ffc300"
+    border-radius="{{0}}"
+    data-map="{{value}}"
+    bindregionchange="handleRegionchange"
+    bind:initdone="handleInitdone"
+    polyline="{{polyline}}"
+    circles="{{circles}}"
+    polygons="{{polygons}}"
+    border-radius-top-left="{{30}}"
+    border-radius-top-right="{{30}}"
+    border-radius-bottom-left="{{30}}"
+    border-radius-bottom-right="{{30}}"
+  >
+  </map>
+  <view class="btn-box">
+    <button class="btn" bindtap="changeLngLat" type="primary">属性 设置经纬度</button>
+    <button class="btn" bindtap="scaleIn" type="primary">属性 放大scale</button>
+    <button class="btn" bindtap="scaleOut" type="primary">属性 缩小scale</button>
+    <button class="btn" bindtap="scale" type="primary">属性 不变scale</button>
+    <button class="btn" bindtap="changeMarkers" type="primary">属性 markers</button>
+    <button class="btn" bindtap="apiMoveToLocation" type="primary">moveToLocation</button>
+    <button class="btn" bindtap="apiAddMarkers" type="primary">addMarkers</button>
+    <button class="btn" bindtap="apiRemoveMarkers" type="primary">removeMarkers</button>
+    <button class="btn" bindtap="apiGetCenterLocation" type="primary">getCenterLocation</button>
+    <button class="btn" bindtap="apiGetScale" type="primary">getScale</button>
+    <button class="btn" bindtap="openConfirm" type="primary">显示弹窗</button>
+
+    <button class="btn" bindtap="changeCircles" type="primary">changeCircles</button>
+    <button class="btn" bindtap="changePolygons" type="primary">changePolygons</button>
+    <button class="btn" bindtap="changePolyline" type="primary">changePolyline</button>
+    <button class="btn" bindtap="moveAlong" type="primary">moveAlong</button>
+
+
+  </view>
+  <mpdialog title="标题" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+    <view>这里是内容，超过部分会自动换行换行。这里是内容，超过部分会自动换行换行</view>
+  </mpdialog>
+</view>

@@ -1,0 +1,28 @@
+<view class="container">
+  <map
+    id="myMap"
+    class="myMap"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+    border-width="{{5}}"
+    border-style="solid"
+    border-color="#007aff"
+    background-color="#ffc300"
+    border-radius="{{0}}"
+    border-radius-top-left="{{30}}"
+    border-radius-top-right="{{30}}"
+    border-radius-bottom-left="{{30}}"
+    border-radius-bottom-right="{{30}}"
+    circles="{{circles}}"
+    polygons="{{polygons}}"
+  >
+  </map>
+
+  <button bindtap="updateCircle">update circles</button>
+  <button bindtap="updatePolygons">update polygons</button>
+</view>
+
+
+

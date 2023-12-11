@@ -1,0 +1,88 @@
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px 20px;
+}
+
+.scrollBox{
+  width: 100%;
+  border: 2px solid green;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.myMap {
+  height: 300px;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.tag1 {
+  width: 80px;
+  height: 40px;
+  background: #faf751;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag2 {
+  /* width: 100px;
+  height: 40px; */
+  background:#3bf4fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.modal{
+  height: 80px;
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #1aad19;
+  border: 5px solid yellowgreen;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-box{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn{
+  width: 160px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-container{
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  top: 150px;
+  right: 60px;
+  background-color: darkorange;
+}
+
+.box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
