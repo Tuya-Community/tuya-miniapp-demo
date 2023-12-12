@@ -11,6 +11,6 @@
   padding: 8px 16px;
   color: red;
 }
-slider {
-  margin-top: 32px;
+button {
+  margin-top: 16px;
 }
