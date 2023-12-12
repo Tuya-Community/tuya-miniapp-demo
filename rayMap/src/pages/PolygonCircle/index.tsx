@@ -1,4 +1,4 @@
-import { View, Map, Slider } from "@ray-js/ray";
+import { View, Map, Button } from "@ray-js/ray";
 import React, { Component } from "react";
 import styles from "./index.module.less";
 import {
@@ -138,12 +138,12 @@ class Index extends Component {
 						circles={circles}
 						polygons={polygons}
 					/>
-					<button onClick={this.updateCircle} type="primary">
+					<Button onClick={this.updateCircle} type="primary">
 						update circles
-					</button>
-					<button onClick={this.updatePolygons} type="primary">
+					</Button>
+					<Button onClick={this.updatePolygons} type="primary">
 						update polygons
-					</button>
+					</Button>
 				</View>
 			</>
 		);
