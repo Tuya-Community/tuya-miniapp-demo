@@ -13,4 +13,8 @@ export const routes: Routes = [
 		route: "/scroll",
 		path: "/pages/Scroll/index",
 	},
+	{
+		route: "/scale",
+		path: "/pages/Scale/index",
+	},
 ];
