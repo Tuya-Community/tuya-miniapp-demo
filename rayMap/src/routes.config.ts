@@ -25,4 +25,8 @@ export const routes: Routes = [
 		route: "/marker",
 		path: "/pages/Marker/index",
 	},
+	{
+		route: "/dialog",
+		path: "/pages/Dialog/index",
+	},
 ];

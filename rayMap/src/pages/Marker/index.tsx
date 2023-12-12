@@ -86,6 +86,12 @@ class Index extends Component {
 						},
 					],
 					clear: false,
+					success: function (e) {
+						console.log("addMarkers success", e);
+					},
+					fail: function (e) {
+						console.log("addMarkers fail", e);
+					},
 				});
 			},
 			fail: function (res) {
@@ -103,10 +109,6 @@ class Index extends Component {
 	markertap = (e) => {
 		console.log("demo 地图 markertap 事件触发", e);
 		const { markerId } = e.detail;
-		console.log("first", this.state.isDeleteMarker, {
-			markerIds: [markerId],
-			clear: false,
-		});
 		if (this.state.isDeleteMarker) {
 			this.mapCtx.removeMarkers({
 				markerIds: [markerId],
