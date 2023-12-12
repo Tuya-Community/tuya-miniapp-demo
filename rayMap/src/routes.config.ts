@@ -17,4 +17,8 @@ export const routes: Routes = [
 		route: "/scale",
 		path: "/pages/Scale/index",
 	},
+	{
+		route: "/polygonCircle",
+		path: "/pages/PolygonCircle/index",
+	},
 ];
