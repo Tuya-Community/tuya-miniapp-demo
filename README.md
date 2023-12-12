@@ -33,6 +33,8 @@ English[](README.md) | [简体中文](README_zh.md)
 | time    | article                        |  qrCode |
 | ------- | ------------------------------ |  ------  |
 | 2023/12 | [recorderManager](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager) |<img src="./qrCode/recorder.png" width="100" height="100"> |
+| 2023/12 | [camera](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayCamera) |<img src="./qrCode/rayCamera.png" width="100" height="100"> |
+| 2023/12 | [map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap) |<img src="./qrCode/rayMap.png" width="100" height="100"> |
 
 ### Link
 

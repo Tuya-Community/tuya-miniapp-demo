@@ -1,0 +1,13 @@
+{
+  "projectname": "camera组件示例_Ray",
+  "i18n": false,
+  "description": "获取图片像素点",
+  "baseversion": "2.15.5",
+  "devMode": "ray",
+  "miniprogramRoot": "./dist/tuya",
+  "dependencies": {
+    "BaseKit": "3.0.0",
+    "MiniKit": "3.0.0",
+    "BizKit": "3.0.1"
+  }
+}
