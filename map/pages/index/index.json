@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "",
-  "usingComponents": {},
-  "backgroundColor": "#ffff00"
+  "navigationBarTitleText": "map",
+  "usingComponents": {}
 }

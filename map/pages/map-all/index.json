@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "map",
+  "navigationBarTitleText": "全部",
   "usingComponents": {
     "mpdialog": "@tuya-miniapp/miniapp-components-plus/dialog/index"
   }

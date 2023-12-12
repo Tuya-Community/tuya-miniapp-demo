@@ -18,9 +18,6 @@
   <view>
     删除marker <switch bindtap="toggleDetlteMarker"></switch>
   </view>
-  <view>
-    显示callout <switch bindtap="toggleShowCallout"></switch>
-  </view>
 </view>
 
 

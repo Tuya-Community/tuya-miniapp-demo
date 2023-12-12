@@ -1,4 +1,5 @@
-<view class="tips">⚠️ map组件属于异层渲染的原生组件，需要遵循原生组件限制，map及其父节点均不能❌设置背景色、背景图等。 </view>
+<view class="tips">⚠️ map组件属于异层渲染的原生组件，需要遵循原生组件限制，map及其父节点（包括page）均不能❌设置背景色、背景图等。 </view>
+<view class="tips">⚠️ 如果一定要设置背景颜色，可以设置page配置文件的背景颜色。</view>
 <view class="tips">⚠️ map组件IDE展示效果与真机效果有差异，请以真机为准。</view>
 <view class="container">
  <map

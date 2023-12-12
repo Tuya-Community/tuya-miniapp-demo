@@ -1,8 +1,17 @@
 <view class="container">
-  <navigator url="/pages/page1/index" open-type="navigate">
-    <button type="primary">page1</button>
+  <navigator url="/pages/map-background/index" open-type="navigate">
+    <button type="primary">map 背景</button>
   </navigator>
-  <navigator url="/pages/page2/index" open-type="navigate">
-    <button type="primary">page2</button>
+  <navigator url="/pages/map-scroll/index" open-type="navigate">
+    <button type="primary">map 滚动</button>
+  </navigator>
+  <navigator url="/pages/map-scale/index" open-type="navigate">
+    <button type="primary">map 缩放</button>
+  </navigator>
+  <navigator url="/pages/map-marker/index" open-type="navigate">
+    <button type="primary">map 标记点</button>
+  </navigator>
+  <navigator url="/pages/map-polygons-circles/index" open-type="navigate">
+    <button type="primary">map 图形</button>
   </navigator>
 </view>
