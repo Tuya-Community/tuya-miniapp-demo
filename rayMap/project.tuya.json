@@ -1,0 +1,12 @@
+{
+  "projectname": "ray map组件",
+  "i18n": false,
+  "description": "地图",
+  "baseversion": "2.15.5",
+  "miniprogramRoot": "./dist/tuya",
+  "dependencies": {
+    "BaseKit": "3.0.0",
+    "MiniKit": "3.0.0",
+    "BizKit": "3.0.1"
+  }
+}
