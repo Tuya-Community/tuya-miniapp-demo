@@ -4,14 +4,12 @@
 .point {
   width: 30px;
   height: 30px;
-
   left: 50%;
   top: 50%;
   margin-left: -15px;
   margin-top: -15px;
   position: absolute;
   z-index: 99;
-  background-image: url('/assets/location.svg');
 }
 .myMap {
   height: 60vh;

@@ -1,6 +1,22 @@
 const markers = [
   {
     id: 1,
+    latitude: 39.908775,
+    longitude: 116.406315,
+    name: '王府井',
+    iconPath: '/assets/marker.png',
+    callout: {
+      content: '王府井',
+      color: '#ffffff',
+      fontSize: 12,
+      bgColor: '#5C91F6',
+      padding: 4,
+      borderRadius: 35,
+      anchorY: -8,
+    },
+  },
+  {
+    id: 2,
     latitude: 39.927761,
     longitude: 116.391467,
     name: '北海公园',
@@ -13,11 +29,10 @@ const markers = [
       padding: 4,
       borderRadius: 35,
       anchorY: -8,
-      textAlign: 'center',
     },
   },
   {
-    id: 2,
+    id: 3,
     latitude: 39.918203,
     longitude: 116.396923,
     name: '故宫',
@@ -30,7 +45,6 @@ const markers = [
       padding: 4,
       borderRadius: 35,
       anchorY: -8,
-      textAlign: 'center',
     },
   },
 ]
@@ -42,7 +56,6 @@ Page({
     scale: 8,
     markers: markers,
     isDeleteMarker: false,
-    isShowCallout: false,
   },
 
   onReady: function () {
@@ -76,11 +89,6 @@ Page({
   toggleDetlteMarker() {
     this.setData({
       isDeleteMarker: !this.data.isDeleteMarker,
-    })
-  },
-  toggleShowCallout() {
-    this.setData({
-      isShowCallout: !this.data.isShowCallout,
     })
   },
   markertap(e) {

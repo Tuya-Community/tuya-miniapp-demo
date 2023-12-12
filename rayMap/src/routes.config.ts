@@ -21,4 +21,8 @@ export const routes: Routes = [
 		route: "/polygonCircle",
 		path: "/pages/PolygonCircle/index",
 	},
+	{
+		route: "/marker",
+		path: "/pages/Marker/index",
+	},
 ];
