@@ -7,6 +7,7 @@
     "pages/map-scale/index",
     "pages/map-polygons-circles/index",
     "pages/map-marker/index",
+    "pages/map-dialog/index",
     "pages/map-all/index"
   ]
 }

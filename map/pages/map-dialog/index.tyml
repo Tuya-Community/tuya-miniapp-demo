@@ -1,0 +1,18 @@
+<view class="container">
+  <map
+    id="myMap"
+    class="myMap"
+    latitude="{{latitude}}"
+    longitude="{{longitude}}"
+    scale="{{scale}}"
+    markers="{{markers}}"
+  >
+  </map>
+
+  <button bindtap="openConfirm" type="primary">显示弹窗</button>
+  <button bindtap="openModal" type="primary">显示Modal</button>
+  <mpdialog title="标题" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" catchtouchmove="catch">
+    <view>这里是内容，超过部分会自动换行换行。这里是内容，超过部分会自动换行换行</view>
+  </mpdialog>
+</view>
+

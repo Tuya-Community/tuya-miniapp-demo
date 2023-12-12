@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "弹窗",
+  "backgroundColor": "#e4d8d7",
+  "usingComponents": {
+    "mpdialog": "@tuya-miniapp/miniapp-components-plus/dialog/index"
+  }
+}

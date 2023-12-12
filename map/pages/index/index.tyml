@@ -14,4 +14,7 @@
   <navigator url="/pages/map-polygons-circles/index" open-type="navigate">
     <button type="primary">map 图形</button>
   </navigator>
+  <navigator url="/pages/map-polygons-circles/index" open-type="navigate">
+    <button type="primary">map 弹窗</button>
+  </navigator>
 </view>

@@ -1,0 +1,16 @@
+.container {
+  padding: 20px;
+}
+.myMap {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+
+.tips {
+  padding: 8px 16px;
+  color: red;
+}
+slider {
+  margin-top: 32px;
+}
