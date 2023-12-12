@@ -1,7 +1,7 @@
 {
   "projectname": "分享Api",
   "i18n": false,
-  "description": "获取图片像素点",
+  "description": "分享 ",
   "baseversion": "2.14.3",
   "dependencies": {
     "BaseKit": "3.0.1",

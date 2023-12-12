@@ -25,8 +25,8 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | <img src="./qrCode/slot.png" width="100" height="100">|
 | 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |<img src="./qrCode/uchart.png" width="100" height="100"> |
 | 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |<img src="./qrCode/getImageData.png" width="100" height="100"> |
-| 2023/12 | [share](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share) |<img src="./qrCode/share.png" width="100" height="100">|
-
+| 2023/12 | [Share](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share) |<img src="./qrCode/share.png" width="100" height="100">|
+| 2023/12 | [Map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map) |<img src="./qrCode/map.png" width="100" height="100">|
 
 
 #### Panel MiniApp
