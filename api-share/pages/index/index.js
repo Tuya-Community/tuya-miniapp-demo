@@ -57,7 +57,6 @@ Page({
       failure(res) {
         console.log('downloadFile failure', res)
       },
-      
     })
   },
 

@@ -40,6 +40,7 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/12 | [recorderManager录音](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager) |<img src="./qrCode/recorder.png" width="100" height="100"> |
 | 2023/12 | [系统相机](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayCamera) |<img src="./qrCode/rayCamera.png" width="100" height="100"> |
 | 2023/12 | [地图](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap) |<img src="./qrCode/rayMap.png" width="100" height="100"> |
+| 2023/12 | [视频](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo) |<img src="./qrCode/rayVideo.png" width="100" height="100"> |
 
 
 ### 相关链接
