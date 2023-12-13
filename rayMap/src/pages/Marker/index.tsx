@@ -70,6 +70,7 @@ class Index extends Component {
 	}
 
 	addMarker = () => {
+		// 需要注意：通过api和markers的props添加标记点会冲突，因此这两种方式仅需选择其中一种
 		let self = this;
 		self.mapCtx.getCenterLocation({
 			success: function (res) {
@@ -122,8 +123,7 @@ class Index extends Component {
 	};
 
 	render() {
-		const { latitude, longitude, scale, markers } = this.state;
-		console.log("markers", markers);
+		const { latitude, longitude, scale } = this.state;
 		return (
 			<>
 				<View className={styles["container"]}>
@@ -139,7 +139,7 @@ class Index extends Component {
 							latitude={latitude}
 							longitude={longitude}
 							scale={scale}
-							markers={markers}
+							// markers={markers}
 							onMarkertap={this.markertap}
 							onCallouttap={this.callouttap}
 						/>
