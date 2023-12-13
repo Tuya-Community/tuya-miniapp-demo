@@ -15,6 +15,15 @@ const Home: FC = () => {
 			>
 				Video
 			</Button>
+			<Button
+				type="primary"
+				className={styles.btn}
+				onClick={() => {
+					router.push("/nativeVideo");
+				}}
+			>
+				NativeVideo
+			</Button>
 		</View>
 	);
 };
