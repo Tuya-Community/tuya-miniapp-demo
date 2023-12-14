@@ -7,14 +7,14 @@ const Home: FC = () => {
 	const handleEvent = (type: string) => (e) => {
 		console.log("webview event" + type, e);
 	};
-  useEffect(() => {
-    nativeDisabled(true)
-  },[])
+	useEffect(() => {
+		nativeDisabled(true);
+	}, []);
 	return (
 		<View className={styles["container"]}>
 			<View>webview before</View>
 			<WebView
-				src="https://images.tuyacn.com/rms-static/5320c160-9990-11ee-8bb1-51351f353ef3-1702455564406.html?tyName=postmessage.html?t=1"
+				src="https://path"
 				onMessage={handleEvent("onMessage")}
 				onLoad={handleEvent("onLoad")}
 				onError={handleEvent("onError")}
