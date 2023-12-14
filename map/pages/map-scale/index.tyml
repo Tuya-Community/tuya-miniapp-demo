@@ -3,7 +3,7 @@
 
   <map
     id="myMap"
-      class="myMap"
+    class="myMap"
     latitude="{{latitude}}"
     longitude="{{longitude}}"
     scale="{{scale}}"
@@ -21,4 +21,3 @@
   </map>
   <slider max="{{19}}" min="{{4}}" show-value="{{true}}" bind:change="sliderChange"></slider>
 </view>
-

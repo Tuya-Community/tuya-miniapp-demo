@@ -2,7 +2,7 @@
 <view class="tips">⚠️ 如果一定要设置背景颜色，可以设置page配置文件的背景颜色。</view>
 <view class="tips">⚠️ map组件IDE展示效果与真机效果有差异，请以真机为准。</view>
 <view class="container">
- <map
+  <map
     id="myMap"
     class="myMap"
     latitude="{{latitude}}"
@@ -24,7 +24,7 @@
 
 <view class="tips">❌由于设置了背景色，导致map组件被覆盖，效果请以真机为准</view>
 <view class="container" style="background:#93b5c6">
- <map
+  <map
     id="myMap2"
     class="myMap"
     style="border:10px solid red"
@@ -44,5 +44,3 @@
   >
   </map>
 </view>
-
-

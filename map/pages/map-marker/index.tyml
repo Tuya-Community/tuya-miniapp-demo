@@ -3,13 +3,11 @@
   <view class="tips">· 不支持点击获取经纬度，仅支持获取地图中心点经纬度</view>
   <view style="position: relative">
     <image src="/assets/location.svg" class="point"></image>
-    <map id="myMap" class="myMap" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" bind:markertap="markertap" bind:callouttap="callouttap">
+    <map id="myMap" class="myMap" latitude="{{latitude}}" longitude="{{longitude}}"
+      markers="{{markers}}" bind:markertap="markertap" bind:callouttap="callouttap">
     </map>
   </view>
   <button bindtap="addMarker">添加 marker</button>
-  <view>
-    删除marker <switch bindtap="toggleDetlteMarker"></switch>
+  <view> 删除marker <switch bindtap="toggleDetlteMarker"></switch>
   </view>
 </view>
-
-

@@ -23,6 +23,3 @@
   <button bindtap="updateCircle">update circles</button>
   <button bindtap="updatePolygons">update polygons</button>
 </view>
-
-
-
