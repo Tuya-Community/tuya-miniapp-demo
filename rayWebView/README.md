@@ -10,4 +10,4 @@
 ## 相关链接
 
 - [WebView](https://developer.tuya.com/cn/miniapp/panels/component/open/web-view)
-- 网页向小程序 postMessage 时，请使用 `@tuya-miniapp/jssdk`` 进行操作, [文档](<(https://www.npmjs.com/package/@tuya-miniapp/jssdk)>)
+- 网页向小程序 postMessage 时，请使用 `@tuya-miniapp/jssdk` 进行操作, [文档](https://www.npmjs.com/package/@tuya-miniapp/jssdk)
