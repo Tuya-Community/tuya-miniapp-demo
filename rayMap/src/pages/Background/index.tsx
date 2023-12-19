@@ -1,6 +1,8 @@
 import { View, Map } from "@ray-js/ray";
 import React, { Component } from "react";
 import styles from "./index.module.less";
+import imageMarker from "../../assets/marker.png";
+
 
 class Index extends Component {
 	state = {
@@ -13,7 +15,7 @@ class Index extends Component {
 				latitude: 39.908775,
 				longitude: 116.406315,
 				name: "王府井",
-				iconPath: "/assets/images/marker.png",
+				iconPath: imageMarker,
 				callout: {
 					content: "王府井",
 					color: "#ffffff",
@@ -29,7 +31,7 @@ class Index extends Component {
 				latitude: 39.927761,
 				longitude: 116.391467,
 				name: "北海公园",
-				iconPath: "/assets/images/marker.png",
+				iconPath: imageMarker,
 				callout: {
 					content:
 						"北海公园北海公园北海公园北海公园北海公园北海公园北海公园北海公园北海公园",
@@ -46,7 +48,7 @@ class Index extends Component {
 				latitude: 39.918203,
 				longitude: 116.396923,
 				name: "故宫",
-				iconPath: "/assets/images/marker.png",
+				iconPath: imageMarker,
 				callout: {
 					content: "故宫",
 					color: "#ffffff",
