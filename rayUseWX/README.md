@@ -19,3 +19,4 @@
 
 - Vant 组件没有 ts 类型定义，为避免干扰，可在代码中 ignore。
 - 在使用 Vant 组件之前，请先阅读[原生小程序混合开发](https://developer.tuya.com/cn/miniapp/panels/framework/mixed-development)和[智能小程序社区生态兼容](https://developer.tuya.com/cn/miniapp/guide/compatible)。
+- Vant 组件的 iconfont 地址为阿里 cdn，使用时请在 IoT 平台添加`https://at.alicdn.com` 静态资源白名单。
