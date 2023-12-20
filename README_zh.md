@@ -33,6 +33,7 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/12 | [分享](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share) |<img src="./qrCode/share.png" width="100" height="100">|
 | 2023/12 | [地图](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map) |<img src="./qrCode/map.png" width="100" height="100">|
 
+
 #### 面板小程序
 
 | time    | 文章               |  二维码 |
@@ -42,6 +43,7 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/12 | [地图](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap) |<img src="./qrCode/rayMap.png" width="100" height="100"> |
 | 2023/12 | [视频](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo) |<img src="./qrCode/rayVideo.png" width="100" height="100"> |
 | 2023/12 | [页面容器](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView) |<img src="./qrCode/rayWebView.png" width="100" height="100"> |
+| 2023/12 | [兼容微信生态](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX) |<img src="./qrCode/rayWx.png" width="100" height="100"> |
 
 
 ### 相关链接

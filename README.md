@@ -37,6 +37,7 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/12 | [Map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap) |<img src="./qrCode/rayMap.png" width="100" height="100"> |
 | 2023/12 | [Video](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo) |<img src="./qrCode/rayVideo.png" width="100" height="100"> |
 | 2023/12 | [WebView](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView) |<img src="./qrCode/rayWebView.png" width="100" height="100"> |
+| 2023/12 | [Compatible with wechat ecology](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX) |<img src="./qrCode/rayWx.png" width="100" height="100"> |
 
 ### Link
 
