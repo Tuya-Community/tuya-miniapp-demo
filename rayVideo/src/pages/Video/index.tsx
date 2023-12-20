@@ -97,7 +97,7 @@ class Index extends Component {
 	setRate = (e) => {
 		this.videoContext.playbackRate(e.value);
 	};
-  seek = () => {
+	seek = () => {
     this.videoContext.seek(getRandomNumberMin())
   }
 	render() {
@@ -186,7 +186,7 @@ class Index extends Component {
 						</Label>
 					</RadioGroup>
 				</View>
-        <View className={styles["item"]}>
+				<View className={styles["item"]}>
 					<Button onClick={this.seek} type="primary">
 						随机跳转一个位置
 					</Button>
