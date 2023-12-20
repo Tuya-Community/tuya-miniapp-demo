@@ -1,0 +1,21 @@
+export default Render({
+  async draw(path) {
+    let self = this
+    let myCanvas = await getCanvasById('myCanvas')
+    const ctx = myCanvas.getContext('2d')
+    myCanvas.width = 100
+    myCanvas.height = 100
+    const img = myCanvas.createImage()
+
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0, 100, 100)
+      self.callMethod('returnImageData', ctx.getImageData(0, 0, 100, 100))
+    }
+    img.crossOrigin = 'anonymous'
+    img.src = path
+    img.onerror = (e) => {
+      console.log('onerror')
+      console.log('rjs image error', e, e.message)
+    }
+  },
+})
