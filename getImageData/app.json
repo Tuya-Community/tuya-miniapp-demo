@@ -3,6 +3,7 @@
   "pages": [
     "pages/index/index",
     "pages/page1/index",
-    "pages/page2/index"
+    "pages/page2/index",
+    "pages/cropImage/index"
   ]
 }
