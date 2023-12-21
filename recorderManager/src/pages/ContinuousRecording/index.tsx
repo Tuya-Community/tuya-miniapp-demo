@@ -3,14 +3,22 @@ import {
 	View,
 	getRecorderManager,
 	onRecordingEvent,
+	offRecordingEvent,
 	authorize,
 } from "@ray-js/ray";
-import React, { FC, useRef } from "react";
+import React, { FC, useRef, useEffect } from "react";
 import styles from "./index.module.less";
 
 const Home: FC = () => {
 	const recorder = useRef();
-
+	useEffect(() => {
+		// 在组件挂载时执行的代码
+		return () => {
+			offRecordingEvent((res) => {
+				console.log("offRecordingEvent ==>", res);
+			});
+		};
+	}, []);
 	const start = () => {
 		authorize({
 			scope: "scope.record",
