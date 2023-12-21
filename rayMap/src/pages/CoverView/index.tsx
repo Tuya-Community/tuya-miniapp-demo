@@ -1,4 +1,11 @@
-import { View, Map, Button, nativeDisabled, showModal } from "@ray-js/ray";
+import {
+	View,
+	Map,
+	CoverView,
+	nativeDisabled,
+	showModal,
+	Slider,
+} from "@ray-js/ray";
 import React, { Component } from "react";
 import imageMarker from "../../assets/marker.png";
 import styles from "./index.module.less";
@@ -60,21 +67,19 @@ class Index extends Component {
 			},
 		],
 	};
-	openModal = () => {
-		nativeDisabled(true);
-		showModal({
-			title: "弹窗标题",
-			content: "弹窗内容",
-			complete: function () {
-				nativeDisabled(false);
-			},
-		});
-	};
+
 	render() {
 		const { latitude, longitude, scale, markers } = this.state;
 		return (
 			<>
 				<View className={styles["container"]}>
+					<View className={styles["cover-map"]}>
+						覆盖在map上我的手势会被原生劫持
+						<Slider></Slider>
+					</View>
+					<CoverView className={styles["cover-view"]}>
+						覆盖在map上我的手势不会被劫持<Slider></Slider>
+					</CoverView>
 					<Map
 						id="myMap"
 						className={styles["myMap"]}
@@ -83,10 +88,6 @@ class Index extends Component {
 						scale={scale}
 						markers={markers}
 					/>
-
-					<Button onClick={this.openModal} type="primary">
-						显示Modal
-					</Button>
 				</View>
 			</>
 		);

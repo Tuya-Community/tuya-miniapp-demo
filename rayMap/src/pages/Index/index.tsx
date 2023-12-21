@@ -60,6 +60,15 @@ const Home: FC = () => {
 			>
 				弹窗
 			</Button>
+			<Button
+				type="primary"
+				className={styles.btn}
+				onClick={() => {
+					router.push("/coverView");
+				}}
+			>
+				CoverView
+			</Button>
 		</View>
 	);
 };

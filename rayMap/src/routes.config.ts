@@ -29,4 +29,8 @@ export const routes: Routes = [
 		route: "/dialog",
 		path: "/pages/Dialog/index",
 	},
+	{
+		route: "/coverView",
+		path: "/pages/CoverView/index",
+	},
 ];
