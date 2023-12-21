@@ -12,6 +12,8 @@ const loop = true;
 const playbackRate = 2; // 播放速度。范围 0.5-2.0，默认为 1。（Android 需要 6 及以上版本）
 const AUDIO_PATH =
 	"https://images.tuyacn.com/rms-static/cf60cb10-9f19-11ee-8cd8-b117287658f4-1703064369729.mp3?tyName=1.mp3";
+const AUDIO_PATH2 =
+	"https://images.tuyacn.com/rms-static/4681f900-9fa4-11ee-af19-cfa45f6de59e-1703123840144.mp3?tyName=2.mp3";
 const Index: FC = () => {
 	const audioContext = useRef(null);
 	const [audioStatus, setAudioStatus] = useState<string>("");
@@ -62,11 +64,25 @@ const Index: FC = () => {
 					autoplay: autoplay,
 					startTime: startTime,
 					loop: loop,
-					volume: Math.random(),
+					volume: 1,
 					playbackRate: playbackRate,
 				})}
 			>
-				播放 play
+				播放音乐1 play
+			</Button>
+			<Button
+				type="primary"
+				className={styles.btn}
+				onClick={operation("play", {
+					src: AUDIO_PATH2,
+					autoplay: autoplay,
+					startTime: startTime,
+					loop: loop,
+					volume: 1,
+					playbackRate: playbackRate,
+				})}
+			>
+				播放音乐2 play
 			</Button>
 			<Button
 				type="primary"
@@ -97,9 +113,7 @@ const Index: FC = () => {
 				<View className={styles.item}>autoplay: {"" + autoplay}</View>
 				<View className={styles.item}>startTime: {"" + startTime}</View>
 				<View className={styles.item}>loop: {"" + loop}</View>
-				<View className={styles.playbackRate}>
-					playbackRate: {"" + playbackRate}
-				</View>
+				<View className={styles.item}>playbackRate: {"" + playbackRate}</View>
 			</View>
 		</View>
 	);
