@@ -78,7 +78,7 @@ class Index extends Component {
 				self.mapCtx.addMarkers({
 					markers: [
 						{
-							id: Date.now(),
+							id: +Date.now(), // 类型 number
 							callout: {
 								content: Date.now(),
 							},

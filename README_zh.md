@@ -45,6 +45,7 @@ English[](README.md) | [简体中文](README_zh.md)
 | 2023/12 | [页面容器](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView) |<img src="./qrCode/rayWebView.png" width="100" height="100"> |
 | 2023/12 | [兼容微信生态](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX) |<img src="./qrCode/rayWx.png" width="100" height="100"> |
 | 2023/12 | [音频](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAudio) |<img src="./qrCode/rayAudio.png" width="100" height="100"> |
+| 2023/12 | [图片相关Api](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayPicApi) |<img src="./qrCode/rayPicApi.png" width="100" height="100"> |
 
 
 ### 相关链接

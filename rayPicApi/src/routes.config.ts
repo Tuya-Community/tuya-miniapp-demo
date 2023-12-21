@@ -13,4 +13,8 @@ export const routes: Routes = [
 		route: "/chooseMedia",
 		path: "/pages/ChooseMedia/index",
 	},
+	{
+		route: "/chooseCropImage",
+		path: "/pages/ChooseCropImage/index",
+	},
 ];

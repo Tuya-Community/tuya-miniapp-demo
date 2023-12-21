@@ -24,6 +24,15 @@ const Home: FC = () => {
 			>
 				chooseMedia
 			</Button>
+			<Button
+				type="primary"
+				className={styles.btn}
+				onClick={() => {
+					router.push("/chooseCropImage");
+				}}
+			>
+				ChooseCropImage
+			</Button>
 		</View>
 	);
 };
