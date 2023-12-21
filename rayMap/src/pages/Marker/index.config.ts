@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "缩放",
+	navigationBarTitleText: "标记点",
 };
