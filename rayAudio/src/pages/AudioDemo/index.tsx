@@ -6,7 +6,7 @@ import styles from "./index.module.less";
 
 // const autoplay = getRandomBoolean();
 const autoplay = true;
-const startTime = getRandomNumberMin();
+// const startTime = getRandomNumberMin();
 // const loop = getRandomBoolean()
 const loop = true;
 const playbackRate = 2; // 播放速度。范围 0.5-2.0，默认为 1。（Android 需要 6 及以上版本）
@@ -17,6 +17,7 @@ const AUDIO_PATH2 =
 const Index: FC = () => {
 	const audioContext = useRef(null);
 	const [audioStatus, setAudioStatus] = useState<string>("");
+	const [startTime, setStartTime] = useState<number>(0);
 
 	useEffect(() => {
 		audioContext.current = createInnerAudioContext({
@@ -37,9 +38,18 @@ const Index: FC = () => {
 	}, []);
 
 	const operation =
-		(ops: "play" | "pause" | "stop" | "resume" | "seek", params?: object) =>
+		(
+			ops: "play" | "pause" | "stop" | "resume" | "seek",
+			params?: {
+				startTime?: number;
+				[key: string]: any; // 其他不固定的参数，类型为任意值
+			}
+		) =>
 		() => {
 			console.log("operation params", params);
+			if (ops === "play") {
+				setStartTime(params.startTime);
+			}
 			setAudioStatus(ops);
 			audioContext.current[ops]({
 				...params,
@@ -62,7 +72,7 @@ const Index: FC = () => {
 				onClick={operation("play", {
 					src: AUDIO_PATH,
 					autoplay: autoplay,
-					startTime: startTime,
+					startTime: getRandomNumberMin(),
 					loop: loop,
 					volume: 1,
 					playbackRate: playbackRate,
@@ -76,7 +86,7 @@ const Index: FC = () => {
 				onClick={operation("play", {
 					src: AUDIO_PATH2,
 					autoplay: autoplay,
-					startTime: startTime,
+					startTime: getRandomNumberMin(),
 					loop: loop,
 					volume: 1,
 					playbackRate: playbackRate,
