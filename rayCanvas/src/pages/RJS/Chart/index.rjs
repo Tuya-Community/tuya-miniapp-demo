@@ -1,0 +1,10 @@
+// @/components/chart/index.rjs
+ 
+export default Render({
+  // module.exports = Render({
+  getDOMByRJS() {
+    getCanvasById('chart', this).then((res) => {
+      console.log('组件中的rjs: getDOMByRJS', res);
+    });
+  },
+});

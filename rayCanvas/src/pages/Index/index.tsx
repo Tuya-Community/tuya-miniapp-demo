@@ -1,0 +1,22 @@
+import { Button, View, router } from "@ray-js/ray";
+import React, { FC } from "react";
+
+import styles from "./index.module.less";
+
+const Home: FC = () => {
+	return (
+		<View className={styles["container"]}>
+			<Button type="primary" className={styles.btn}>
+				lottie
+			</Button>
+			<Button type="primary" className={styles.btn}>
+				Uchart
+			</Button>
+			<Button type="primary" className={styles.btn}>
+				F2
+			</Button>
+		</View>
+	);
+};
+
+export default Home;

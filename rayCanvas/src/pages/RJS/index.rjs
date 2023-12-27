@@ -1,0 +1,17 @@
+// page/index.rjs
+// render js 只能获取 canvas 节点
+const LOG_PREFIX = '页面中的rjs: ';
+ 
+export default Render({
+  // module.exports = Render({
+  document: null,
+  x: 111,
+  getDOMByRJS() {
+    return getCanvasById('chart', this).then((chart) => {
+      console.log(LOG_PREFIX, 'getDOMByRJS 1', chart);
+    });
+  },
+  getDocument() {
+    console.log(LOG_PREFIX, 'getDocument', this.document);
+  },
+});
