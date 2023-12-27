@@ -1,0 +1,9 @@
+.pageContainer {
+  padding: 16px;
+}
+swiper {
+  height: 500px;
+}
+.swiper-item {
+  height: 500px;
+}

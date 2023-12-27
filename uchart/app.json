@@ -25,7 +25,8 @@
     "pages/board/index",
     "pages/funnel/index",
     "pages/word/index",
-    "pages/mix/index"
+    "pages/mix/index",
+    "pages/gesture/index"
   ],
   "window": {
     "backgroundColor": "#ffffff"

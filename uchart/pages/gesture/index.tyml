@@ -1,0 +1,29 @@
+<view>disableScroll: {{disableScroll}}</view>
+<view>isMoving: {{isMoving}}</view>
+<swiper indicator-dots="{{true}}" catch:touchmove="itemstart">
+  <block ty:for="{{[1,2,3]}}" ty:key="*this">
+    <swiper-item>
+      <view catch:touchmove="itemstart" style="height:100px; background:#ff0000">我捕获了touchmove</view>
+      <scroll-view
+        catch:touchstart="touchStart"
+        catch:touchend="touchEnd"
+        catch:touchmove="touchMove"
+        catch:touchcancel="touchCancel"
+        class="swiper-item" scroll-y="{{true}}">
+        <canvas
+          ty:if="{{item === 2}}"
+          canvas-id="pageCanvas1"
+          style="width: 350px; height: 300px; margin-bottom:16px;"
+          disable-scroll="{{disableScroll}}"
+          bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"
+        ></canvas>
+        <block ty:for="30">
+          <view style="height:100px; background:#937dc2"></view>
+          <view style="height:100px; background:#c689c6"></view>
+          <view style="height:100px; background:#e8a0bf"></view>
+          <view style="height:100px; background:#fcc5c0"></view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>
