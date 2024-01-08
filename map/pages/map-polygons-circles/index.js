@@ -5,7 +5,7 @@ const markers = [
     latitude: 39.908775,
     longitude: 116.406315,
     name: '王府井',
-    iconPath: '/assets/images/marker.png',
+    iconPath: '/assets/marker.png',
     callout: {
       content: '王府井',
       color: '#ffffff',
@@ -21,7 +21,7 @@ const markers = [
     latitude: 39.927761,
     longitude: 116.391467,
     name: '北海公园',
-    iconPath: '/assets/images/marker.png',
+    iconPath: '/assets/marker.png',
     callout: {
       content: '北海公园北海公园北海公园北海公园北海公园北海公园北海公园北海公园北海公园',
       color: '#ff0000',
@@ -37,7 +37,7 @@ const markers = [
     latitude: 39.918203,
     longitude: 116.396923,
     name: '故宫',
-    iconPath: '/assets/images/marker.png',
+    iconPath: '/assets/marker.png',
     callout: {
       content: '故宫',
       color: '#ffffff',
