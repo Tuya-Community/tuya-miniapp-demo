@@ -1,3 +1,4 @@
+import { generateUniqueFourDigitNumber } from '../../utils'
 const markers = [
   {
     id: 1,
@@ -66,12 +67,13 @@ Page({
     self.mapCtx.getCenterLocation({
       success: function (res) {
         console.log('getCenterLocation success', res)
+        const id = generateUniqueFourDigitNumber() // 安卓要求id为number 且不大于2^32
         self.mapCtx.addMarkers({
           markers: [
             {
-              id: Date.now(),
+              id: id,
               callout: {
-                content: Date.now(),
+                content: id,
               },
               ...res,
               iconPath: '/assets/marker.png',
