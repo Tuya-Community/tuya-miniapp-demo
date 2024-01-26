@@ -18,36 +18,205 @@ English[](README.md) | [简体中文](README_zh.md)
 
 - 请使用智能生活App扫码体验
 
-#### 原生小程序
+#### 原生小程序示例项目
 
-| time    | 文章               | 二维码                                                            |
-|---------| ------------------ |----------------------------------------------------------------|
-| 2023/11 | [适配刘海屏](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     | <img src="./qrCode/iOS.png" width="100" height="100">          |
-| 2023/11 | [canvas 涂抹，画板，F2，lottie，RJS最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) | <img src="./qrCode/canvas.png" width="100" height="100">       |
-| 2023/11 | [页面跳转和拦截](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | <img src="./qrCode/navigator.png" width="100" height="100">    |
-| 2023/11 | [滚动穿透问题最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | <img src="./qrCode/scroll.png" width="100" height="100">       |
-| 2023/11 | [icon的多种实现方式](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) | <img src="./qrCode/icon.png" width="100" height="100">         |
-| 2023/11 | [slot 的多场景应用-最佳实践](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | <img src="./qrCode/slot.png" width="100" height="100">         |
-| 2023/11 | [图表](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) | <img src="./qrCode/uchart.png" width="100" height="100">       |
-| 2023/11 | [获取图片像素点](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) | <img src="./qrCode/getImageData.png" width="100" height="100"> |
-| 2023/12 | [分享](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share) | <img src="./qrCode/share.png" width="100" height="100">        |
-| 2023/12 | [地图](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map) | <img src="./qrCode/map.png" width="100" height="100">          |
-| 2024/01 | [有赞组件小程序](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/vant-weapp)| <img src="./qrCode/vant-weapp.png" width="100" height="100">   |
+<table>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation">适配刘海屏</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/iOS.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas">canvas 涂抹，画板，F2，lottie，RJS最佳实践</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/canvas.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/page-navigator">页面跳转和拦截</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/navigator.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll">滚动穿透问题最佳实践</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/scroll.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon">icon 的多种实现方式</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/icon.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot">slot 的多场景应用-最佳实践</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/slot.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart">图表</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/uchart.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData">获取图片像素点</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/getImageData.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share">分享</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/share.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map">地图</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/map.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/01</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/vant-weapp">有赞组件小程序</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/vant-weapp.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+</table>
 
+#### 面板小程序示例项目
 
-#### 面板小程序
-
-| time    | 文章               |  二维码 |
-| ------- | ------------------ | --- |
-| 2023/12 | [recorderManager录音](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager) |<img src="./qrCode/recorder.png" width="100" height="100"> |
-| 2023/12 | [系统相机](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayCamera) |<img src="./qrCode/rayCamera.png" width="100" height="100"> |
-| 2023/12 | [地图](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap) |<img src="./qrCode/rayMap.png" width="100" height="100"> |
-| 2023/12 | [视频](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo) |<img src="./qrCode/rayVideo.png" width="100" height="100"> |
-| 2023/12 | [页面容器](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView) |<img src="./qrCode/rayWebView.png" width="100" height="100"> |
-| 2023/12 | [兼容微信生态](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX) |<img src="./qrCode/rayWx.png" width="100" height="100"> |
-| 2023/12 | [音频](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAudio) |<img src="./qrCode/rayAudio.png" width="100" height="100"> |
-| 2023/12 | [图片相关Api](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayPicApi) |<img src="./qrCode/rayPicApi.png" width="100" height="100"> |
-
+<table>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager">recorderManager 录音</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/recorder.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayCamera">系统相机</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayCamera.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap">地图</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayMap.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo">视频</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayVideo.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView">页面容器</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayWebView.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX">兼容微信生态</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayWx.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAudio">音频</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayAudio.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayPicApi">图片相关 Api</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayPicApi.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+</table>
 
 ### 相关链接
 

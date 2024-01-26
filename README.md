@@ -11,36 +11,208 @@ English[](README.md) | [简体中文](README_zh.md)
 - Install [Tuya MiniApp Tools](https://developer.tuya.com/cn/miniapp/devtools/download) and enjoy the fun of miniApp development!
 
 ### Samples
+
 - Please use Smart Life app to scan code for experience
 
-#### MiniApp
+#### Smart MiniApp Sample Projects
 
-| time    | article                                                                                                                      | qrCode                                                         |
-| ------- |------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)        | <img src="./qrCode/iOS.png" width="100" height="100">          |
-| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) | <img src="./qrCode/canvas.png" width="100" height="100">       |
-| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll)                      | <img src="./qrCode/navigator.png" width="100" height="100">    |
-| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll)  | <img src="./qrCode/scroll.png" width="100" height="100">       |
-| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon)                    | <img src="./qrCode/icon.png" width="100" height="100">         |
-| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot)      | <img src="./qrCode/slot.png" width="100" height="100">         |
-| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart)                                              | <img src="./qrCode/uchart.png" width="100" height="100">       |
-| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData)                                 | <img src="./qrCode/getImageData.png" width="100" height="100"> |
-| 2023/12 | [Share](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share)                                           | <img src="./qrCode/share.png" width="100" height="100">        |
-| 2023/12 | [Map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map)                                                   | <img src="./qrCode/map.png" width="100" height="100">          |
-| 2024/01 | [Vant Weapp](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/vant-weapp)                                     | <img src="./qrCode/vant-weapp.png" width="100" height="100">   |
+<table>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation">Adapt to iPhone navigation</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/iOS.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas">Canvas smear,drawing board,lottie,F2,best practice</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/canvas.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/page-navigator">Navigator and intercept</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/navigator.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll">Best practices for rolling through problems</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/scroll.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon">Multiple implementations of ICONS</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/icon.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot">Slot multi-scenario application - Best practice</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/slot.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart">Chart</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/uchart.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/11</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData">getImageData</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/getImageData.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share">Share</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/share.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map">Map</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/map.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/01</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/vant-weapp">Vant Weapp</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/vant-weapp.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+</table>
 
+#### Panel MiniApp Sample Projects
 
-#### Panel MiniApp
-| time    | article                        |  qrCode |
-| ------- | ------------------------------ |  ------  |
-| 2023/12 | [RecorderManager](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager) |<img src="./qrCode/recorder.png" width="100" height="100"> |
-| 2023/12 | [Camera](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayCamera) |<img src="./qrCode/rayCamera.png" width="100" height="100"> |
-| 2023/12 | [Map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap) |<img src="./qrCode/rayMap.png" width="100" height="100"> |
-| 2023/12 | [Video](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo) |<img src="./qrCode/rayVideo.png" width="100" height="100"> |
-| 2023/12 | [WebView](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView) |<img src="./qrCode/rayWebView.png" width="100" height="100"> |
-| 2023/12 | [Compatible with wechat ecology](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX) |<img src="./qrCode/rayWx.png" width="100" height="100"> |
-| 2023/12 | [Audio](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAudio) |<img src="./qrCode/rayAudio.png" width="100" height="100"> |
-| 2023/12 | [Picture Api](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayPicApi) |<img src="./qrCode/rayPicApi.png" width="100" height="100"> |
+<table>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/recorderManager">RecorderManager</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/recorder.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayCamera">Camera</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayCamera.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMap">Map</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayMap.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayVideo">Video</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayVideo.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayWebView">WebView</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayWebView.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayUseWX">Compatible with wechat ecology</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayWx.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAudio">Audio</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayAudio.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayPicApi">Picture Api</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayPicApi.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+</table>
 
 ### Link
 
