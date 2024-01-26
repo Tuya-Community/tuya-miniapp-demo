@@ -1,0 +1,16 @@
+{
+  "name": "vant-weapp",
+  "version": "0.0.0",
+  "description": "有赞小程序组件 - 涂鸦智能小程序 demo",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "zx scripts/build.mjs"
+  },
+  "dependencies": {
+    "@vant/weapp": "^1.11.4"
+  },
+  "devDependencies": {
+    "zx": "^7.2.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-row": "@vant/weapp/lib/row/index",
+    "van-col": "@vant/weapp/lib/col/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

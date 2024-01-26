@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "@vant/weapp/lib/button/index",
+    "van-uploader": "@vant/weapp/lib/uploader/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

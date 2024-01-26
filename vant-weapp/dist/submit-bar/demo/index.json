@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tag": "@vant/weapp/lib/tag/index",
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "van-submit-bar": "@vant/weapp/lib/submit-bar/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-radio": "@vant/weapp/lib/radio/index",
+    "van-radio-group": "@vant/weapp/lib/radio-group/index",
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-cell-group": "@vant/weapp/lib/cell-group/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

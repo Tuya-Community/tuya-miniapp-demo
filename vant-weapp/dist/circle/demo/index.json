@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-circle": "@vant/weapp/lib/circle/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

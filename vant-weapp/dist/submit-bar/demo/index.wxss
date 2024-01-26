@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.van-submit-bar{position:relative!important}.edit-address{color:#1989fa}.submit-tag{margin-left:15px}

@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-grid": "@vant/weapp/lib/grid/index",
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "van-grid-item": "@vant/weapp/lib/grid-item/index",
+    "van-count-down": "@vant/weapp/lib/count-down/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-divider": "@vant/weapp/lib/divider/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

@@ -6,4 +6,6 @@ yarn.lock
 .DS_Store
 .vscode
 *.lock
-npm-debug.log 
+npm-debug.log
+!vant-weapp/dist
+dist-next/

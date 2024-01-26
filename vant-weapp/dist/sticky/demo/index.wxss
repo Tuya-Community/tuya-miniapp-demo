@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.van-button{margin-left:16px}.sticky-container{background-color:#fff;height:150px;position:relative;z-index:-1}

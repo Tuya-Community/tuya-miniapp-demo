@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-field": "@vant/weapp/lib/field/index",
+    "van-button": "@vant/weapp/lib/button/index",
+    "van-cell-group": "@vant/weapp/lib/cell-group/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

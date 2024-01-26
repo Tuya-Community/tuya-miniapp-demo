@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-rate": "@vant/weapp/lib/rate/index",
+    "van-field": "@vant/weapp/lib/field/index",
+    "van-slider": "@vant/weapp/lib/slider/index",
+    "van-button": "@vant/weapp/lib/button/index",
+    "van-cell-group": "@vant/weapp/lib/cell-group/index",
+    "van-config-provider": "@vant/weapp/lib/config-provider/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

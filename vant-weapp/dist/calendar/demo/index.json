@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-calendar": "@vant/weapp/lib/calendar/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

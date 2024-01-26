@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-rate": "@vant/weapp/lib/rate/index",
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

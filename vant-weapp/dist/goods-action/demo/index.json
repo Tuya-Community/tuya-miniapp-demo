@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "van-goods-action": "@vant/weapp/lib/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/lib/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/lib/goods-action-button/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

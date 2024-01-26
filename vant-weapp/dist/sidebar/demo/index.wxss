@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.custom-sidebar{margin-left:16px}.demo-sidebar{background-color:#fff}.demo-sidebar-title{color:#969799;font-size:14px;font-weight:400;margin-bottom:16px}

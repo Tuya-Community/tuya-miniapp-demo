@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-row": "@vant/weapp/lib/row/index",
+    "van-col": "@vant/weapp/lib/col/index",
+    "van-image": "@vant/weapp/lib/image/index",
+    "van-loading": "@vant/weapp/lib/loading/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}
