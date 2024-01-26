@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.custom-image .van-empty__image{height:90px;width:90px}.bottom-button{height:40px;width:160px}

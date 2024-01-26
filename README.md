@@ -15,18 +15,19 @@ English[](README.md) | [简体中文](README_zh.md)
 
 #### MiniApp
 
-| time    | article                        |  qrCode |
-| ------- | ------------------------------ | ------ |
-| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)     |<img src="./qrCode/iOS.png" width="100" height="100">  |
-| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) |<img src="./qrCode/canvas.png" width="100" height="100"> |
-| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) |<img src="./qrCode/navigator.png" width="100" height="100"> |
-| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll) | <img src="./qrCode/scroll.png" width="100" height="100">|
-| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon) |<img src="./qrCode/icon.png" width="100" height="100"> |
-| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot) | <img src="./qrCode/slot.png" width="100" height="100">|
-| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart) |<img src="./qrCode/uchart.png" width="100" height="100"> |
-| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData) |<img src="./qrCode/getImageData.png" width="100" height="100"> |
-| 2023/12 | [Share](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share) |<img src="./qrCode/share.png" width="100" height="100">|
-| 2023/12 | [Map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map) |<img src="./qrCode/map.png" width="100" height="100">|
+| time    | article                                                                                                                      | qrCode                                                         |
+| ------- |------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+| 2023/11 | [Adapt to iPhone navigation](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/adapt-iphone-navigation)        | <img src="./qrCode/iOS.png" width="100" height="100">          |
+| 2023/11 | [Canvas smear,drawing board,lottie,F2,best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvas) | <img src="./qrCode/canvas.png" width="100" height="100">       |
+| 2023/11 | [Navigator and intercept](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll)                      | <img src="./qrCode/navigator.png" width="100" height="100">    |
+| 2023/11 | [Best practices for rolling through problems](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/popup-scroll)  | <img src="./qrCode/scroll.png" width="100" height="100">       |
+| 2023/11 | [Multiple implementations of ICONS](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/icon)                    | <img src="./qrCode/icon.png" width="100" height="100">         |
+| 2023/11 | [Slot multi-scenario application - Best practice](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/slot)      | <img src="./qrCode/slot.png" width="100" height="100">         |
+| 2023/11 | [Chart](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/uchart)                                              | <img src="./qrCode/uchart.png" width="100" height="100">       |
+| 2023/11 | [getImageData](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/getImageData)                                 | <img src="./qrCode/getImageData.png" width="100" height="100"> |
+| 2023/12 | [Share](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/api-share)                                           | <img src="./qrCode/share.png" width="100" height="100">        |
+| 2023/12 | [Map](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/map)                                                   | <img src="./qrCode/map.png" width="100" height="100">          |
+| 2024/01 | [Vant Weapp](https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/vant-weapp)                                     | <img src="./qrCode/vant-weapp.png" width="100" height="100">   |
 
 
 #### Panel MiniApp

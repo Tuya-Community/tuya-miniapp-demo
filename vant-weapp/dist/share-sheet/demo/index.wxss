@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.container{background-color:#fff;height:100vh}.button,.tag{margin-right:5px}.van-card__footer{margin-top:5px}

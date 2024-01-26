@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-area": "@vant/weapp/lib/area/index",
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

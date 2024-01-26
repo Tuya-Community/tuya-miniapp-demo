@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-progress": "@vant/weapp/lib/progress/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

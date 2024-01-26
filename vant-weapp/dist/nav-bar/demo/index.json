@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-icon": "@vant/weapp/lib/icon/index",
+    "van-nav-bar": "@vant/weapp/lib/nav-bar/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

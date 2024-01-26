@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "van-stepper": "@vant/weapp/lib/stepper/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

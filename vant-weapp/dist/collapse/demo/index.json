@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-collapse": "@vant/weapp/lib/collapse/index",
+    "van-collapse-item": "@vant/weapp/lib/collapse-item/index",
+    "van-toast": "@vant/weapp/lib/toast/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

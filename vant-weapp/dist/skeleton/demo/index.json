@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-switch": "@vant/weapp/lib/switch/index",
+    "van-skeleton": "@vant/weapp/lib/skeleton/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

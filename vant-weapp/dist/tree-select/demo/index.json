@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-image": "@vant/weapp/lib/image/index",
+    "van-tree-select": "@vant/weapp/lib/tree-select/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

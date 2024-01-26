@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-field": "@vant/weapp/lib/field/index",
+    "van-popup": "@vant/weapp/lib/popup/index",
+    "van-cascader": "@vant/weapp/lib/cascader/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

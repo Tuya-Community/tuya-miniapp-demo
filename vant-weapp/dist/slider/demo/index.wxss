@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.slider{margin:0 15px 30px}.custom-button{background-color:#ee0a24;border-radius:100px;color:#fff;font-size:10px;line-height:18px;text-align:center;width:26px}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-card": "@vant/weapp/lib/card/index",
+    "van-tag": "@vant/weapp/lib/tag/index",
+    "van-button": "@vant/weapp/lib/button/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

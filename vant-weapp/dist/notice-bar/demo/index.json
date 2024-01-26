@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-notice-bar": "@vant/weapp/lib/notice-bar/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-slider": "@vant/weapp/lib/slider/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

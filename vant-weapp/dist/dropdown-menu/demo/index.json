@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-switch": "@vant/weapp/lib/switch/index",
+    "van-button": "@vant/weapp/lib/button/index",
+    "van-dropdown-item": "@vant/weapp/lib/dropdown-item/index",
+    "van-dropdown-menu": "@vant/weapp/lib/dropdown-menu/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

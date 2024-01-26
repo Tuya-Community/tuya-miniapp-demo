@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.demo-swipe-cell{-webkit-user-select:none;user-select:none}.van-swipe-cell__left,.van-swipe-cell__right{background-color:#ee0a24;color:#fff;display:inline-block;font-size:15px;height:44px;line-height:44px;text-align:center;width:65px}

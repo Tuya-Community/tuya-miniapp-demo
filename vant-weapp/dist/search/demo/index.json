@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-search": "@vant/weapp/lib/search/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

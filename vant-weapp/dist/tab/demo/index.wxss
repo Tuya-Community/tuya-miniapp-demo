@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.content{background-color:#fff}.content,.content-2{padding:20px}.right-nav{background-color:#fff;line-height:44px!important;padding:0 10px}.special-tab{transition:all .25s ease-in-out}.special-tab-active{font-size:1.05em!important}

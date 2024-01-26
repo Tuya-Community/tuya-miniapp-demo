@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-dialog": "@vant/weapp/lib/dialog/index",
+    "van-notify": "@vant/weapp/lib/notify/index",
+    "van-swipe-cell": "@vant/weapp/lib/swipe-cell/index",
+    "van-cell-group": "@vant/weapp/lib/cell-group/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

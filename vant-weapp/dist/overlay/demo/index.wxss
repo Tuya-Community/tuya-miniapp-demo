@@ -1,0 +1,1 @@
+@import '../../common/index.wxss';.wrapper{align-items:center;display:flex;height:100%;justify-content:center}.block{background-color:#fff;height:120px;width:120px}

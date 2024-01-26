@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-button": "@vant/weapp/lib/button/index",
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-checkbox": "@vant/weapp/lib/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/lib/checkbox-group/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

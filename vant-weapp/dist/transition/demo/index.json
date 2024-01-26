@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/lib/cell/index",
+    "van-transition": "@vant/weapp/lib/transition/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}

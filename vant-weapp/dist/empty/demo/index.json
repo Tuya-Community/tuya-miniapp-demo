@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-tab": "@vant/weapp/lib/tab/index",
+    "van-tabs": "@vant/weapp/lib/tabs/index",
+    "van-empty": "@vant/weapp/lib/empty/index",
+    "van-button": "@vant/weapp/lib/button/index",
+    "demo-block": "../../../components/demo-block/index"
+  }
+}
