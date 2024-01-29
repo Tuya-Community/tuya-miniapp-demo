@@ -81,7 +81,7 @@ Page({
         latitude: 39.927761,
         longitude: 116.391467,
         color: '#800080', // 紫色
-        fillColor: '#cccccccc',
+        fillColor: '#cccccc',
         radius: 1000,
         strokeWidth: 2,
       },
