@@ -17,7 +17,7 @@ class Index extends Component {
 				latitude: 39.927761,
 				longitude: 116.391467,
 				color: "#800080", // 紫色
-				fillColor: "#cccccccc",
+				fillColor: "#cccccc", // 如果需要透明度可使用 类似 #ff000050
 				radius: 1000,
 				strokeWidth: 2,
 			},
