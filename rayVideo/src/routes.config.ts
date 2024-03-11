@@ -13,4 +13,8 @@ export const routes: Routes = [
 		route: "/nativeVideo",
 		path: "/pages/NativeVideo/index",
 	},
+  {
+		route: "/saveVideo",
+		path: "/pages/SaveVideo/index",
+	},
 ];
