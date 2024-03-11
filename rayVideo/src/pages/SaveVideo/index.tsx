@@ -5,6 +5,7 @@ import {
   saveVideoToPhotosAlbum,
   downloadFile,
   chooseMedia,
+  showToast,
 } from '@ray-js/ray'
 
 import React, { Component } from 'react'
@@ -63,9 +64,15 @@ class Index extends Component {
       src: tempFilePath,
       success: (res) => {
         console.log('视频信息:', res)
+        showToast({
+          title: 'getVideoInfo success,在console中查看',
+        })
       },
       fail: (e) => {
         console.log('getVideoInfo fail', e)
+        showToast({
+          title: 'getVideoInfo fail,在console中查看',
+        })
       },
       complete: () => {
         console.log(console.log('getVideoInfo complete'))
@@ -82,9 +89,15 @@ class Index extends Component {
           src: res.tempFiles[0].tempFilePath,
           success: (res) => {
             console.log('视频信息:', res)
+            showToast({
+              title: 'getVideoInfo success,在console中查看',
+            })
           },
           fail: (e) => {
             console.log('getVideoInfo fail', e)
+            showToast({
+              title: 'getVideoInfo fail,在console中查看',
+            })
           },
           complete: () => {
             console.log(console.log('getVideoInfo complete'))
@@ -106,9 +119,15 @@ class Index extends Component {
       filePath: tempFilePath,
       success: () => {
         console.log('saveVideoToPhotosAlbum success')
+        showToast({
+          title: 'saveVideoToPhotosAlbum success',
+        })
       },
       fail: (e) => {
         console.log('saveVideoToPhotosAlbum fail', e)
+        showToast({
+          title: 'saveVideoToPhotosAlbum fail',
+        })
       },
       complete: () => {
         console.log(console.log('saveVideoToPhotosAlbum complete'))
