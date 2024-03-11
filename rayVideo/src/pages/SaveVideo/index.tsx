@@ -12,8 +12,7 @@ import React, { Component } from 'react'
 import styles from './index.module.less'
 // 视频地址
 const VIDEO_SRC =
-  'https://images.tuyacn.com/rms-static/784fddc0-95fc-11ec-9792-55a737b91552-1645767212444.mp4?tyName=%E4%B8%AD%E6%96%87-2022%E6%B6%82%E9%B8%A6%E5%93%81%E7%89%8C%E5%AE%A3%E4%BC%A0%E7%89%87-01.04.mp4'
-
+  'https://images.tuyacn.com/rms-static/a4264da0-df77-11ee-8f06-49ae7b2fadcf-1710141544314.mp4?tyName=video.mp4'
 type State = {
   progress: number
 }
@@ -30,36 +29,36 @@ class Index extends Component {
     statusCode: number
     profile: any
   }> => {
+    let self = this
     return new Promise((resolve) => {
       const DownloadFileTask = downloadFile({
         url: src,
-        success(res) {
+        success: (res) => {
           console.log('downloadFile success', res)
           resolve(res)
         },
-        failure(e) {
+        failure: (e) => {
           console.log('downloadFile fail', e)
         },
-        complete() {
-          this.setState({
+        complete: () => {
+          console.log('downloadFile complete')
+          self.setState({
             progress: 0,
           })
         },
       })
-      
       // 监听下载进度变化
       DownloadFileTask.onProgressUpdate((res) => {
         this.setState({
           progress: res.progress.toFixed(2),
         })
       })
-      console.log('DownloadFileTask', DownloadFileTask)
+      // console.log('DownloadFileTask', DownloadFileTask)
     })
   }
 
   getNetworkVideoInfo = async () => {
     let { tempFilePath } = await this.downloadVideo(VIDEO_SRC)
-    console.log('tempFilePath', tempFilePath)
     getVideoInfo({
       src: tempFilePath,
       success: (res) => {
@@ -73,10 +72,38 @@ class Index extends Component {
       },
     })
   }
-  getLocalVideoInfo = () => {}
-  saveNetworkVideo = () => {
+  getLocalVideoInfo = () => {
+    chooseMedia({
+      count: 1,
+      mediaType: 'video',
+      success: (res) => {
+        console.log('chooseMedia success', res, res.tempFiles[0])
+        getVideoInfo({
+          src: res.tempFiles[0].tempFilePath,
+          success: (res) => {
+            console.log('视频信息:', res)
+          },
+          fail: (e) => {
+            console.log('getVideoInfo fail', e)
+          },
+          complete: () => {
+            console.log(console.log('getVideoInfo complete'))
+          },
+        })
+      },
+      fail: (err) => {
+        console.log('chooseMedia fail', err)
+      },
+      complete: () => {
+        console.log('chooseMedia complete')
+      },
+    })
+  }
+  saveNetworkVideo = async () => {
+    let { tempFilePath } = await this.downloadVideo(VIDEO_SRC)
+    console.log('tempFilePath', tempFilePath)
     saveVideoToPhotosAlbum({
-      filePath: VIDEO_SRC,
+      filePath: tempFilePath,
       success: () => {
         console.log('saveVideoToPhotosAlbum success')
       },
@@ -88,7 +115,6 @@ class Index extends Component {
       },
     })
   }
-  saveLocalVideo = () => {}
   render() {
     return (
       <View className={styles['container']}>
@@ -101,9 +127,6 @@ class Index extends Component {
         </Button>
         <Button type="primary" className={styles['btn']} onClick={this.saveNetworkVideo}>
           保存网络视频到相册
-        </Button>
-        <Button type="primary" className={styles['btn']} onClick={this.saveLocalVideo}>
-          保存本地视频到相册
         </Button>
       </View>
     )
