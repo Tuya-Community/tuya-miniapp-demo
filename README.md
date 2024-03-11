@@ -14,7 +14,7 @@ English[](README.md) | [简体中文](README_zh.md)
 
 - Please use Smart Life app to scan code for experience
 
-#### Smart MiniApp Sample Projects
+#### Native Miniapp Sample Projects
 
 <table>
 <tr>
@@ -129,7 +129,7 @@ English[](README.md) | [简体中文](README_zh.md)
 </tr>
 </table>
 
-#### Panel MiniApp Sample Projects
+#### Ray-Based Miniapp Sample Projects
 
 <table>
 <tr>

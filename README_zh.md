@@ -133,7 +133,7 @@ English[](README.md) | [简体中文](README_zh.md)
 </tr>
 </table>
 
-#### 面板小程序示例项目
+#### Ray示例项目
 
 <table>
 <tr>
