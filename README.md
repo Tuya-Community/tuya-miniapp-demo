@@ -212,6 +212,16 @@ English[](README.md) | [简体中文](README_zh.md)
     </details>
     </td>
 </tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAuthorize">Authorize</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayAuthorize.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
 </table>
 
 ### Link

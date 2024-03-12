@@ -216,6 +216,16 @@ English[](README.md) | [简体中文](README_zh.md)
     </details>
     </td>
 </tr>
+<tr>
+    <td>2023/12</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAuthorize">授权相关</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayAuthorize.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
 </table>
 
 ### 相关链接
