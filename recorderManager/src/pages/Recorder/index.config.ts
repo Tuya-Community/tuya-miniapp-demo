@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "录音",
-};
+  navigationBarTitleText: '录音',
+}

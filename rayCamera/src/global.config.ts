@@ -1,9 +1,9 @@
-import { GlobalConfig } from "@ray-js/types";
+import { GlobalConfig } from '@ray-js/types'
 
-export const tuya = {};
+export const tuya = {}
 
 const globalConfig: GlobalConfig = {
-	basename: "",
-};
+  basename: '',
+}
 
-export default globalConfig;
+export default globalConfig

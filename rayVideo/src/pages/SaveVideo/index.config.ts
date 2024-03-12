@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "保存视频",
-};
+  navigationBarTitleText: '保存视频',
+}

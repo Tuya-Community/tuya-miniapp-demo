@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "滚动",
-};
+  navigationBarTitleText: '滚动',
+}
