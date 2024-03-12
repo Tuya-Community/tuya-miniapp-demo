@@ -1,0 +1,12 @@
+{
+  "name": "tuya-miniapp-demo",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "git@github.com:Tuya-Community/tuya-miniapp-demo.git",
+  "scripts": {
+    "lint": "prettier --write ./*/src/"
+  },
+  "devDpendencies": {
+    "prettier": "^3.2.5"
+  }
+}

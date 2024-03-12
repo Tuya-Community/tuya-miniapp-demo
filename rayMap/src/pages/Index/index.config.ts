@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "Ray地图",
-};
+  navigationBarTitleText: 'Ray地图',
+}

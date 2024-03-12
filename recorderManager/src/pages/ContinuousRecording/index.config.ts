@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "持续录音",
-};
+  navigationBarTitleText: '持续录音',
+}

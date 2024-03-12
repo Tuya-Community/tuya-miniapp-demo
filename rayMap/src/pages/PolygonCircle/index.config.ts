@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "图形",
-};
+  navigationBarTitleText: '图形',
+}

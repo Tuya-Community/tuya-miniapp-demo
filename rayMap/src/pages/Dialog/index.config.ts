@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "弹窗",
-};
+  navigationBarTitleText: '弹窗',
+}

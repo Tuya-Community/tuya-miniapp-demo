@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "标记点",
-};
+  navigationBarTitleText: '标记点',
+}

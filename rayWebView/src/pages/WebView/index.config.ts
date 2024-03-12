@@ -1,3 +1,3 @@
 export default {
-	navigationBarTitleText: "WebView",
-};
+  navigationBarTitleText: 'WebView',
+}
