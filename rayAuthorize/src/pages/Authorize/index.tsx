@@ -35,6 +35,7 @@ const Home: FC = () => {
 
   return (
     <View className={styles['container']}>
+      <View>Tips: 调用结果需本地查看查看console</View>
       <Button type="primary" className={styles.btn} onClick={getAuthorize('scope.bluetooth')}>
         蓝牙权限
       </Button>
