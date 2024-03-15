@@ -12,7 +12,8 @@ English[](README.md) | [简体中文](README_zh.md)
 
 ### Samples
 
-- Please use Smart Life app to scan code for experience
+- Please use Smart Life app to scan code for experience.
+- Please note that some information retrieval APIs may not be directly displayed in code previews; you can run them locally and check using `console.log`.
 
 #### Native Miniapp Sample Projects
 
