@@ -6,7 +6,7 @@
   "devMode": "ray",
   "miniprogramRoot": "./dist/tuya",
   "dependencies": {
-    "BaseKit": "3.0.0",
+    "BaseKit": "3.4.1",
     "MiniKit": "3.0.0",
     "BizKit": "3.0.1"
   },
