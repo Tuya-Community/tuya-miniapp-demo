@@ -16,7 +16,8 @@ English[](README.md) | [简体中文](README_zh.md)
 
 ### 目录
 
-- 请使用智能生活App扫码体验
+- 请使用智能生活 App 扫码体验
+- 需要注意，有些信息获取类的 API 在代码预览中无法直接展示，你可以在本地运行并通过 console.log 查看。
 
 #### 原生小程序示例项目
 
@@ -133,7 +134,7 @@ English[](README.md) | [简体中文](README_zh.md)
 </tr>
 </table>
 
-#### Ray示例项目
+#### Ray 示例项目
 
 <table>
 <tr>
@@ -217,12 +218,22 @@ English[](README.md) | [简体中文](README_zh.md)
     </td>
 </tr>
 <tr>
-    <td>2023/12</td>
+    <td>2024/3</td>
     <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAuthorize">授权相关</a></td>
     <td>
     <details>
     <summary>点击扫码预览</summary>
     <img src="./qrCode/rayAuthorize.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/3</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayFileSystemManager">文件系统管理</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/rayFileSystemManager.png" width="100" height="100">
     </details>
     </td>
 </tr>

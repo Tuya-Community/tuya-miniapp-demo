@@ -12,7 +12,8 @@ English[](README.md) | [简体中文](README_zh.md)
 
 ### Samples
 
-- Please use Smart Life app to scan code for experience
+- Please use Smart Life app to scan code for experience.
+- Please note that some information retrieval APIs may not be directly displayed in code previews; you can run them locally and check using `console.log`.
 
 #### Native Miniapp Sample Projects
 
@@ -213,12 +214,22 @@ English[](README.md) | [简体中文](README_zh.md)
     </td>
 </tr>
 <tr>
-    <td>2023/12</td>
+    <td>2024/3</td>
     <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayAuthorize">Authorize</a></td>
     <td>
     <details>
     <summary>Scan QRCode</summary>
     <img src="./qrCode/rayAuthorize.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/3</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayFileSystemManager">FileSystemManager</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rayFileSystemManager.png" width="100" height="100">
     </details>
     </td>
 </tr>
