@@ -1,4 +1,4 @@
-import { Button, View, createInnerAudioContext } from '@ray-js/ray'
+import { Button, View, createInnerAudioContext, getAudioFileDuration } from '@ray-js/ray'
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { getRandomNumberMin, getRandomBoolean } from '../../utils/index'
 

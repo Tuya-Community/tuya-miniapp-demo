@@ -22,7 +22,6 @@ const Home: FC = () => {
         })
         // @ts-ignore
         recorder.current.start({
-          period: 100,
           success(res) {
             console.log('start ==>', res)
           },
@@ -37,7 +36,6 @@ const Home: FC = () => {
   const pause = () => {
     // @ts-ignore
     recorder.current.pause({
-      period: 100,
       success(res) {
         console.log('pause ==>', res)
       },
@@ -50,7 +48,6 @@ const Home: FC = () => {
   const resume = () => {
     // @ts-ignore
     recorder.current.resume({
-      period: 100,
       success(res) {
         console.log('resume ==>', res)
       },
