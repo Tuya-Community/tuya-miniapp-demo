@@ -13,4 +13,8 @@ export const routes: Routes = [
     route: '/webViewError',
     path: '/pages/WebViewError/index',
   },
+  {
+    route: '/openInnerH5',
+    path: '/pages/OpenInnerH5/index',
+  },
 ]
