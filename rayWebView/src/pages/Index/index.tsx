@@ -13,7 +13,7 @@ const Home: FC = () => {
           router.push('/webView')
         }}
       >
-        webView
+        WebView
       </Button>
       <Button
         type="primary"
@@ -22,7 +22,16 @@ const Home: FC = () => {
           router.push('/webViewError')
         }}
       >
-        webView Error
+        WebView Error
+      </Button>
+      <Button
+        type="primary"
+        className={styles.btn}
+        onClick={() => {
+          router.push('/openInnerH5')
+        }}
+      >
+        OpenInnerH5
       </Button>
     </View>
   )
