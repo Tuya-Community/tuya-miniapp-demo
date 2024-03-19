@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: 'OpenInnerH5',
+  navigationBarTitleText: 'WebView',
 }
