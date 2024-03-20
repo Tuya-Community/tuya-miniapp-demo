@@ -1,0 +1,5 @@
+<view class="container">
+  <view>小程序 B 收到的小程序 A 发来的数据: {{message}}</view>
+  <button bindtap="close" class="btn" type="primary">关闭小程序</button>
+  <button bindtap="back" class="btn" type="primary">返回上一个小程序小程序</button>
+</view>
