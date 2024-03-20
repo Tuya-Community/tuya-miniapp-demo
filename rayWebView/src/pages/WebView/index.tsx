@@ -1,4 +1,4 @@
-import { View, WebView, nativeDisabled, createWebviewContext } from '@ray-js/ray'
+import { View, WebView, showToast, createWebviewContext } from '@ray-js/ray'
 import React, { FC, useEffect } from 'react'
 
 import styles from './index.module.less'
@@ -8,6 +8,9 @@ const Home: FC = () => {
 
   const handleEvent = (type: string) => (e) => {
     console.log('webview event' + type + ' ' + e.detail.msg)
+    showToast({
+      title: type + (e?.detail?.msg || ''),
+    })
   }
   const postToWebview = () => {
     webviewContext.current.postMessage({
@@ -17,7 +20,6 @@ const Home: FC = () => {
     })
   }
   useEffect(() => {
-    nativeDisabled(true)
     webviewContext.current = createWebviewContext('w1')
     Id = setInterval(postToWebview, 5000)
     return () => {

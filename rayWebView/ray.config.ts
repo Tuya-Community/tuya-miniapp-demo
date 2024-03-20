@@ -1,5 +1,5 @@
-import { RayConfig } from '@ray-js/types';
+import { RayConfig } from '@ray-js/types'
 
-const config: RayConfig = {};
+const config: RayConfig = {}
 
-export default config;
+export default config
