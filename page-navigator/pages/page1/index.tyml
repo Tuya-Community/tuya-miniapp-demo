@@ -1,5 +1,5 @@
 <view class="head">
- page1
+  page1
 </view>
 <view class="section">component</view>
 <view class="container">
@@ -10,4 +10,11 @@
 <view class="section">api</view>
 <view class="container">
   <button type="primary" bindtap="tynavigateTo">navigate to page2</button>
+</view>
+
+<view class="section">跳转小程序</view>
+
+<view class="container">
+  <view>B 返回数据：{{message}}</view>
+  <button type="primary" bindtap="tynavigateToMiniApp">navigate to MiniApp</button>
 </view>
