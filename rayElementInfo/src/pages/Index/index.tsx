@@ -4,21 +4,19 @@ import {
   createSelectorQuery,
   getElementById,
   getBoundingClientRect,
-  showToast,
+  RichText,
 } from '@ray-js/ray'
 import React, { FC } from 'react'
 import styles from './index.module.less'
 
 const Home: FC = () => {
+  const [elementInfo, setElementInfo] = React.useState<string>('')
   const getViewInfo = async () => {
     try {
       const element = await getElementById('box')
       if (element) {
         const rect = await getBoundingClientRect(element)
-        console.log('Rect:', rect)
-        showToast({
-          title: '请在console查看调用结果',
-        })
+        setElementInfo(JSON.stringify(rect, null, 4))
       }
     } catch (error) {
       console.error('Error getting size:', error)
@@ -31,10 +29,7 @@ const Home: FC = () => {
       query.select('#box').boundingClientRect()
       query.selectViewport().scrollOffset()
       query.exec(function (res) {
-        console.log('res', res)
-        showToast({
-          title: '请在console查看调用结果',
-        })
+        setElementInfo(JSON.stringify(res, null, 4))
       })
     } catch (error) {
       console.error('Error getting size:', error)
@@ -43,6 +38,7 @@ const Home: FC = () => {
 
   return (
     <View className={styles['container']}>
+      <RichText nodes={`<pre> ${elementInfo} </pre>`}></RichText>
       <View style={{ height: '150px', background: '#06113c', width: '100%' }}></View>
       <View style={{ height: '150px', background: '#ff8c32', width: '100%' }}></View>
       <View style={{ height: '150px', background: '#dddddd', width: '100%' }}></View>
@@ -51,7 +47,7 @@ const Home: FC = () => {
       <View style={{ height: '150px', background: '#ff8c32', width: '100%' }}></View>
       <View style={{ height: '150px', background: '#dddddd', width: '100%' }}></View>
       <View style={{ height: '150px', background: '#eeeeee', width: '100%' }}></View>
-      <View className={styles['box']} id="box">
+      <View className={styles['box']} id="box" data-desc="this is a box">
         box
       </View>
       <Button type="primary" className={styles.btn1} onClick={getViewInfo} size="mini">
