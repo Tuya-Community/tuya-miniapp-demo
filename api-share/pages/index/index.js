@@ -93,4 +93,20 @@ Page({
       contentType: 'web',
     })
   },
+
+  getShareChannel() {
+    ty.getShareChannelList({
+      success(shareChannelList) {
+        ty.showToast({
+          title: '请在console中查看分享渠道列表',
+        })
+        console.log('getShareChannelList success', shareChannelList)
+      },
+      fail(err) {
+        ty.showToast({
+          title: '获取分享渠道列表失败',
+        })
+      },
+    })
+  },
 })
