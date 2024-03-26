@@ -1,6 +1,5 @@
 export default {
   en: {
-    device_info: 'Device Information',
     syncTimerTask: 'syncTimerTask',
     addTimer: 'addTimer',
     updateTimer: 'updateTimer',
@@ -13,7 +12,6 @@ export default {
     please_input_status: 'Please input status(true or false)',
   },
   zh: {
-    device_info: '设备信息',
     syncTimerTask: '获取定时任务列表',
     addTimer: '添加定时',
     updateTimer: '更新定时',

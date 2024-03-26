@@ -1,5 +1,5 @@
-import { Button, View, Text, Input, changeDebugMode } from '@ray-js/ray'
-import React, { useCallback } from 'react'
+import { Button, View, Text, Input, changeDebugMode, getLaunchOptionsSync, openDeviceInfo, openDeviceDetailPage } from '@ray-js/ray'
+import React, { useCallback, useState } from 'react'
 import { groupInfoApiList } from '@/constants'
 
 import styles from './index.module.less'
@@ -7,7 +7,12 @@ import Strings from '@/i18n'
 
 const functionNameStyle = `color: blue; font-size: 18px`
 const resultStyle = `color: green; font-size: 16px`
+
+const {
+  query: { deviceId, groupId },
+} = getLaunchOptionsSync()
 function GroupInfo() {
+  const [isGroup] = useState(!!groupId)
   const inputValue = {}
   const _onInput = useCallback((event) => {
     const {
@@ -19,6 +24,23 @@ function GroupInfo() {
     console.log(event)
     inputValue[key] = value
   }, [])
+
+  if (!isGroup) {
+    return (
+      <View className={styles['container']}>
+        <Button
+          type="primary"
+          onClick={() => {
+            openDeviceDetailPage({
+              deviceId,
+            });
+          }}
+        >
+          {Strings.getLang('to_create_group')}
+        </Button>
+      </View>
+    )
+  }
 
   return (
     <View className={styles['container']}>

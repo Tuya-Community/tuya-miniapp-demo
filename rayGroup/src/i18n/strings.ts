@@ -11,6 +11,7 @@ export default {
     getGroupDeviceNum: 'getGroupDeviceNum',
     getDeviceNumWithDpCode: 'getDeviceNumWithDpCode',
     please_input_dp_code: 'Please input dp code',
+    to_create_group: 'To create group first',
 
     openVConsole: 'open vConsole'
   },
@@ -26,7 +27,7 @@ export default {
     getGroupDeviceNum: '获取群组下的设备数量',
     getDeviceNumWithDpCode: '获取群组下支持上述dpCode的设备列表',
     please_input_dp_code: '请输入要查询的 dp code',
-
+    to_create_group: "请先创建群组",
     openVConsole: '打开 vConsole'
 
   },
