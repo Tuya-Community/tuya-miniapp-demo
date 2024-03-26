@@ -1,0 +1,26 @@
+export default {
+  en: {
+    device_info: 'Device Information',
+    getDeviceInfo: 'getDeviceInfo',
+    publishCommands: 'publishCommands',
+    publishDpsWithPipeType: 'publishDpsWithPipeType',
+    getDeviceWifiActivatorStatus: 'getDeviceWifiActivatorStatus',
+    getDeviceOnlineType: 'getDeviceOnlineType',
+    getShareDeviceInfo: 'getShareDeviceInfo',
+    getDeviceListByDevIds: 'getDeviceListByDevIds',
+    please_input_shared_dev_id: 'Please input shared device id',
+    openVConsole: 'open vConsole',
+  },
+  zh: {
+    device_info: '设备信息',
+    getDeviceInfo: '获取设备信息',
+    publishCommands: '下发设备指令',
+    publishDpsWithPipeType: '指定通道下发 dp',
+    getDeviceWifiActivatorStatus: '获取连云激活状态',
+    getDeviceOnlineType: '获取设备在线类型',
+    getShareDeviceInfo: '获取设备分享信息',
+    getDeviceListByDevIds: '通过设备id批量获取设备信息',
+    please_input_shared_dev_id: '请输入分享设备的 ID',
+    openVConsole: '打开 vConsole',
+  },
+}
