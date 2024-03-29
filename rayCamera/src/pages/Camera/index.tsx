@@ -21,7 +21,7 @@ class Index extends Component {
     flash: 'auto',
     src: '',
   }
-  cameraCtx: any
+  cameraCtx: CameraContext
   componentDidMount(): void {
     this.cameraCtx = createCameraContext()
   }
