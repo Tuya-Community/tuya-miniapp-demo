@@ -9,3 +9,11 @@ yarn.lock
 npm-debug.log
 !vant-weapp/dist
 dist-next/
+
+
+*/typings/tuya-miniapp__BaseKit
+*/typings/tuya-miniapp__BizKit
+*/typings/tuya-miniapp__DeviceKit
+*/typings/tuya-miniapp__MiniKit
+*/typings/tuya-miniapp__MediaKit
+*/typings/tuya_miniapp__api-types
