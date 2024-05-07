@@ -128,6 +128,16 @@ English[](README.md) | [简体中文](README_zh.md)
     </details>
     </td>
 </tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rjsPlugin">Rjs Plugin</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/rjsPlugin.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
 </table>
 
 #### Ray-Based Miniapp Sample Projects
