@@ -1,0 +1,13 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@antv/f2": "^3",
+    "echarts": "^5.5.0"
+  }
+}

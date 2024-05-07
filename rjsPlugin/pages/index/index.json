@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Home",
+  "usingComponents": {
+    "f2": "../../components/f2/index"
+  }
+}
