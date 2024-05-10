@@ -5,6 +5,7 @@ import {
   showToast,
   env,
   getFileSystemManager,
+  saveImageToPhotosAlbum,
   authorize,
 } from '@ray-js/ray'
 import React, { FC } from 'react'
@@ -128,7 +129,7 @@ const Index: FC = () => {
       },
       complete: () => {},
     })
-    ty.saveImageToPhotosAlbum({
+    saveImageToPhotosAlbum({
       filePath: filePathImage,
       success: () => {
         showToast({
