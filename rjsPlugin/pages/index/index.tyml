@@ -1,0 +1,8 @@
+<canvas class="f1" canvas-id="f1" style="width: 750rpx; height: 422rpx" />
+
+<view style="margin: 10px;">
+<button bind:tap="up" type="primary">更新数据</button>
+</view>
+
+
+<f2 />
