@@ -2,13 +2,13 @@
   "projectname": "文件系统_Ray",
   "i18n": false,
   "description": "文件系统",
-  "baseversion": "2.15.5",
+  "baseversion": "2.18.4",
   "devMode": "ray",
   "miniprogramRoot": "./dist/tuya",
   "dependencies": {
-    "BaseKit": "3.0.0",
-    "MiniKit": "3.0.0",
-    "BizKit": "3.0.1"
+    "BaseKit": "3.11.3",
+    "MiniKit": "3.9.8",
+    "BizKit": "4.5.1"
   },
   "compileType": "miniprogram"
 }
