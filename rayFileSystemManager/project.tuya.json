@@ -7,8 +7,8 @@
   "miniprogramRoot": "./dist/tuya",
   "dependencies": {
     "BaseKit": "3.11.3",
-    "MiniKit": "3.0.0",
-    "BizKit": "3.0.1"
+    "MiniKit": "3.9.8",
+    "BizKit": "4.5.1"
   },
   "compileType": "miniprogram"
 }
