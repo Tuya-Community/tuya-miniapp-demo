@@ -138,6 +138,17 @@ English[](README.md) | [简体中文](README_zh.md)
     </details>
     </td>
 </tr>
+
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/canvasLibExample">Canvas graphics library example</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/canvasLib.png" width="100" height="100">
+    </details>
+    </td>
+</tr>
 </table>
 
 #### Ray-Based Miniapp Sample Projects
