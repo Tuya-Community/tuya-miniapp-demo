@@ -11,3 +11,5 @@
 - 当提示`"IDE 暂时还没实现 API xxx，请使用真机预览，或者真机调试`时，请使用真机进行调试。
 
 ## 相关链接
+
+- [文档地址](https://developer.tuya.com/cn/miniapp/develop/ray/api/group/info/getGroupInfo)
