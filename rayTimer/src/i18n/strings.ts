@@ -10,6 +10,8 @@ export default {
     openVConsole: 'open vConsole',
     please_input_category: 'Please input category',
     please_input_status: 'Please input status(true or false)',
+    click_to_trigger: 'click to trigger',
+
   },
   zh: {
     syncTimerTask: '获取定时任务列表',
@@ -21,6 +23,7 @@ export default {
     please_input_a_timer_id: '请输入定时任务 ID',
     openVConsole: '打开 vConsole',
     please_input_category: '请输入类型，为空则加载全部',
+    click_to_trigger: '点我触发',
     please_input_status: '请输入状态（true/false）'
 
 

@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 32rpx;
 }
 
 .btn {
@@ -11,9 +12,51 @@
 .item {
   display: flex;
   flex-direction: column;
-
-  margin: 6px;
-  padding: 0 16px;
+  margin: 8px;
+  border-radius: 16px;
   width: 100%;
+  // align-items: center;
+  padding: 16px 16px;
 
+  background-color: #FFF;
+
+  .title {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+    .title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #555;
+    }
+    .input {
+      flex: 1;
+      margin-right: 8px;
+    }
+
+    .btn {
+      width: 80px;
+    }
+    .mulInput {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      .title {
+        flex: 1;
+      }
+
+      input {
+        flex: 2
+      }
+    }
+  }
 }

@@ -68,9 +68,9 @@ function DeviceInfo() {
                   item.keys?.map((key) => {
                     values[key] = inputValue[`${item.functionName}_${key}`]
                   })
-                  const data = await item.func(values)
                   console.group(item.functionName)
                   console.log(`%c 调用方法: ${item.functionName}`, functionNameStyle)
+                  const data = await item.func(values)
                   console.log(`%c 得到结果: `, resultStyle)
                   console.log(data)
                   console.groupEnd()

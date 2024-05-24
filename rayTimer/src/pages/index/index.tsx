@@ -1,21 +1,12 @@
-import {
-  Button,
-  View,
-  Text,
-  Input,
-  changeDebugMode,
-  onTimerUpdate,
-  offTimerUpdate,
-  env,
-} from '@ray-js/ray'
-import React, { useCallback, useEffect } from 'react'
-import { timerApiList } from '@/constants'
+import { Button, View, Text, Input, changeDebugMode } from '@ray-js/ray'
+import React, { useCallback, useDebugValue } from 'react'
 import Strings from '@/i18n'
+import { timerApiList } from '@/constants'
 import styles from './index.module.less'
 
 const functionNameStyle = `color: blue; font-size: 18px`
 const resultStyle = `color: green; font-size: 16px`
-function GroupInfo() {
+function DeviceInfo() {
   const inputValue = {}
   const _onInput = useCallback((event) => {
     const {
@@ -26,17 +17,6 @@ function GroupInfo() {
     } = event
     console.log(event)
     inputValue[key] = value
-  }, [])
-
-  useEffect(() => {
-    onTimerUpdate((event) => {
-      console.log('onTimerUpdate', event)
-    })
-    return () => {
-      offTimerUpdate((event) => {
-        console.log('offTimerUpdate', event)
-      })
-    }
   }, [])
 
   return (
@@ -54,26 +34,31 @@ function GroupInfo() {
       {timerApiList.map((item) => {
         return (
           <View className={styles.item} key={item.title}>
-            {/* <Text>{Strings.getLang(item.functionName)}</Text> */}
-            {item.input &&
-              (item.keys ? (
-                item.keys.map((key, index) => {
-                  return (
-                    <Input
-                      key={`${item.functionName}_${key}`}
-                      onInput={_onInput}
-                      placeholder={item.placeholder[index]}
-                      data-key={`${item.functionName}_${key}`}
-                    />
-                  )
-                })
-              ) : (
-                <Input
-                  onInput={_onInput}
-                  placeholder={item.placeholder}
-                  data-key={item.functionName}
-                />
-              ))}
+            <Text className={styles.title}> {item.title}</Text>
+            <View className={styles.form}>
+              {item.input && <Text className={styles.title}>参数：</Text>}
+              {item.input &&
+                (item.keys ? (
+                  item.keys.map((key, index) => {
+                    return (
+                      <View className={styles.mulInput} key={`${item.functionName}_${key}`}>
+                        <Text className={styles.title}>{key}</Text>
+                        <Input
+                          onInput={_onInput}
+                          placeholder={item.placeholder[index]}
+                          data-key={`${item.functionName}_${key}`}
+                        />
+                      </View>
+                    )
+                  })
+                ) : (
+                  <Input
+                    onInput={_onInput}
+                    placeholder={item.placeholder}
+                    data-key={item.functionName}
+                  />
+                ))}
+            </View>
             <Button
               type="primary"
               className={styles.btn}
@@ -94,7 +79,7 @@ function GroupInfo() {
                 }
               }}
             >
-              {item.title}
+              {Strings.getLang('click_to_trigger')}
             </Button>
           </View>
         )
@@ -103,4 +88,4 @@ function GroupInfo() {
   )
 }
 
-export default GroupInfo
+export default DeviceInfo

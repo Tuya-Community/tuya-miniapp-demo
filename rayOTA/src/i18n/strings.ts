@@ -8,6 +8,8 @@ export default {
     onOtaCompleted: 'onOtaCompleted',
     openOTAUpgrade: 'openOTAUpgrade',
     openVConsole: 'open vConsole',
+    click_to_trigger: 'click to trigger',
+
   },
   zh: {
     device_info: '设备 OTA',
@@ -18,5 +20,7 @@ export default {
     onOtaCompleted: 'ota 升级完成监听',
     openOTAUpgrade: '打开 ota 升级页面',
     openVConsole: '打开 vConsole',
+    click_to_trigger: '点我触发',
+
   },
 }

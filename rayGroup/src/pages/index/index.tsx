@@ -21,7 +21,7 @@ function GroupInfo() {
       },
       detail: { value },
     } = event
-    console.log(event)
+
     inputValue[key] = value
   }, [])
 
@@ -57,38 +57,45 @@ function GroupInfo() {
       {groupInfoApiList.map((item) => {
         return (
           <View className={styles.item} key={item.title}>
-            {/* <Text>{Strings.getLang(item.functionName)}</Text> */}
-            {item.input &&
-              (item.keys ? (
-                item.keys.map((key, index) => {
-                  return (
-                    <Input
-                      key={`${item.functionName}_${key}`}
-                      onInput={_onInput}
-                      placeholder={item.placeholder[index]}
-                      data-key={`${item.functionName}_${key}`}
-                    />
-                  )
-                })
-              ) : (
-                <Input
-                  onInput={_onInput}
-                  placeholder={item.placeholder}
-                  data-key={item.functionName}
-                />
-              ))}
+            <Text className={styles.title}> {item.title}</Text>
+            <View className={styles.form}>
+              {item.input && <Text className={styles.title}>参数：</Text>}
+              {item.input &&
+                (item.keys ? (
+                  item.keys.map((key, index) => {
+                    return (
+                      <View className={styles.mulInput} key={`${item.functionName}_${key}`}>
+                        <Text className={styles.title}>{key}</Text>
+                        <Input
+                          onInput={_onInput}
+                          placeholder={item.placeholder[index]}
+                          data-key={`${item.functionName}_${key}`}
+                        />
+                      </View>
+                    )
+                  })
+                ) : (
+                  <Input
+                    onInput={_onInput}
+                    placeholder={item.placeholder}
+                    data-key={item.functionName}
+                  />
+                ))}
+            </View>
             <Button
               type="primary"
               className={styles.btn}
               onClick={async () => {
                 try {
+                  // const data = await item.func(inputValue[item.functionName])
                   const values = item.keys ? {} : inputValue[item.functionName]
                   item.keys?.map((key) => {
                     values[key] = inputValue[`${item.functionName}_${key}`]
-                  })
-                  const data = await item.func(values)
+                  })    
+                  
                   console.group(item.functionName)
                   console.log(`%c 调用方法: ${item.functionName}`, functionNameStyle)
+                  const data = await item.func(values)
                   console.log(`%c 得到结果: `, resultStyle)
                   console.log(data)
                   console.groupEnd()
@@ -97,7 +104,7 @@ function GroupInfo() {
                 }
               }}
             >
-              {item.title}
+              {Strings.getLang('click_to_trigger')}
             </Button>
           </View>
         )
