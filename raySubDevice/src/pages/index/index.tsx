@@ -15,7 +15,6 @@ function DeviceInfo() {
       },
       detail: { value },
     } = event
-
     inputValue[key] = value
   }, [])
 

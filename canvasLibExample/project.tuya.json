@@ -1,0 +1,14 @@
+{
+  "projectname": "RayCodeSample",
+  "i18n": false,
+  "description": "rayCanvasLibExample",
+  "baseversion": "2.12.18",
+  "devMode": "ray",
+  "miniprogramRoot": "./dist/tuya",
+  "dependencies": {
+    "BaseKit": "3.0.0",
+    "MiniKit": "3.0.0",
+    "BizKit": "3.0.1"
+  },
+  "compileType": "miniprogram"
+}

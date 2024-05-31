@@ -21,7 +21,6 @@ function GroupInfo() {
       },
       detail: { value },
     } = event
-
     inputValue[key] = value
   }, [])
 

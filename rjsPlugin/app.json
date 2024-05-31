@@ -1,0 +1,5 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": ["pages/index/index"],
+  usingPlugins: ['rjs://echarts', "rjs://@antv/f2"]
+}
