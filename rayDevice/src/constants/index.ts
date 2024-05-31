@@ -26,8 +26,6 @@ import Strings from '@/i18n'
 const {
   query: { deviceId, groupId },
 } = getLaunchOptionsSync()
-var cachedCondition = null,
-  cachedAction = null
 export const deviceInfoApiList = [
   {
     title: Strings.getLang('getDeviceInfo'),
@@ -157,22 +155,13 @@ export const deviceInfoApiList = [
   {
     title: Strings.getLang('getDeviceListByDevIds'),
     functionName: 'getDeviceListByDevIds',
-    func: () => {
+    input: true,
+    placeholder: Strings.getLang('please_input_dev_ids'),
+    func: (devIds) => {
       return new Promise((resolve, reject) => {
-        home.getCurrentHomeInfo({
-          success: ({ homeId }) => {
-            home.getDeviceIdList({
-              ownerId: Number(homeId),
-              success: ({ devIds }) => {
-                getDeviceListByDevIds({
-                  deviceIds: devIds,
-                  success: resolve,
-                  fail: reject,
-                })
-              },
-              fail: reject,
-            })
-          },
+        getDeviceListByDevIds({
+          deviceIds: devIds.split(','),
+          success: resolve,
           fail: reject,
         })
       })

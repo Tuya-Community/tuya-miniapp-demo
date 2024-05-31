@@ -32,7 +32,9 @@ export default {
     please_input_state: 'Please input state',
     dpTranslateAdvancedCapability: "dpTranslateAdvancedCapability",
     please_input_dp_id: 'Please input dp id',
-    please_input_dp_value: 'Please input dp value'
+    please_input_dp_value: 'Please input dp value',
+    please_input_dev_ids: 'Please input dev ids, multiple dev ids separated by commas',
+    test:'test'
   },
   zh: {
     device_info: '设备信息',
@@ -66,6 +68,8 @@ export default {
     please_input_state: '请输入状态',
     dpTranslateAdvancedCapability: "高级能力 dp 值转换",
     please_input_dp_id: '请输入 dp id',
-    please_input_dp_value: '请输入 dp value'
+    please_input_dp_value: '请输入 dp value',
+    please_input_dev_ids: '请输入设备 id 列表，多个设备 id 用英文逗号分隔',
+    test: '测试'
   },
 }
