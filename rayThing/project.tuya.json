@@ -1,0 +1,17 @@
+{
+  "projectname": "Ray Thing",
+  "i18n": false,
+  "description": "",
+  "baseversion": "2.18.0",
+  "devMode": "ray",
+  "miniprogramRoot": "./dist/tuya",
+  "dependencies": {
+    "BaseKit": "3.11.3",
+    "MiniKit": "3.9.8",
+    "BizKit": "4.5.1",
+    "DeviceKit": "4.5.1",
+    "HomeKit": "3.4.0"
+  },
+  "compileType": "miniprogram",
+  "remoteDebug": "mqtt"
+}

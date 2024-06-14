@@ -1,7 +1,7 @@
 {
   "projectname": "Ray Timer",
   "i18n": false,
-  "description": "",
+  "description": " 设备定时示例_Ray",
   "baseversion": "2.15.5",
   "devMode": "ray",
   "miniprogramRoot": "./dist/tuya",

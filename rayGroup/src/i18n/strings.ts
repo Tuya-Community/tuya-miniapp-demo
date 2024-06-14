@@ -12,8 +12,11 @@ export default {
     getDeviceNumWithDpCode: 'getDeviceNumWithDpCode',
     please_input_dp_code: 'Please input dp code',
     to_create_group: 'To create group first',
-
-    openVConsole: 'open vConsole'
+    click_to_trigger: 'click to trigger',
+    please_input_dp_value: 'Please input dp value',
+    please_input_correct_code_and_value: 'Please input correct code and value',
+    please_input_correct_cv: 'Please input correct code and value',
+    openVConsole: 'open vConsole',
   },
   zh: {
     group_info: '群组信息',
@@ -25,10 +28,13 @@ export default {
     please_input_value: '请输入上述键对应的值',
     getGroupDeviceList: '获取群组下的设备列表',
     getGroupDeviceNum: '获取群组下的设备数量',
-    getDeviceNumWithDpCode: '获取群组下支持上述dpCode的设备列表',
+    getDeviceNumWithDpCode: '获取群组下支持上述dpCode的设备数量',
     please_input_dp_code: '请输入要查询的 dp code',
-    to_create_group: "请先创建群组",
-    openVConsole: '打开 vConsole'
-
+    to_create_group: '请先创建群组',
+    openVConsole: '打开 vConsole',
+    click_to_trigger: '点我触发',
+    please_input_dp_value: '请输入 dp 值',
+    please_input_correct_code_and_value: '请输入正确的 dp code 和 dp value',
+    please_input_correct_cv: '请输入正确的 code 和 value',
   },
-};
+}

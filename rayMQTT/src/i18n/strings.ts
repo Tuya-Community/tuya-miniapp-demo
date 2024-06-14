@@ -1,0 +1,46 @@
+export default {
+  en: {
+    device_info: 'MQTT',
+    openVConsole: 'open vConsole',
+    please_input_shared_dev_id: 'Please input dev id',
+    registerMQTTDeviceListener: 'Register MQTT Device Listener',
+    unregisterMQTTDeviceListener: 'Unregister Device Listener',
+    registerMQTTProtocolListener: 'Register MQTT Protocol Listener',
+    unregisterMQTTProtocolListener: 'Unregister Protocol Listener',
+    registerTopicListListener: 'Register Topic List Listener',
+    unregisterTopicListListener: 'Unregister Topic List Listener',
+    onMqttMessageReceived: 'onMqttMessageReceived',
+    sendMqttMessage: 'Send Mqtt Message',
+    getMqttConnectState: 'getMqttConnectState',
+    onMqttConnectState: 'onMqttConnectState',
+    offMqttConnectState: 'offMqttConnectState',
+
+    please_input_device_id: 'Please input device id',
+    please_input_message: 'Please input message',
+    please_input_protocol: 'Please input protocol(Query format)',
+    click_to_trigger: 'Click to trigger',
+
+  },
+  zh: {
+    device_info: 'MQTT',
+    openVConsole: '打开 vConsole',
+    please_input_shared_dev_id: '请输入设备 ID',
+    registerMQTTDeviceListener: '注册 MQTT 设备监听器',
+    unregisterMQTTDeviceListener: '取消注册设备监听器',
+    registerMQTTProtocolListener: '注册 MQTT 协议监听器',
+    unregisterMQTTProtocolListener: '取消注册协议监听器',
+    registerTopicListListener: '注册 topic 列表监听器',
+    unregisterTopicListListener: '取消注册 topic 列表监听器',
+    onMqttMessageReceived: 'Mqtt 接收消息',
+    sendMqttMessage: '发送 Mqtt 消息',
+    getMqttConnectState: '获取 Mqtt 连接状态',
+    onMqttConnectState: 'Mqtt 连接状态监听',
+    offMqttConnectState: '取消 Mqtt 连接状态监听',
+
+    please_input_device_id: '请输入设备 ID',
+    please_input_message: '请输入消息（Query 格式）',
+    please_input_protocol: '请输入协议',
+    click_to_trigger: '点我触发',
+
+  },
+}

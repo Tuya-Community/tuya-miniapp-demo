@@ -1,7 +1,7 @@
 {
   "projectname": "Ray OTA",
   "i18n": false,
-  "description": "",
+  "description": "OTA_Ray",
   "baseversion": "2.17.3",
   "devMode": "ray",
   "miniprogramRoot": "./dist/tuya",

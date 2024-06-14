@@ -52,6 +52,7 @@ export const deviceInfoApiList = [
         onSubDeviceAdded((event) => {
           console.log('============onSubDeviceAdded', event)
         })
+        resolve(true)
       })
     },
   },
@@ -64,6 +65,7 @@ export const deviceInfoApiList = [
         onSubDeviceInfoUpdate((event) => {
           console.log('============onSubDeviceInfoUpdate', event)
         })
+        resolve(true)
       })
     },
   },
@@ -76,6 +78,7 @@ export const deviceInfoApiList = [
         onSubDeviceRemoved((event) => {
           console.log('============onSubDeviceRemoved', event)
         })
+        resolve(true)
       })
     },
   },
@@ -89,6 +92,7 @@ export const deviceInfoApiList = [
         onSubDeviceDpUpdate((event) => {
           console.log('============onSubDeviceDpUpdate', event)
         })
+        resolve(true)
       })
     },
   },

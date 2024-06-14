@@ -6,8 +6,9 @@ export default {
     onSubDeviceInfoUpdate: 'onSubDeviceInfoUpdate',
     onSubDeviceRemoved: 'onSubDeviceRemoved',
     onSubDeviceDpUpdate: 'onSubDeviceDpUpdate',
-    startGWActivation: "startGWActivation",
+    startGWActivation: 'startGWActivation',
     openVConsole: 'open vConsole',
+    click_to_trigger: 'click to trigger',
   },
   zh: {
     device_info: '子设备控制',
@@ -18,5 +19,6 @@ export default {
     onSubDeviceDpUpdate: '监听子设备dp变更事件',
     startGWActivation: '网关进入配网状态',
     openVConsole: '打开 vConsole',
+    click_to_trigger: '点我触发',
   },
 }
