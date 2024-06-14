@@ -11,6 +11,10 @@ export default {
     unregisterTopicListListener: 'Unregister Topic List Listener',
     onMqttMessageReceived: 'onMqttMessageReceived',
     sendMqttMessage: 'Send Mqtt Message',
+    getMqttConnectState: 'getMqttConnectState',
+    onMqttConnectState: 'onMqttConnectState',
+    offMqttConnectState: 'offMqttConnectState',
+
     please_input_device_id: 'Please input device id',
     please_input_message: 'Please input message',
     please_input_protocol: 'Please input protocol(Query format)',
@@ -29,6 +33,10 @@ export default {
     unregisterTopicListListener: '取消注册 topic 列表监听器',
     onMqttMessageReceived: 'Mqtt 接收消息',
     sendMqttMessage: '发送 Mqtt 消息',
+    getMqttConnectState: '获取 Mqtt 连接状态',
+    onMqttConnectState: 'Mqtt 连接状态监听',
+    offMqttConnectState: '取消 Mqtt 连接状态监听',
+
     please_input_device_id: '请输入设备 ID',
     please_input_message: '请输入消息（Query 格式）',
     please_input_protocol: '请输入协议',

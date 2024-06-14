@@ -9,6 +9,9 @@ import {
   unregisterMQTTProtocolListener,
   unregisterTopicListListener,
   sendMqttMessage,
+  getMqttConnectState,
+  onMqttConnectState,
+  offMqttConnectState,
 } from '@ray-js/ray'
 
 const {
@@ -153,6 +156,42 @@ export const deviceInfoApiList = [
           success: resolve,
           fail: reject,
         })
+      })
+    },
+  },
+  {
+    title: Strings.getLang('getMqttConnectState'),
+    functionName: 'getMqttConnectState',
+    func: () => {
+      return new Promise((resolve, reject) => {
+        getMqttConnectState({
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+  {
+    title: Strings.getLang('onMqttConnectState'),
+    functionName: 'onMqttConnectState',
+    func: () => {
+      return new Promise((resolve, reject) => {
+        onMqttConnectState(event => {
+          console.log('onMqttConnectState', event)
+        })
+        resolve(true)
+      })
+    },
+  },
+  {
+    title: Strings.getLang('offMqttConnectState'),
+    functionName: 'offMqttConnectState',
+    func: () => {
+      return new Promise((resolve, reject) => {
+        offMqttConnectState(event => {
+          console.log('offMqttConnectState', event)
+        })
+        resolve(true)
       })
     },
   },

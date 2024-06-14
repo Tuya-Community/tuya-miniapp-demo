@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@ray-js/cli": "latest",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "core-js": "^3.19.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "@ray-js/panel-sdk": "^1.10.1",
+    "@ray-js/ray": "latest",
+    "react-json-inspector": "^7.1.1",
+    "react-json-tree": "^0.18.0"
+  }
+}

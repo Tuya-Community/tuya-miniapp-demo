@@ -34,7 +34,17 @@ export default {
     please_input_dp_id: 'Please input dp id',
     please_input_dp_value: 'Please input dp value',
     please_input_dev_ids: 'Please input dev ids, multiple dev ids separated by commas',
-    test:'test'
+    syncDeviceInfo:'syncDeviceInfo',
+    resetFactory: 'resetFactory',
+
+    setDeviceProperty: 'setDeviceProperty',
+    getDeviceProperty: 'getDeviceProperty',
+    getRemoteRebootTimers: 'getRemoteRebootTimers',
+    validDeviceOnlineType: 'validDeviceOnlineType',
+    please_input_code: 'Please input code',
+    please_input_value: 'Please input value',
+    please_input_online_type: 'Please input online type',
+    params: 'Params:',
   },
   zh: {
     device_info: '设备信息',
@@ -70,6 +80,17 @@ export default {
     please_input_dp_id: '请输入 dp id',
     please_input_dp_value: '请输入 dp value',
     please_input_dev_ids: '请输入设备 id 列表，多个设备 id 用英文逗号分隔',
-    test: '测试'
+    test: '测试',
+    syncDeviceInfo: '同步设备信息',
+    resetFactory: '恢复出厂设置',
+
+    setDeviceProperty: '设置设备属性',
+    getDeviceProperty: '获取设备属性',
+    getRemoteRebootTimers: '获取远程重启定时器',
+    validDeviceOnlineType: '校验设备在线类型',
+    please_input_code: '请输入 code',
+    please_input_value: '请输入 value',
+    please_input_online_type: '请输入在线类型',
+    params: '参数：',
   },
 }

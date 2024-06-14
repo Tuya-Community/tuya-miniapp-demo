@@ -35,7 +35,7 @@ function DeviceInfo() {
           <View className={styles.item} key={item.title}>
             <Text className={styles.title}> {item.title}</Text>
             <View className={styles.form}>
-              {item.input && <Text className={styles.title}>参数：</Text>}
+              {item.input && <Text className={styles.title}>{Strings.getLang('params')}</Text>}
               {item.input &&
                 (item.keys ? (
                   item.keys.map((key, index) => {

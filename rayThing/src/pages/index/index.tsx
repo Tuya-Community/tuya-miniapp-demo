@@ -1,5 +1,5 @@
-import { Button, View, Text, Input, changeDebugMode } from '@ray-js/ray'
-import React, { useCallback, useDebugValue } from 'react'
+import { Button, View, Text, Input, changeDebugMode, setNavigationBarTitle } from '@ray-js/ray'
+import React, { useCallback, useDebugValue, useEffect } from 'react'
 import Strings from '@/i18n'
 import { deviceInfoApiList } from '@/constants'
 import styles from './index.module.less'
@@ -16,6 +16,12 @@ function DeviceInfo() {
       detail: { value },
     } = event
     inputValue[key] = value
+  }, [])
+
+  useEffect(() => {
+    setNavigationBarTitle({
+      title: Strings.getLang('device_thing'),
+    })
   }, [])
 
   return (
@@ -35,7 +41,7 @@ function DeviceInfo() {
           <View className={styles.item} key={item.title}>
             <Text className={styles.title}> {item.title}</Text>
             <View className={styles.form}>
-              {item.input && <Text className={styles.title}>参数：</Text>}
+              {item.input && <Text className={styles.title}>{Strings.getLang('params')}</Text>}
               {item.input &&
                 (item.keys ? (
                   item.keys.map((key, index) => {
@@ -69,13 +75,14 @@ function DeviceInfo() {
                   })
                   console.group(item.functionName)
                   console.log(`%c 调用方法: ${item.functionName}`, functionNameStyle)
+
                   const data = await item.func(values)
+
                   console.log(`%c 得到结果: `, resultStyle)
                   console.log(data)
                   console.groupEnd()
                 } catch (error) {
                   console.log('操作失败', error)
-                  console.groupEnd()
                 }
               }}
             >

@@ -17,9 +17,12 @@ import {
   removeDevice,
   removeShareDevice,
   renameDeviceName,
+  resetFactory,
   subscribeDeviceRemoved,
+  syncDeviceInfo,
   toggleDeviceOfflineReminder,
   unSubscribeDeviceRemoved,
+  validDeviceOnlineType,
 } from '@ray-js/ray'
 import Strings from '@/i18n'
 
@@ -375,6 +378,105 @@ export const deviceInfoApiList = [
       return new Promise((resolve, reject) => {
         bluetoothCapabilityOfBLEBeacon({
           deviceId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+  {
+    title: Strings.getLang('syncDeviceInfo'),
+    functionName: 'syncDeviceInfo',
+    input: true,
+    placeholder: Strings.getLang('please_input_dev_id'),
+    func: (inputValue?) => {
+      return new Promise((resolve, reject) => {
+        syncDeviceInfo({
+          deviceId: inputValue || deviceId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+  {
+    title: Strings.getLang('resetFactory'),
+    functionName: 'resetFactory',
+    input: true,
+    placeholder: Strings.getLang('please_input_dev_id'),
+    func: (inputValue?) => {
+      return new Promise((resolve, reject) => {
+        resetFactory({
+          deviceId: inputValue || deviceId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+
+  {
+    title: Strings.getLang('setDeviceProperty'),
+    functionName: 'setDeviceProperty',
+    input: true,
+    keys: ['code', 'value'],
+    placeholder: [Strings.getLang('please_input_code'), Strings.getLang('please_input_value')],
+    func: async (inputValue?) => {
+      return new Promise((resolve, reject) => {
+        console.log('-----dpTranslateAdvancedCapability', inputValue)
+        if (!inputValue || !inputValue.code || !inputValue.value) {
+          reject('code, value is required')
+          return
+        }
+        ty.device.setDeviceProperty({
+          deviceId,
+          code: inputValue.code,
+          value: inputValue.value,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+
+  {
+    title: Strings.getLang('getDeviceProperty'),
+    functionName: 'getDeviceProperty',
+    func: async () => {
+      return new Promise((resolve, reject) => {
+        ty.device.getDeviceProperty({
+          deviceId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+  {
+    title: Strings.getLang('getRemoteRebootTimers'),
+    functionName: 'getRemoteRebootTimers',
+    func: async () => {
+      return new Promise((resolve, reject) => {
+        ty.device.getRemoteRebootTimers({
+          deviceId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+
+  {
+    title: Strings.getLang('validDeviceOnlineType'),
+    functionName: 'validDeviceOnlineType',
+    input: true,
+    keys: ['deviceId', 'onlineType'],
+    placeholder: [Strings.getLang('please_input_dev_id'), Strings.getLang('please_input_online_type')],
+    func: (inputValue?) => {
+      return new Promise((resolve, reject) => {
+        validDeviceOnlineType({
+          deviceId: inputValue.deviceId || deviceId,
+          onlineType: inputValue.onlineType,
           success: resolve,
           fail: reject,
         })
