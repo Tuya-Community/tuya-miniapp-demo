@@ -1,6 +1,6 @@
 import { Button, View, Text, Input, changeDebugMode } from '@ray-js/ray'
 import React, { useCallback, useDebugValue } from 'react'
-import Strings from '@/i18n';
+import Strings from '@/i18n'
 import { deviceInfoApiList } from '@/constants'
 import styles from './index.module.less'
 
@@ -22,22 +22,53 @@ function DeviceInfo() {
   return (
     <View className={styles['container']}>
       <View>
-        <Button type='default' onClick={() =>{
-          
-          changeDebugMode({isEnable: true});
-        }}>{Strings.getLang('openVConsole')}</Button>
+        <Button
+          type="default"
+          onClick={() => {
+            changeDebugMode({ isEnable: true })
+          }}
+        >
+          {Strings.getLang('openVConsole')}
+        </Button>
       </View>
       {deviceInfoApiList.map((item) => {
         return (
           <View className={styles.item} key={item.title}>
-            {/* <Text>{Strings.getLang(item.functionName)}</Text> */}
-            {item.input && <Input onInput={_onInput} placeholder={item.placeholder} data-key={item.functionName} />}
+            <Text className={styles.title}> {item.title}</Text>
+            <View className={styles.form}>
+              {item.input && <Text className={styles.title}>参数：</Text>}
+              {item.input &&
+                (item.keys ? (
+                  item.keys.map((key, index) => {
+                    return (
+                      <View className={styles.mulInput} key={`${item.functionName}_${key}`}>
+                        <Text className={styles.title}>{key}</Text>
+                        <Input
+                          onInput={_onInput}
+                          placeholder={item.placeholder[index]}
+                          data-key={`${item.functionName}_${key}`}
+                        />
+                      </View>
+                    )
+                  })
+                ) : (
+                  <Input
+                    onInput={_onInput}
+                    placeholder={item.placeholder}
+                    data-key={item.functionName}
+                  />
+                ))}
+            </View>
             <Button
               type="primary"
               className={styles.btn}
               onClick={async () => {
                 try {
-                  const data = await item.func(inputValue[item.functionName])
+                  const values = item.keys ? {} : inputValue[item.functionName]
+                  item.keys?.map((key) => {
+                    values[key] = inputValue[`${item.functionName}_${key}`]
+                  })
+                  const data = await item.func(values)
                   console.group(item.functionName)
                   console.log(`%c 调用方法: ${item.functionName}`, functionNameStyle)
                   console.log(`%c 得到结果: `, resultStyle)
@@ -48,7 +79,7 @@ function DeviceInfo() {
                 }
               }}
             >
-              {item.title}
+              {Strings.getLang('click_to_trigger')}
             </Button>
           </View>
         )

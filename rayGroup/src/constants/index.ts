@@ -31,11 +31,16 @@ export const groupInfoApiList = [
   {
     title: Strings.getLang('publishGroupDpCodes'),
     functionName: 'publishGroupDpCodes',
-    func: () => {
+    input: true,
+    keys: ['code', 'value'],
+    placeholder: [Strings.getLang('please_input_dp_code'), Strings.getLang('please_input_dp_value')],
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
+        console.log('---------inputValue', inputValue)
+        if(!inputValue || !inputValue.code || !inputValue.value) return reject(Strings.getLang('please_input_correct_code_and_value'))
         publishGroupDpCodes({
           groupId,
-          dpCodes: { switch_led: true },
+          dpCodes: { [inputValue.code]: inputValue.value },
           success: resolve,
           fail: reject,
         })
@@ -63,6 +68,7 @@ export const groupInfoApiList = [
     placeholder: [Strings.getLang('please_input_code'), Strings.getLang('please_input_value')],
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
+        if(!inputValue || !inputValue.code || !inputValue.value) return reject(Strings.getLang('please_input_correct_cv'))
         setGroupProperty({
           groupId,
           code: inputValue.code,

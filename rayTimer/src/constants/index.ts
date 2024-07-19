@@ -25,7 +25,7 @@ export const timerApiList = [
         syncTimerTask({
           groupId,
           deviceId,
-          category: inputValue,
+          category: inputValue || "",
           success: resolve,
           fail: reject,
         })
@@ -63,6 +63,7 @@ export const timerApiList = [
     placeholder: Strings.getLang('please_input_a_timer_id'),
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
+        if(!inputValue) return reject('timerId is required')
         updateTimer({
           deviceId,
           groupId,
@@ -90,6 +91,7 @@ export const timerApiList = [
     placeholder: [Strings.getLang('please_input_a_timer_id'), Strings.getLang('please_input_status')],
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
+        if(!inputValue || !inputValue.timerId) return reject('timerId is required')
         updateTimerStatus({
           deviceId,
           groupId,
@@ -108,6 +110,7 @@ export const timerApiList = [
     placeholder: Strings.getLang('please_input_a_timer_id'),
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
+        if(!inputValue) return reject('timerId is required')
         removeTimer({
           deviceId,
           groupId,
@@ -126,8 +129,8 @@ export const timerApiList = [
       return new Promise((resolve, reject) => {
         openTimerPage({
           deviceId,
-          category: '',
-          repeat: 1,
+          category: 'schedule',
+          repeat: 0,
           data: [
             {
               dpName: Strings.getLang(`dp_switch_led`),

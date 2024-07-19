@@ -1,0 +1,46 @@
+export default {
+  en: {
+    device_info: 'Device Information',
+    getDeviceInfo: 'getDeviceInfo',
+    please_input_dev_id: 'Please input device id',
+    openVConsole: 'open vConsole',
+
+    click_to_trigger: 'Click to Trigger',
+    device_thing: 'Device Thing Model',
+    deviceIsSupportThingModel: 'deviceIsSupportThingModel',
+    getDeviceThingModelInfo: 'getDeviceThingModelInfo',
+    publishThingModelMessage: 'publishThingModelMessage',
+    updateDeviceThingModelInfo: 'updateDeviceThingModelInfo',
+    subscribeReceivedThingModelMessage: 'subscribeReceivedThingModelMessage',
+    unSubscribeReceivedThingModelMessage: 'unSubscribeReceivedThingModelMessage',
+    onReceivedThingModelMessage: 'onReceivedThingModelMessage',
+    offReceivedThingModelMessage: 'offReceivedThingModelMessage',
+    please_input_type: 'Please input type',
+    please_input_payload: 'Please input payload',
+    please_input_pid: 'Please input pid',
+    please_input_pv: 'Please input product version',
+    params: 'Params:'
+  },
+  zh: {
+    device_info: '设备信息',
+    getDeviceInfo: '获取设备信息',
+    please_input_dev_id: '请输入设备 ID',
+    openVConsole: '打开 vConsole',
+    click_to_trigger: '点我触发',
+
+    device_thing: '物模型',
+    deviceIsSupportThingModel: '设备是否支持物模型',
+    getDeviceThingModelInfo: '获取设备物模型信息',
+    publishThingModelMessage: '下发物模型消息',
+    updateDeviceThingModelInfo: '更新设备物模型信息',
+    subscribeReceivedThingModelMessage: '订阅收到物模型消息',
+    unSubscribeReceivedThingModelMessage: '取消订阅收到物模型消息',
+    onReceivedThingModelMessage: '接收物模型消息监听',
+    offReceivedThingModelMessage: '取消物模型消息监听',
+    please_input_type: '请输入 type',
+    please_input_payload: '请输入 payload',
+    please_input_pid: '请输入 pid',
+    please_input_pv: '请输入 product version',
+    params: '参数：'
+  },
+}

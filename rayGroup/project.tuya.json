@@ -1,7 +1,7 @@
 {
   "projectname": "Ray Group",
   "i18n": false,
-  "description": "",
+  "description": "群组控制示例_Ray",
   "baseversion": "2.15.5",
   "devMode": "ray",
   "miniprogramRoot": "./dist/tuya",
