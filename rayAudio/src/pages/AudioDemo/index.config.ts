@@ -1,3 +1,4 @@
 export default {
-  navigationBarTitleText: 'Home',
+  navigationBarTitleText: 'Home1',
+  backgroundColor: '#ff000030',
 }

@@ -1,4 +1,5 @@
 export default {
-  navigationBarTitleText: 'Home',
+  navigationBarTitleText: 'Home23',
   disableScroll: true,
+  navigationBarBackgroundColor: '#ff000030',
 }

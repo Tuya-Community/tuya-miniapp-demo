@@ -20,12 +20,12 @@ const Index: FC = () => {
   const [startTime, setStartTime] = useState<number>(0)
 
   useEffect(() => {
-    audioContext.current = createInnerAudioContext({
+    audioContext.current = ty.createInnerAudioContext({
       success: function (res) {
         console.log('createInnerAudioContext success', res)
 
         audioContext.current.onTimeUpdate((res) => {
-          // console.log("onTimeUpdate callback", res);
+          console.log('onTimeUpdate callback1', res)
         })
       },
       fail: function (res) {
