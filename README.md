@@ -276,6 +276,83 @@ English[](README.md) | [简体中文](README_zh.md)
 </tr>
 </table>
 
+
+#### Ray-Based Device Sample Projects
+
+<table>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayTimer">Device</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayTimer">Timers</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceTimer.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayGroup">Group</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceGroup.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayOTA">OTA</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/06</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMQTT">MQTT</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/06</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/raySubDevice">Sub Device</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/06</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayThing">ThingModel</a></td>
+    <td>
+    <details>
+    <summary>Scan QRCode</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+
+</table>
+
 ### Link
 
 - [official website](https://developer.tuya.com/cn/miniapp)
