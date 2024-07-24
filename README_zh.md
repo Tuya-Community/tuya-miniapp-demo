@@ -280,6 +280,84 @@ English[](README.md) | [简体中文](README_zh.md)
 </tr>
 </table>
 
+
+#### Ray 设备示例项目
+
+<table>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayTimer">设备控制</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayTimer">基础定时</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceTimer.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayGroup">群组控制</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceGroup.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/05</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayOTA">OTA升级</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/06</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayMQTT">MQTT消息通知</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/06</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/raySubDevice">子设备控制</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+<tr>
+    <td>2024/06</td>
+    <td><a href="https://github.com/Tuya-Community/tuya-miniapp-demo/tree/master/rayThing">物模型</a></td>
+    <td>
+    <details>
+    <summary>点击扫码预览</summary>
+    <img src="./qrCode/deviceAll.png" width="100" height="100"> 
+    </details>
+    </td>
+</tr>
+
+</table>
+
+
 ### 相关链接
 
 - [智能小程序官方网站](https://developer.tuya.com/cn/miniapp)
