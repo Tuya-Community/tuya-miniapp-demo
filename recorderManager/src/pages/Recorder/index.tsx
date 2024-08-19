@@ -1,9 +1,29 @@
-import { Button, View, getRecorderManager, authorize } from '@ray-js/ray'
-import React, { FC, useRef } from 'react'
+import { Button, View, getRecorderManager, authorize, createInnerAudioContext } from '@ray-js/ray'
+import React, { FC, useRef, useEffect, useState } from 'react'
 import styles from './index.module.less'
 
 const Home: FC = () => {
   const recorder = useRef()
+  const audioContext = useRef(null)
+  const [recordPath, setRecordPath] = useState('')
+
+  useEffect(() => {
+    audioContext.current = createInnerAudioContext({
+      success: function (res) {
+        console.log('createInnerAudioContext success', res)
+
+        audioContext.current.onTimeUpdate((res) => {
+          // console.log("onTimeUpdate callback", res);
+        })
+      },
+      fail: function (res) {
+        console.log('createInnerAudioContext fail', res)
+      },
+      complete: function () {
+        console.log('createInnerAudioContext complete')
+      },
+    })
+  }, [])
 
   const start = () => {
     authorize({
@@ -22,8 +42,15 @@ const Home: FC = () => {
         })
         // @ts-ignore
         recorder.current.start({
+          sampleRate: 16000, //采样率
+          numberOfChannels: 1, //单声道
+          frameSize: 1024 * 1024, //帧大小
+          format: 'pcm',
           success(res) {
             console.log('start ==>', res)
+            if (res && res.tempFilePath) {
+              setRecordPath(res.tempFilePath)
+            }
           },
           fail(params) {
             console.log('start fail ==>', params)
@@ -63,11 +90,35 @@ const Home: FC = () => {
       recorder.current.stop({
         success(res) {
           console.log('stop ==>', res)
+          if (res && res.tempFilePath) {
+            setRecordPath(res.tempFilePath)
+          }
         },
         fail(params) {
           console.log('stop fail ==>', params)
         },
       })
+  }
+
+  const playAudio = () => {
+    console.log('playAudio recordPath', recordPath)
+    audioContext.current.play({
+      // src: 'https://images.tuyacn.com/rms-static/4681f900-9fa4-11ee-af19-cfa45f6de59e-1703123840144.mp3?tyName=2.mp3',
+      src: recordPath,
+      startTime: 0,
+      loop: true,
+      playbackRate: 1,
+      volume: 1,
+      success: function (res) {
+        console.log(`audio play success`, res)
+      },
+      fail: function (res) {
+        console.log(`audio play fail`, res)
+      },
+      complete: function (res) {
+        console.log(`audio play complete`, res)
+      },
+    })
   }
 
   return (
@@ -83,6 +134,10 @@ const Home: FC = () => {
       </Button>
       <Button className={styles['btn']} onClick={stop}>
         点击关闭录音
+      </Button>
+
+      <Button className={styles['btn']} onClick={playAudio}>
+        播放保存的录音
       </Button>
     </View>
   )
