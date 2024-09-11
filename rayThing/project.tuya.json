@@ -13,5 +13,5 @@
     "HomeKit": "3.4.0"
   },
   "compileType": "miniprogram",
-  "remoteDebug": "mqtt"
+  "remoteDebug": "lan"
 }
