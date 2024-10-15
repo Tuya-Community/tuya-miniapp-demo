@@ -16,7 +16,7 @@
 
 ## 相关文档
 
-- [api 跳转路由](https://developer.tuya.com/cn/miniapp/framework/page/router#%E8%B7%AF%E7%94%B1%E6%96%B9%E5%BC%8F)
-- [navigator 组件](https://developer.tuya.com/cn/miniapp/component/navigation/navigator#navigator)
+- [api 跳转路由](https://developer.tuya.com/cn/miniapp/develop/miniapp/framework/page/router#%E8%B7%AF%E7%94%B1%E6%96%B9%E5%BC%8F)
+- [navigator 组件](https://developer.tuya.com/cn/miniapp/develop/miniapp/component/navigation/navigator#navigator)
 - [如何拦截后退事件](https://www.tuyaos.com/viewtopic.php?t=171)
 - [小程序间通信](https://developer.tuya.com/cn/miniapp/develop/miniapp/framework/event/app)
