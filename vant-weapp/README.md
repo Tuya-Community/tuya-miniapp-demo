@@ -2,7 +2,7 @@
 
 添加 project.tuya.json 文件后，并声明编译选项 `compatible` 为 `["wx"]`，即可无缝使用微信小程序组件。
 
-https://developer.tuya.com/cn/miniapp/guide/compatible
+[https://developer.tuya.com/cn/miniapp/guide/compatible](https://developer.tuya.com/cn/miniapp/develop/miniapp/guide/compatible)
 
 ```json
 {
