@@ -10,5 +10,5 @@
 
 ## 相关链接
 
-- [权限请求](https://developer.tuya.com/cn/miniapp/panels/api/authorize/authorize#authorize)
-- [录音文档地址](https://developer.tuya.com/cn/miniapp/panels/api/media/record/GetRecorderManagerTask)
+- [权限请求](https://developer.tuya.com/cn/miniapp/develop/miniapp/api/authorize/authorize#tyauthorize)
+- [录音文档地址](https://developer.tuya.com/cn/miniapp/develop/miniapp/api/media/record/GetRecorderManagerTask)
