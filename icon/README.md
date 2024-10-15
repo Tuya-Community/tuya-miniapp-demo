@@ -3,7 +3,7 @@
 ## 描述
 
 - 本示例向您展示了智能小程序中几种 icon 的用法，方便你在项目中更好的使用 icon
-  - 直接使用小程序扩展组件的 icon。[文档](https://developer.tuya.com/cn/miniapp/extended/component-plus/component/Icon#icon), [代码示例](https://github.com/Tuya-Community/tuya-miniapp-explorer-template/tree/main/pages/componentsExtension/iconEx)。
+  - 直接使用小程序扩展组件的 icon。[文档](https://developer.tuya.com/cn/miniapp/develop/miniapp/component/extended/component-plus/component/Icon), [代码示例](https://github.com/Tuya-Community/tuya-miniapp-explorer-template/tree/main/pages/componentsExtension/iconEx)。
   - 使用 png 图片或雪碧图
   - 使用 mask-image
   - 使用 svg（小程序不支持 svg 标签，需要配合 mask-image 使用）
