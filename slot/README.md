@@ -20,5 +20,5 @@
 
 ## 相关文档
 
-- [组件的 slot](https://developer.tuya.com/cn/miniapp/framework/custom-component/tyml-tyss#%E7%BB%84%E4%BB%B6-tyml-%E7%9A%84-slot)
-- [triggerEvent](https://developer.tuya.com/cn/miniapp/framework/api/component#%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6)
+- [组件的 slot](https://developer.tuya.com/cn/miniapp/develop/miniapp/framework/custom-component/tyml-tyss#%E7%BB%84%E4%BB%B6-tyml-%E7%9A%84-slot)
+- [triggerEvent](https://developer.tuya.com/cn/miniapp/develop/miniapp/framework/api/component#%E6%96%B9%E6%B3%95)
