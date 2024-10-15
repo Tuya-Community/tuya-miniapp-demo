@@ -11,5 +11,5 @@
 
 ## 相关链接
 
-- [文档地址](https://developer.tuya.com/cn/miniapp/component/map/map)
-- 如果你需要更多 map 相关 api 请查看[地址](https://developer.tuya.com/cn/miniapp/api/location/getLocation)。
+- [文档地址](https://developer.tuya.com/cn/miniapp/develop/ray/component/map/map)
+- 如果你需要更多 map 相关 api 请查看[地址](https://developer.tuya.com/cn/miniapp/develop/miniapp/api/location/getLocation#tymapgetlocation)。
