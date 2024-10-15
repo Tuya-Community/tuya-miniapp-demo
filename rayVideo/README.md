@@ -8,4 +8,4 @@
 
 ## 相关链接
 
-- [官方文档](https://developer.tuya.com/cn/miniapp/panels/component/media-component/video)
+- [官方文档](https://developer.tuya.com/cn/miniapp/develop/ray/component/media-component/video)
