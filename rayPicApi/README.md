@@ -10,8 +10,8 @@
 
 ## 相关链接
 
-- [chooseImage](https://developer.tuya.com/cn/miniapp/panels/api/media/image/chooseImage)
-- [chooseMedia](https://developer.tuya.com/cn/miniapp/panels/api/media/image/chooseMedia)
-- [chooseCropImage](https://developer.tuya.com/cn/miniapp/panels/api/media/image/chooseCropImage)
-- [getImageInfo](https://developer.tuya.com/cn/miniapp/panels/api/media/image/getImageInfo)
-- [previewImage](https://developer.tuya.com/cn/miniapp/panels/api/media/image/previewImage)
+- [chooseImage](https://developer.tuya.com/cn/miniapp/develop/ray/api/media/image/chooseImage#chooseimage)
+- [chooseMedia](https://developer.tuya.com/cn/miniapp/develop/ray/api/media/image/chooseMedia#choosemedia)
+- [chooseCropImage](https://developer.tuya.com/cn/miniapp/develop/ray/api/media/image/chooseCropImage#choosecropimage)
+- [getImageInfo](https://developer.tuya.com/cn/miniapp/develop/ray/api/media/image/getImageInfo#getimageinfo)
+- [previewImage](https://developer.tuya.com/cn/miniapp/develop/ray/api/media/image/previewImage#previewimage)
