@@ -12,5 +12,5 @@
 
 ## 相关链接
 
--[智能小程序分享](https://developer.tuya.com/cn/miniapp/api/base/container/share#tyshare) 
--[面板小程序分享](https://developer.tuya.com/cn/miniapp/panels/api/base/container/share#share)
+-[智能小程序分享](https://developer.tuya.com/cn/miniapp/develop/miniapp/api/base/container/share#tyshare) 
+-[面板小程序分享](https://developer.tuya.com/cn/miniapp/develop/ray/api/base/container/share#share)
