@@ -18,4 +18,4 @@
 
 ### 相关文档
 
-[ty.getSystemInfo](https://developer.tuya.com/cn/miniapp/api/base/system/getSystemInfo#tygetsysteminfo)
+[ty.getSystemInfo](https://developer.tuya.com/cn/miniapp/develop/miniapp/api/base/system/getSystemInfo#tygetsysteminfo)
