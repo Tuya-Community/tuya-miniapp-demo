@@ -278,7 +278,7 @@ English[](README.md) | [简体中文](README_zh.md)
 
 ### Link
 
-- [official website](https://developer.tuya.com/cn/miniapp)
+- [official website](https://developer.tuya.com/miniapp)
 - [Developer Forum](https://www.tuyaos.com/posting.php?mode=post&f=10)
 
 ## License
