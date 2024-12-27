@@ -1,0 +1,30 @@
+{
+  "AY": {
+    "/cdn/logo.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  "AZ": {
+    "/cdn/logo.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  "EU": {
+    "/cdn/logo.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  "IN": {
+    "/cdn/logo.png": "https://inimagesd1jqokb9wptk2t.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://inimagesd1jqokb9wptk2t.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  "UE": {
+    "/cdn/logo.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  "WE": {
+    "/cdn/logo.png": "https://d2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://d2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  "RU": {
+    "/cdn/logo.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  }
+}

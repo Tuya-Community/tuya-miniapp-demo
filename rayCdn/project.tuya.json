@@ -1,0 +1,14 @@
+{
+  "projectname": "rayCdn",
+  "i18n": false,
+  "description": "测试小程序demo",
+  "baseversion": "2.19.0",
+  "devMode": "ray",
+  "miniprogramRoot": "./dist/tuya",
+  "dependencies": {
+    "BaseKit": "3.0.0",
+    "MiniKit": "3.0.0",
+    "BizKit": "3.0.1"
+  },
+  "compileType": "miniprogram"
+}
