@@ -8,6 +8,7 @@ import {
   getLaunchOptionsSync,
   publishGroupDpCodes,
   setGroupProperty,
+  openGroupDetailPage
 } from '@ray-js/ray'
 
 const {
@@ -15,6 +16,19 @@ const {
 } = getLaunchOptionsSync()
 
 export const groupInfoApiList = [
+  {
+    title: Strings.getLang('openGroupDetailPage'),
+    functionName: 'openGroupDetailPage',
+    func: () => {
+      return new Promise((resolve, reject) => {
+        openGroupDetailPage({
+          groupId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
   {
     title: Strings.getLang('getGroupInfo'),
     functionName: 'getGroupInfo',

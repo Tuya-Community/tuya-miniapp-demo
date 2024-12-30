@@ -23,8 +23,12 @@ import {
   toggleDeviceOfflineReminder,
   unSubscribeDeviceRemoved,
   validDeviceOnlineType,
+  queryDps
 } from '@ray-js/ray'
 import Strings from '@/i18n'
+import TUNIDeviceActivationManager from './TUNIDeviceActivationManager'
+import TUNIDeviceControlManager from './TUNIDeviceControlManager'
+import TUNIDeviceDetailManager from './TUNIDeviceDetailManager'
 
 const {
   query: { deviceId, groupId },
@@ -37,6 +41,23 @@ export const deviceInfoApiList = [
       return new Promise((resolve, reject) => {
         getDeviceInfo({
           deviceId,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+  {
+    title: Strings.getLang('queryDps'),
+    functionName: 'queryDps',
+    input: true,
+    placeholder: Strings.getLang('please_input_dpids'),
+    func: (inputValue?) => {
+      return new Promise((resolve, reject) => {
+        queryDps({
+          deviceId,
+          dpIds: inputValue.split(','),
+          queryType: 2,
           success: resolve,
           fail: reject,
         })
@@ -492,3 +513,26 @@ export const getConfigWithFunc = (functionName) => {
 
   return menu.func
 }
+
+
+export const routes = [
+  {
+    title: I18n.t('TUNIDeviceActivationManager'),
+    url: '/pages/detail/index?type=TUNIDeviceActivationManager',
+  },
+  {
+    title: I18n.t('TUNIDeviceControlManager'),
+    url: '/pages/detail/index?type=TUNIDeviceControlManager',
+  },
+  {
+    title: I18n.t('TUNIDeviceDetailManager'),
+    url: '/pages/detail/index?type=TUNIDeviceDetailManager',
+  }
+]
+
+export const config = {
+  TUNIDeviceActivationManager,
+  TUNIDeviceControlManager,
+  TUNIDeviceDetailManager
+}
+

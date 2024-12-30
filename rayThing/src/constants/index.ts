@@ -80,7 +80,7 @@ export const deviceInfoApiList = [
         publishThingModelMessage({
           devId: inputValue.deviceId || deviceId,
           type: inputValue.type,
-          payload: inputValue.payload,
+          payload:JSON.parse(inputValue.payload),
           success: resolve,
           fail: reject,
         })

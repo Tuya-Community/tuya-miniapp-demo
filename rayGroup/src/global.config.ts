@@ -1,6 +1,8 @@
 import { GlobalConfig } from '@ray-js/types'
 
-export const tuya = {}
+export const tuya = {
+  routers: ['devList'],
+}
 
 const globalConfig: GlobalConfig = {
   basename: '',
