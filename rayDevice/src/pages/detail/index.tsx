@@ -1,12 +1,15 @@
-import { Button, View, Text, Input, changeDebugMode, onDpDataChange } from '@ray-js/ray'
+import { Button, View, Text, Input, changeDebugMode, onDpDataChange, useQuery } from '@ray-js/ray'
 import React, { useCallback, useDebugValue, useEffect } from 'react'
 import Strings from '@/i18n'
-import { deviceInfoApiList } from '@/constants'
+import { config } from '@/constants'
 import styles from './index.module.less'
 
 const functionNameStyle = `color: blue; font-size: 18px`
 const resultStyle = `color: green; font-size: 16px`
 function DeviceInfo() {
+  const query = useQuery()
+  const type = query?.type || 'deviceInfo'
+  const list = config[type] || [];
   const inputValue = {}
   const _onInput = useCallback((event) => {
     const {
@@ -18,30 +21,21 @@ function DeviceInfo() {
     inputValue[key] = value
   }, [])
 
-  useEffect(() => {
+  useEffect(()=>{
     onDpDataChange((data) => {
-      console.log('============onDpDataChange', data)
+      console.log('onDpDataChange', data) 
     })
-  },[])
+  }, [])
 
   return (
     <View className={styles['container']}>
-      <View>
-        <Button
-          type="default"
-          onClick={() => {
-            changeDebugMode({ isEnable: true })
-          }}
-        >
-          {Strings.getLang('openVConsole')}
-        </Button>
-      </View>
-      {deviceInfoApiList.map((item) => {
+      <View className={styles.title}>{type}</View>
+      {list.map((item) => {
         return (
           <View className={styles.item} key={item.title}>
             <Text className={styles.title}> {item.title}</Text>
             <View className={styles.form}>
-              {item.input && <Text className={styles.title}>参数：</Text>}
+              {item.input && <Text className={styles.title}>{Strings.getLang('params')}</Text>}
               {item.input &&
                 (item.keys ? (
                   item.keys.map((key, index) => {
@@ -72,11 +66,12 @@ function DeviceInfo() {
                   const values = item.keys ? {} : inputValue[item.functionName]
                   item.keys?.map((key) => {
                     values[key] = inputValue[`${item.functionName}_${key}`]
-                  })    
-                  
+                  })
                   console.group(item.functionName)
                   console.log(`%c 调用方法: ${item.functionName}`, functionNameStyle)
+                  
                   const data = await item.func(values)
+
                   console.log(`%c 得到结果: `, resultStyle)
                   console.log(data)
                   console.groupEnd()

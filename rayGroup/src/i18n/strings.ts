@@ -17,6 +17,7 @@ export default {
     please_input_correct_code_and_value: 'Please input correct code and value',
     please_input_correct_cv: 'Please input correct code and value',
     openVConsole: 'open vConsole',
+    openGroupDetailPage: 'open Group Detail Page'
   },
   zh: {
     group_info: '群组信息',
@@ -36,5 +37,6 @@ export default {
     please_input_dp_value: '请输入 dp 值',
     please_input_correct_code_and_value: '请输入正确的 dp code 和 dp value',
     please_input_correct_cv: '请输入正确的 code 和 value',
+    openGroupDetailPage: '打开群组详情页'
   },
 }

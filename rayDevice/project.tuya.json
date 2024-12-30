@@ -2,14 +2,14 @@
   "projectname": "Ray Device",
   "i18n": false,
   "description": "设备控制示例_Ray",
-  "baseversion": "2.19.0",
+  "baseversion": "2.10.23",
   "devMode": "ray",
   "miniprogramRoot": "./dist/tuya",
   "dependencies": {
     "BaseKit": "3.11.3",
     "MiniKit": "3.9.8",
     "BizKit": "4.5.1",
-    "DeviceKit": "4.5.1",
+    "DeviceKit": "4.0.8",
     "HomeKit": "3.4.0"
   },
   "compileType": "miniprogram",

@@ -45,7 +45,7 @@ export const timerApiList = [
             time: '10:03',
             loops: '1111111',
             dps: {
-              20: false,
+              1: false,
             },
             aliasName: '',
             isAppPush: false,
@@ -72,7 +72,7 @@ export const timerApiList = [
             time: '20:03',
             loops: '0110101',
             dps: {
-              20: true,
+              switch: true,
             },
             aliasName: '',
             isAppPush: false,
