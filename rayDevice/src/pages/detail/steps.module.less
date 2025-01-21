@@ -1,0 +1,136 @@
+.step-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 686rpx;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 32rpx;
+  flex: 1;
+  width: 100%;
+  background-color: var(--app-B1);
+  border-radius: var(--app-C2);
+  margin-bottom: 32rpx;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  color: var(--app-B1-N1);
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--app-B1-N2);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  border-radius: 16px;
+  width: 100%;
+  // align-items: center;
+  padding: 16px 16px;
+
+  background-color: var(--app-B2);
+
+  .title {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+    .title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #555;
+    }
+    .input {
+      flex: 1;
+      margin-right: 8px;
+    }
+
+    .btn {
+      width: 80px;
+    }
+    .mulInput {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      .title {
+        flex: 1;
+      }
+
+      input {
+        flex: 2;
+      }
+    }
+  }
+}
+
+
+.dropdownItem{
+  height: 64rpx !important;
+  box-shadow: unset !important;
+  background-color: var(--app-B2) !important;
+  border-radius: 10rpx !important;
+  border: 1px solid #eee !important;
+}
+
+.input {
+  background-color: var(--app-B2) !important;
+  border-radius: 10rpx !important;
+  border: 1px solid #eee !important;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  color: var(--app-B1-N2);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.inputBtn {
+  background-color: var(--app-B2) !important;
+  border-radius: 10rpx !important;
+  border: 1px solid #eee !important;
+  width: 100%;
+  margin-bottom: 8px;
+  color: #555;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20rpx;
+}

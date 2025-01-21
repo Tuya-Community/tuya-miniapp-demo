@@ -1,7 +1,8 @@
 import React from 'react'
-import { initPanelEnvironment } from '@ray-js/ray'
-initPanelEnvironment({ useDefaultOffline: false })
 export default class App extends React.Component {
+  onLaunch(options) {
+    console.log('App.onLaunch', options)
+  }
   render() {
     return this.props.children
   }
