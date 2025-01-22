@@ -1,13 +1,14 @@
-import { routes } from '@/constants'
+import { routes } from '@/constants/public'
 import { useDeviceList } from '@/hooks'
 import Strings from '@/i18n'
-import { Button, View, changeDebugMode, navigateTo, onDpDataChange } from '@ray-js/ray'
+import { Button, View, changeDebugMode, navigateTo } from '@ray-js/ray'
 import { ActionSheet } from '@ray-js/smart-ui'
 import React, { useEffect } from 'react'
 import './index.less'
 
 function Index(props) {
   const devId = props?.location?.query?.deviceId || ''
+
 
   const devIdList = useDeviceList()
   const [deviceId, setDeviceId] = React.useState(devId)
@@ -40,11 +41,6 @@ function Index(props) {
     setDeviceId(id)
   }
 
-  useEffect(() => {
-    onDpDataChange((data) => {
-      console.log('Index.onDpDataChange', data)
-    })
-  }, [])
 
   console.log('Index.render', devIdList, actions, deviceId)
 

@@ -28,31 +28,37 @@ import {
   toggleDeviceOfflineReminder,
   updateTimer,
   updateTimerStatus,
+  getApp,
+  updateDpName,
+  getDpsInfos,
 } from '@ray-js/ray'
 const {
   query: { deviceId, groupId },
 } = getLaunchOptionsSync()
 
-const _onTimerUpdate = event => {
-  console.log('onTimerUpdate', event)
+const _onTimerUpdate = (event) => {
+  console.log('TUNIDeviceDetailManager.onTimerUpdate', event)
 }
 
-const _onSubFunctionDataChange = event => {
-  console.log('onSubFunctionDataChange', event)
+const _onSubFunctionDataChange = (event) => {
+  console.log('TUNIDeviceDetailManager.onSubFunctionDataChange', event)
 }
 
-const _onDispatchEvent = event => {
-  console.log('onDispatchEvent', event)
+const _onDispatchEvent = (event) => {
+  console.log('TUNIDeviceDetailManager.onDispatchEvent', event)
 }
 
 export default [
   {
     title: 'checkOTAUpdateInfo',
     functionName: 'checkOTAUpdateInfo',
-    func: () => {
+    input: true,
+    placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         checkOTAUpdateInfo({
-          deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -62,10 +68,13 @@ export default [
   {
     title: 'getOTAUpdateInfo',
     functionName: 'getOTAUpdateInfo',
-    func: () => {
+    input: true,
+    placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         ty.device.getOTAUpdateInfo({
-          deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -75,10 +84,13 @@ export default [
   {
     title: 'openDeviceDetailPage',
     functionName: 'openDeviceDetailPage',
-    func: () => {
+    input: true,
+    placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         openDeviceDetailPage({
-          deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -125,7 +137,7 @@ export default [
         }
         let repeat = +inputValue.repeat
         openTimerPage({
-          deviceId: deviceId || inputValue.deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           category: inputValue.category || 'schedule',
           repeat: isNaN(repeat) ? 0 : repeat,
           data: trans(inputValue.data),
@@ -175,10 +187,11 @@ export default [
     functionName: 'openDeviceWifiNetworkMonitorPage',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         openDeviceWifiNetworkMonitorPage({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -203,10 +216,17 @@ export default [
           return
         }
 
-        syncTimerTask({
-          deviceId: inputValue.deviceId,
+        const param = {
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           groupId: inputValue.groupId,
-          category: inputValue.category || 'schedule',
+          category: inputValue.category,
+        }
+        if(!param.groupId) delete param.groupId
+        if(!param.deviceId) delete param.deviceId
+        if(param.groupId) delete param.deviceId
+        console.log('syncTimerTask', param)
+        syncTimerTask({
+          ...param,
           success: resolve,
           fail: reject,
         })
@@ -222,7 +242,7 @@ export default [
       Strings.getLang('please_input_dev_id'),
       Strings.getLang('please_input_group_id'),
       Strings.getLang('please_input_category'),
-      Strings.getLang('please_input_repeat'),
+      // Strings.getLang('please_input_repeat'),
       Strings.getLang('please_input_timer_data'),
     ],
     func: (inputValue) => {
@@ -239,11 +259,19 @@ export default [
           return
         }
 
-        addTimer({
-          deviceId: inputValue.deviceId,
+        const param = {
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           groupId: inputValue.groupId,
           category: inputValue.category || 'schedule',
           timer: trans(inputValue.data),
+        }
+
+        if(!param.groupId) delete param.groupId
+        if(!param.deviceId) delete param.deviceId
+        if(param.groupId) delete param.deviceId
+        console.log('addTimer', param)
+        addTimer({
+          ...param,
           success: resolve,
           fail: reject,
         })
@@ -273,11 +301,18 @@ export default [
           reject(Strings.getLang('please_input_timer_data'))
           return
         }
-
-        updateTimer({
-          deviceId: inputValue.deviceId,
+        const param = {
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           groupId: inputValue.groupId,
           timer: trans(inputValue.data),
+        }
+
+        if(!param.groupId) delete param.groupId
+        if(!param.deviceId) delete param.deviceId
+        if(param.groupId) delete param.deviceId
+        console.log('updateTimer', param)
+        updateTimer({
+          ...param,
           success: resolve,
           fail: reject,
         })
@@ -292,8 +327,10 @@ export default [
     placeholder: [
       Strings.getLang('please_input_dev_id'),
       Strings.getLang('please_input_group_id'),
+      Strings.getLang('please_input_timer_id'),
       Strings.getLang('please_input_status'),
     ],
+    dataType: { status: 'boolean' },
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         if (!inputValue.groupId && !inputValue.deviceId) {
@@ -301,18 +338,19 @@ export default [
           reject(Strings.getLang('please_input_group_or_dev_id'))
           return
         }
-
-        if (!inputValue.data) {
-          ty.showToast({ title: Strings.getLang('please_input_timer_data'), icon: 'none' })
-          reject(Strings.getLang('please_input_timer_data'))
-          return
-        }
-
-        updateTimerStatus({
-          deviceId: inputValue.deviceId,
+        const param = {
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           groupId: inputValue.groupId,
           timerId: inputValue.timerId,
-          status: JSON.parse(inputValue.status),
+          status: inputValue.status,
+        }
+
+        if(!param.groupId) delete param.groupId
+        if(!param.deviceId) delete param.deviceId
+        if(param.groupId) delete param.deviceId
+        console.log('updateTimerStatus', param)
+        updateTimerStatus({
+          ...param,
           success: resolve,
           fail: reject,
         })
@@ -342,11 +380,18 @@ export default [
           reject(Strings.getLang('please_input_a_timer_id'))
           return
         }
-
-        removeTimer({
-          deviceId: inputValue.deviceId,
+        const param = {
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           groupId: inputValue.groupId,
           timerId: inputValue.timerId,
+        }
+
+        if(!param.groupId) delete param.groupId
+        if(!param.deviceId) delete param.deviceId
+        if(param.groupId) delete param.deviceId
+        console.log('removeTimer', param)
+        removeTimer({
+          ...param,
           success: resolve,
           fail: reject,
         })
@@ -358,10 +403,11 @@ export default [
     functionName: 'getShareDeviceInfo',
     input: true,
     placeholder: Strings.getLang('please_input_shared_dev_id'),
+    // key: 'deviceId',
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         getShareDeviceInfo({
-          deviceId: inputValue,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -373,10 +419,11 @@ export default [
     functionName: 'openDeviceEdit',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         openDeviceEdit({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -391,7 +438,7 @@ export default [
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         openGroupEdit({
-          groupId: inputValue || groupId,
+          groupId: inputValue || getApp().deviceId || groupId,
           success: resolve,
           fail: reject,
         })
@@ -403,10 +450,11 @@ export default [
     functionName: 'openDeviceInfo',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         openDeviceInfo({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -419,10 +467,11 @@ export default [
     functionName: 'isDeviceSupportOfflineReminder',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         isDeviceSupportOfflineReminder({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -435,10 +484,11 @@ export default [
     functionName: 'getDeviceOfflineReminderState',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         getDeviceOfflineReminderState({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -454,8 +504,8 @@ export default [
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         toggleDeviceOfflineReminder({
-          deviceId: inputValue.deviceId || deviceId,
-          state: JSON.parse(inputValue.state) || false,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
+          state: +inputValue.state,
           success: resolve,
           fail: reject,
         })
@@ -481,10 +531,11 @@ export default [
     functionName: 'openDeviceQuestionsAndFeedback',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         openDeviceQuestionsAndFeedback({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -497,10 +548,11 @@ export default [
     functionName: 'openShareDevice',
     input: true,
     placeholder: Strings.getLang('please_input_shared_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         openShareDevice({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -512,10 +564,11 @@ export default [
     functionName: 'addDeviceToDesk',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         addDeviceToDesk({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -527,10 +580,11 @@ export default [
     functionName: 'removeShareDevice',
     input: true,
     placeholder: Strings.getLang('please_input_shared_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         removeShareDevice({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -542,10 +596,11 @@ export default [
     functionName: 'getSupportedThirdPartyServices',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         getSupportedThirdPartyServices({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -571,7 +626,7 @@ export default [
     placeholder: ['id', 'name', 'type', 'optionType', 'from', 'order', 'isHide', 'data'],
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
-        if(!inputValue.id) {
+        if (!inputValue.id) {
           reject('id is required')
           return
         }
@@ -598,7 +653,7 @@ export default [
     placeholder: ['id', 'name', 'type', 'optionType', 'from', 'order', 'isHide', 'data'],
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
-        if(!inputValue.id) {
+        if (!inputValue.id) {
           reject('id is required')
           return
         }
@@ -623,23 +678,33 @@ export default [
     functionName: 'getSubFunctionShowState',
     input: true,
     keys: ['deviceId', 'groupId', 'ids'],
-    placeholder: [Strings.getLang('please_input_dev_id'), Strings.getLang('please_input_group_id'), Strings.getLang('please_input_sub_function_ids')],
+    placeholder: [
+      Strings.getLang('please_input_dev_id'),
+      Strings.getLang('please_input_group_id'),
+      Strings.getLang('please_input_sub_function_ids'),
+    ],
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
-        if(!inputValue) {
+        if (!inputValue) {
           reject('ids is required')
           return
         }
-        if(!inputValue.deviceId && !inputValue.groupId) {
+        if (!inputValue.deviceId && !inputValue.groupId) {
           ty.showToast({ title: Strings.getLang('please_input_group_or_dev_id'), icon: 'none' })
           reject(Strings.getLang('please_input_group_or_dev_id'))
           return
         }
-
-        ty.device.getSubFunctionShowState({
-          deviceId: inputValue.deviceId,
+        const param = {
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           groupId: inputValue.groupId,
           ids: inputValue.ids.split(','),
+        }
+
+        if(!param.groupId) delete param.groupId
+        if(!param.deviceId) delete param.deviceId
+        if(param.groupId) delete param.deviceId
+        ty.device.getSubFunctionShowState({
+          ...param,
           success: resolve,
           fail: reject,
         })
@@ -653,7 +718,7 @@ export default [
     placeholder: Strings.getLang('please_input_sub_function_ids'),
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
-        if(!inputValue) {
+        if (!inputValue) {
           reject('ids is required')
           return
         }
@@ -668,14 +733,15 @@ export default [
   },
 
   {
-    title:'getRemoteRebootTimers',
+    title: 'getRemoteRebootTimers',
     functionName: 'getRemoteRebootTimers',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (input) => {
       return new Promise((resolve, reject) => {
         ty.device.getRemoteRebootTimers({
-          deviceId: input || deviceId,
+          deviceId: input || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -688,7 +754,7 @@ export default [
     func: () => {
       return new Promise((resolve, reject) => {
         onTimerUpdate(_onTimerUpdate)
-        resolve(true);
+        resolve(true)
       })
     },
   },
@@ -698,7 +764,7 @@ export default [
     func: () => {
       return new Promise((resolve, reject) => {
         offTimerUpdate(_onTimerUpdate)
-        resolve(true);
+        resolve(true)
       })
     },
   },
@@ -708,7 +774,7 @@ export default [
     func: () => {
       return new Promise((resolve, reject) => {
         ty.device.onSubFunctionDataChange(_onSubFunctionDataChange)
-        resolve(true);
+        resolve(true)
       })
     },
   },
@@ -718,7 +784,7 @@ export default [
     func: () => {
       return new Promise((resolve, reject) => {
         ty.device.offSubFunctionDataChange(_onSubFunctionDataChange)
-        resolve(true);
+        resolve(true)
       })
     },
   },
@@ -728,7 +794,7 @@ export default [
     func: () => {
       return new Promise((resolve, reject) => {
         ty.device.onDispatchEvent(_onDispatchEvent)
-        resolve(true);
+        resolve(true)
       })
     },
   },
@@ -738,7 +804,62 @@ export default [
     func: () => {
       return new Promise((resolve, reject) => {
         ty.device.offDispatchEvent(_onDispatchEvent)
-        resolve(true);
+        resolve(true)
+      })
+    },
+  },
+
+  {
+    title: 'updateDpName',
+    functionName: 'updateDpName',
+    input: true,
+    keys: ['devId', 'dpId', 'name'],
+    placeholder: [
+      Strings.getLang('please_input_dev_id'),
+      Strings.getLang('please_input_group_id'),
+      Strings.getLang('please_input_sub_function_ids'),
+    ],
+    func: (inputValue) => {
+      return new Promise((resolve, reject) => {
+        if (!inputValue) {
+          reject('ids is required')
+          return
+        }
+        if (!inputValue.devId) {
+          ty.showToast({ title: Strings.getLang('please_input_group_or_dev_id'), icon: 'none' })
+          reject(Strings.getLang('please_input_group_or_dev_id'))
+          return
+        }
+        const param = {
+          devId: inputValue.devId || getApp().deviceId || deviceId,
+          dpId: inputValue.dpId,
+          name: inputValue.name,
+        }
+
+        updateDpName({
+          ...param
+        }).then(resolve).catch(reject)
+      })
+    },
+  },
+  {
+    title: 'getDpsInfos',
+    functionName: 'getDpsInfos',
+    input: true,
+    func: (inputValue) => {
+      return new Promise((resolve, reject) => {
+        if (!inputValue) {
+          reject('ids is required')
+          return
+        }
+        const param = {
+          devId: inputValue.devId || getApp().deviceId || deviceId,
+          gwId: inputValue.devId || getApp().deviceId || deviceId,
+        }
+
+        getDpsInfos({
+          ...param
+        }).then(resolve).catch(reject)
       })
     },
   },

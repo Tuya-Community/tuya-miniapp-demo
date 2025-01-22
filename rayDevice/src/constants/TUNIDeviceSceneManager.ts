@@ -11,6 +11,7 @@ import {
   openRecommendSceneDetail,
   saveSceneAction,
   showSceneDialog,
+  getApp
 } from '@ray-js/ray'
 const {
   query: { deviceId, groupId },
@@ -49,7 +50,7 @@ export default [
     func: (input) => {
       return new Promise((resolve, reject) => {
         openDeviceExecutionAndAnutomation({
-          deviceId: input.deviceId || deviceId,
+          deviceId: input.deviceId || getApp().deviceId || deviceId,
           title: input.title,
           success: resolve,
           fail: reject,
@@ -92,7 +93,7 @@ export default [
           return
         }
         saveSceneAction({
-          deviceId: input.deviceId || deviceId,
+          deviceId: input.deviceId || getApp().deviceId || deviceId,
           taskPosition: input.taskPosition,
           actionExecutor: input.actionExecutor,
           executorProperty: input.executorProperty,
@@ -209,9 +210,9 @@ export default [
     placeholder: ['type', 'condition', 'index'],
     func: (input) => {
       return new Promise((resolve, reject) => {
-        if(typeof input.type === 'undefined'){
+        if (typeof input.type === 'undefined') {
           reject('type is required')
-          return;
+          return
         }
         createCondition({
           type: input.type,
@@ -231,9 +232,9 @@ export default [
     placeholder: ['type', 'condition', 'index'],
     func: (input) => {
       return new Promise((resolve, reject) => {
-        if(typeof input.type === 'undefined'){
+        if (typeof input.type === 'undefined') {
           reject('type is required')
-          return;
+          return
         }
         editCondition({
           type: input.type,

@@ -23,12 +23,41 @@ import {
   toggleDeviceOfflineReminder,
   unSubscribeDeviceRemoved,
   validDeviceOnlineType,
-  queryDps
+  queryDps,
 } from '@ray-js/ray'
 import Strings from '@/i18n'
 import TUNIDeviceActivationManager from './TUNIDeviceActivationManager'
 import TUNIDeviceControlManager from './TUNIDeviceControlManager'
 import TUNIDeviceDetailManager from './TUNIDeviceDetailManager'
+import TUNIGroupControlManager from './TUNIGroupControlManager'
+import TUNIMeshManager from './TUNIMeshManager'
+import TUNIOTAManager from './TUNIOTAManager'
+import TUNIThingControlManager from './TUNIThingControlManager'
+import TUNIBluetoothManager from './TUNIBluetoothManager'
+import TUNIVirtualExperienceManager from './TUNIVirtualExperienceManager'
+import TUNIDeviceSceneManager from './TUNIDeviceSceneManager'
+import DpOperation from './public/DpOperation'
+import DeviceTimer from './public/DeviceTimer'
+import GroupControl from './public/GroupControl'
+import GroupInformation from './public/GroupInformation'
+import GroupProperty from './public/GroupProperty'
+import GroupNativePage from './public/GroupNativePage'
+import SubDevice from './public/SubDevice'
+import Gateway from './public/Gateway'
+import DeviceInformation from './public/DeviceInformation'
+import DeviceProperty from './public/DeviceProperty'
+import DeviceRemove from './public/DeviceRemove'
+import BTPairing from './public/BTPairing'
+import WifiActivator from './public/WifiActivator'
+import FreePairing from './public/FreePairing'
+import LAN from './public/LAN'
+import MQTT from './public/MQTT'
+import Socket from './public/Socket'
+import SingleBle from './public/SingleBle'
+import Beacon from './public/Beacon'
+import OtherBle from './public/OtherBle'
+import ThingModel from './public/ThingModel'
+import FunctionalPage from './public/FunctionalPage'
 
 const {
   query: { deviceId, groupId },
@@ -37,6 +66,7 @@ export const deviceInfoApiList = [
   {
     title: Strings.getLang('getDeviceInfo'),
     functionName: 'getDeviceInfo',
+    key: 'deviceId',
     func: () => {
       return new Promise((resolve, reject) => {
         getDeviceInfo({
@@ -492,7 +522,10 @@ export const deviceInfoApiList = [
     functionName: 'validDeviceOnlineType',
     input: true,
     keys: ['deviceId', 'onlineType'],
-    placeholder: [Strings.getLang('please_input_dev_id'), Strings.getLang('please_input_online_type')],
+    placeholder: [
+      Strings.getLang('please_input_dev_id'),
+      Strings.getLang('please_input_online_type'),
+    ],
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         validDeviceOnlineType({
@@ -514,8 +547,11 @@ export const getConfigWithFunc = (functionName) => {
   return menu.func
 }
 
-
 export const routes = [
+  {
+    title: I18n.t('TUNIBluetoothManager'),
+    url: '/pages/detail/index?type=TUNIBluetoothManager',
+  },
   {
     title: I18n.t('TUNIDeviceActivationManager'),
     url: '/pages/detail/index?type=TUNIDeviceActivationManager',
@@ -527,12 +563,66 @@ export const routes = [
   {
     title: I18n.t('TUNIDeviceDetailManager'),
     url: '/pages/detail/index?type=TUNIDeviceDetailManager',
-  }
+  },
+  {
+    title: I18n.t('TUNIDeviceSceneManager'),
+    url: '/pages/detail/index?type=TUNIDeviceSceneManager',
+  },
+  {
+    title: I18n.t('TUNIGroupControlManager'),
+    url: '/pages/detail/index?type=TUNIGroupControlManager',
+  },
+  {
+    title: I18n.t('TUNIMeshManager'),
+    url: '/pages/detail/index?type=TUNIMeshManager',
+  },
+  {
+    title: I18n.t('TUNIOTAManager'),
+    url: '/pages/detail/index?type=TUNIOTAManager',
+  },
+  {
+    title: I18n.t('TUNIThingControlManager'),
+    url: '/pages/detail/index?type=TUNIThingControlManager',
+  },
+  {
+    title: I18n.t('TUNIVirtualExperienceManager'),
+    url: '/pages/detail/index?type=TUNIVirtualExperienceManager',
+  },
 ]
 
 export const config = {
   TUNIDeviceActivationManager,
   TUNIDeviceControlManager,
-  TUNIDeviceDetailManager
+  TUNIDeviceDetailManager,
+  TUNIGroupControlManager,
+  TUNIMeshManager,
+  TUNIOTAManager,
+  TUNIThingControlManager,
+  TUNIBluetoothManager,
+  TUNIVirtualExperienceManager,
+  TUNIDeviceSceneManager,
+  DpOperation,
+  DeviceTimer,
+  GroupControl,
+  GroupInformation,
+  GroupProperty,
+  GroupNativePage,
+  SubDevice,
+  Gateway,
+  DeviceInformation,
+  DeviceProperty,
+  DeviceRemove,
+  BTPairing,
+  WifiActivator,
+  FreePairing,
+  LAN,
+  MQTT,
+  Socket,
+  SingleBle,
+  Beacon,
+  OtherBle,
+  ThingModel,
+  FunctionalPage
 }
 
+export * from './steps'

@@ -9,4 +9,8 @@ export const routes: Routes = [
     route: '/detail',
     path: '/pages/detail/index',
   },
+  {
+    route: '/public',
+    path: '/pages/public/index',
+  },
 ]

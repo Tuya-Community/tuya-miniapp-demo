@@ -15,20 +15,19 @@ import {
   stopDirectlyConnectedDeviceActivator,
   stopDirectlyConnectedSearchDevice,
   stopGWActivation,
+  getApp,
 } from '@ray-js/ray'
 
 const {
   query: { deviceId, groupId },
 } = getLaunchOptionsSync()
 
-
-const _onSubDeviceInfoUpdateEvent = event => {
-  console.log('onSubDeviceInfoUpdateEvent', event)
+const _onSubDeviceInfoUpdateEvent = (event) => {
+  console.log('TUNIDeviceActivationManager.onSubDeviceInfoUpdateEvent', event)
 }
 
-
-const _onDirectlyConnectedSearchDeviceEvent = event => {
-  console.log('onDirectlyConnectedSearchDeviceEvent', event)
+const _onDirectlyConnectedSearchDeviceEvent = (event) => {
+  console.log('TUNIDeviceActivationManager.onDirectlyConnectedSearchDeviceEvent', event)
 }
 
 export default [
@@ -37,10 +36,11 @@ export default [
     functionName: 'startGWActivation',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         startGWActivation({
-          gateway: { gwId: inputValue || deviceId },
+          gateway: { gwId: inputValue || getApp().deviceId || deviceId },
           timeout: 10000,
           success: resolve,
           fail: reject,
@@ -53,10 +53,11 @@ export default [
     functionName: 'stopGWActivation',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         stopGWActivation({
-          gwId: inputValue || deviceId,
+          gwId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -68,10 +69,11 @@ export default [
     functionName: 'openReconnectPage',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         openReconnectPage({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -83,10 +85,11 @@ export default [
     functionName: 'startDirectlyConnectedDeviceActivator',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         startDirectlyConnectedDeviceActivator({
-          device: { deviceId: inputValue || deviceId },
+          device: { deviceId: inputValue || getApp().deviceId || deviceId },
           timeout: 10000,
           success: resolve,
           fail: reject,
@@ -99,10 +102,11 @@ export default [
     functionName: 'stopDirectlyConnectedDeviceActivator',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         stopDirectlyConnectedDeviceActivator({
-          device: { deviceId: inputValue || deviceId },
+          device: { deviceId: inputValue || getApp().deviceId || deviceId },
           timeout: 10000,
           success: resolve,
           fail: reject,
@@ -113,8 +117,8 @@ export default [
   {
     title: 'openCategoryActivatorPage',
     functionName: 'openCategoryActivatorPage',
-    input: true,
-    placeholder: Strings.getLang('please_input_gateway_id'),
+    // input: true,
+    // placeholder: Strings.getLang('please_input_gateway_id'),
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         openCategoryActivatorPage({
@@ -129,10 +133,11 @@ export default [
     functionName: 'startDirectlyConnectedSearchDevice',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         startDirectlyConnectedSearchDevice({
-          device: { deviceId: inputValue || deviceId },
+          device: { deviceId: inputValue || getApp().deviceId || deviceId },
           timeout: 10000,
           success: resolve,
           fail: reject,
@@ -145,10 +150,11 @@ export default [
     functionName: 'stopDirectlyConnectedSearchDevice',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         stopDirectlyConnectedSearchDevice({
-          device: { deviceId: inputValue || deviceId },
+          device: { deviceId: inputValue || getApp().deviceId || deviceId },
           timeout: 10000,
           success: resolve,
           fail: reject,
@@ -161,10 +167,11 @@ export default [
     functionName: 'getDeviceWifiActivatorStatus',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         getDeviceWifiActivatorStatus({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -176,10 +183,11 @@ export default [
     functionName: 'startDeviceWifiActivator',
     input: true,
     placeholder: Strings.getLang('please_input_gateway_id'),
+    key: 'deviceId',
     func: (inputValue?: string) => {
       return new Promise((resolve, reject) => {
         startDeviceWifiActivator({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -189,48 +197,48 @@ export default [
   {
     title: 'onSubDeviceInfoUpdateEvent',
     functionName: 'onSubDeviceInfoUpdateEvent',
-    input: true,
-    placeholder: Strings.getLang('please_input_gateway_id'),
+    // input: true,
+    // placeholder: Strings.getLang('please_input_gateway_id'),
     func: () => {
       return new Promise((resolve, reject) => {
         onSubDeviceInfoUpdateEvent(_onSubDeviceInfoUpdateEvent)
-        resolve(true);
+        resolve(true)
       })
     },
   },
   {
     title: 'offSubDeviceInfoUpdateEvent',
     functionName: 'offSubDeviceInfoUpdateEvent',
-    input: true,
-    placeholder: Strings.getLang('please_input_gateway_id'),
+    // input: true,
+    // placeholder: Strings.getLang('please_input_gateway_id'),
     func: () => {
       return new Promise((resolve, reject) => {
         offSubDeviceInfoUpdateEvent(_onSubDeviceInfoUpdateEvent)
-        resolve(true);
+        resolve(true)
       })
     },
   },
   {
     title: 'onDirectlyConnectedSearchDeviceEvent',
     functionName: 'onDirectlyConnectedSearchDeviceEvent',
-    input: true,
-    placeholder: Strings.getLang('please_input_gateway_id'),
+    // input: true,
+    // placeholder: Strings.getLang('please_input_gateway_id'),
     func: () => {
       return new Promise((resolve, reject) => {
         onDirectlyConnectedSearchDeviceEvent(_onDirectlyConnectedSearchDeviceEvent)
-        resolve(true);
+        resolve(true)
       })
     },
   },
   {
     title: 'offDirectlyConnectedSearchDeviceEvent',
     functionName: 'offDirectlyConnectedSearchDeviceEvent',
-    input: true,
-    placeholder: Strings.getLang('please_input_gateway_id'),
+    // input: true,
+    // placeholder: Strings.getLang('please_input_gateway_id'),
     func: () => {
       return new Promise((resolve, reject) => {
         offDirectlyConnectedSearchDeviceEvent(_onDirectlyConnectedSearchDeviceEvent)
-        resolve(true);
+        resolve(true)
       })
     },
   },
