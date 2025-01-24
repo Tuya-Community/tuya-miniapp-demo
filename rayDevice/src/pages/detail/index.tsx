@@ -1,16 +1,31 @@
-import { Button, View, Text, Input, changeDebugMode, onDpDataChange, useQuery } from '@ray-js/ray'
-import React, { useCallback, useDebugValue, useEffect } from 'react'
+import { config, steps } from '@/constants'
 import Strings from '@/i18n'
-import { config } from '@/constants'
+import {
+  Button,
+  View,
+  changeDebugMode,
+  onDpDataChange,
+  setNavigationBarTitle,
+  useQuery
+} from '@ray-js/ray'
+import { Tabbar, TabbarItem } from '@ray-js/smart-ui'
+import BubbleDouble from '@tuya-miniapp/icons/dist/svg/BubbleDouble'
+import Home from '@tuya-miniapp/icons/dist/svg/Home'
+import React, { useCallback, useEffect } from 'react'
 import styles from './index.module.less'
+import { DetailList, inputValue } from './list'
+import Steps from './steps'
 
-const functionNameStyle = `color: blue; font-size: 18px`
-const resultStyle = `color: green; font-size: 16px`
 function DeviceInfo() {
   const query = useQuery()
   const type = query?.type || 'deviceInfo'
-  const list = config[type] || [];
-  const inputValue = {}
+  const list = config[type] || []
+  const stepList = Object.keys(steps[type] || {}) || []
+  const hasSteps = stepList.length > 0
+  const [active, setActive] = React.useState(0)
+  useEffect(() => {
+    setNavigationBarTitle({ title: type })
+  }, [type])
   const _onInput = useCallback((event) => {
     const {
       target: {
@@ -20,71 +35,57 @@ function DeviceInfo() {
     } = event
     inputValue[key] = value
   }, [])
+  const _onSwitch = useCallback((event) => {
+    const {
+      origin: {
+        target: {
+          dataset: { key },
+        },
+      },
+      value,
+    } = event
+    inputValue[key] = value
+  }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     onDpDataChange((data) => {
-      console.log('onDpDataChange', data) 
+      console.log('Detail.onDpDataChange', data)
     })
+  }, [])
+  const onChange = useCallback((e) => {
+    setActive(e.detail)
   }, [])
 
   return (
-    <View className={styles['container']}>
-      <View className={styles.title}>{type}</View>
-      {list.map((item) => {
-        return (
-          <View className={styles.item} key={item.title}>
-            <Text className={styles.title}> {item.title}</Text>
-            <View className={styles.form}>
-              {item.input && <Text className={styles.title}>{Strings.getLang('params')}</Text>}
-              {item.input &&
-                (item.keys ? (
-                  item.keys.map((key, index) => {
-                    return (
-                      <View className={styles.mulInput} key={`${item.functionName}_${key}`}>
-                        <Text className={styles.title}>{key}</Text>
-                        <Input
-                          onInput={_onInput}
-                          placeholder={item.placeholder[index]}
-                          data-key={`${item.functionName}_${key}`}
-                        />
-                      </View>
-                    )
-                  })
-                ) : (
-                  <Input
-                    onInput={_onInput}
-                    placeholder={item.placeholder}
-                    data-key={item.functionName}
-                  />
-                ))}
-            </View>
-            <Button
-              type="primary"
-              className={styles.btn}
-              onClick={async () => {
-                try {
-                  const values = item.keys ? {} : inputValue[item.functionName]
-                  item.keys?.map((key) => {
-                    values[key] = inputValue[`${item.functionName}_${key}`]
-                  })
-                  console.group(item.functionName)
-                  console.log(`%c 调用方法: ${item.functionName}`, functionNameStyle)
-                  
-                  const data = await item.func(values)
+    <View className={styles.container}>
+      <View className="item">
+        <Button
+          type="default"
+          onClick={() => {
+            changeDebugMode({ isEnable: true })
+          }}
+        >
+          {Strings.getLang('openVConsole')}
+        </Button>
+      </View>
+      <View className={styles.content}>
+        {active === 0 && (
+          <DetailList type={type} list={list} onSwitch={_onSwitch} onInput={_onInput} />
+        )}
+        {active === 1 && <Steps type={type} />}
+      </View>
 
-                  console.log(`%c 得到结果: `, resultStyle)
-                  console.log(data)
-                  console.groupEnd()
-                } catch (error) {
-                  console.log('操作失败', error)
-                }
-              }}
-            >
-              {Strings.getLang('click_to_trigger')}
-            </Button>
-          </View>
-        )
-      })}
+      {hasSteps && (
+        <Tabbar
+          active={active}
+          activeColor={'var(--app-M4)'}
+          safeAreaInsetBottom={false}
+          onChange={onChange}
+        >
+          <TabbarItem icon={Home}>列表</TabbarItem>
+          <TabbarItem icon={BubbleDouble}>流程</TabbarItem>
+        </Tabbar>
+      )}
     </View>
   )
 }

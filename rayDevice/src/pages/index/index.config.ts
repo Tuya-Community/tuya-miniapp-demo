@@ -1,3 +1,5 @@
 export default {
-  navigationBarTitleText: "@I18n.t('device_info')",
+  navigationBarTitleText: "DeviceKit",
+  navigationBarBackgroundColor: "--app-B2",
+  backgroundColor: "--app-B2",
 }

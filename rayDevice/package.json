@@ -1,19 +1,26 @@
 {
   "name": "app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "devDependencies": {
-    "@ray-js/cli": "latest",
+    "@ray-js/cli": "^1.5.40",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "autoprefixer": "^10.4.20",
     "core-js": "^3.19.1",
+    "postcss": "^8.4.45",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.78.0",
+    "tailwind-one": "^1.0.8",
+    "tailwindcss": "^3.4.11"
   },
   "dependencies": {
     "@ray-js/panel-sdk": "^1.10.1",
-    "@ray-js/ray": "latest",
+    "@ray-js/ray": "^1.5.40",
+    "@ray-js/smart-ui": "^2.1.1",
     "react-json-inspector": "^7.1.1",
     "react-json-tree": "^0.18.0"
-  }
+  },
+  "author": "玄一（崔本勇）"
 }

@@ -1,6 +1,6 @@
 import Strings from '@/i18n'
-import { isNumerical } from '@ray-js/panel-sdk/lib/utils'
 import {
+  getApp,
   getDeviceInfo,
   getDeviceListByDevIds,
   getDeviceOnlineType,
@@ -10,6 +10,7 @@ import {
   getProductInfo,
   getSubDeviceInfoList,
   home,
+  offDeviceInfoUpdated,
   offDeviceOnlineStatusUpdate,
   offDeviceRemoved,
   offDpDataChange,
@@ -20,6 +21,7 @@ import {
   offSubDeviceDpUpdate,
   offSubDeviceInfoUpdate,
   offSubDeviceRemoved,
+  onDeviceInfoUpdated,
   onDeviceOnlineStatusUpdate,
   onDeviceRemoved,
   onDpDataChange,
@@ -31,7 +33,6 @@ import {
   onSubDeviceInfoUpdate,
   onSubDeviceRemoved,
   publishCommands,
-  publishDps,
   publishDpsWithPipeType,
   publishLanMessage,
   publishMqttMessage,
@@ -57,7 +58,7 @@ import {
   unregisterTopicListListener,
   unregisterZigbeeGateWaySubDeviceListener,
   unSubscribeDeviceRemoved,
-  validDeviceOnlineType,
+  validDeviceOnlineType
 } from '@ray-js/ray'
 import { trans } from '../utils'
 
@@ -66,43 +67,41 @@ const {
 } = getLaunchOptionsSync()
 
 const _onMqttMessageReceived = (event) => {
-  console.log('onMqttMessageReceived', event)
+  console.log('TUNIDeviceControlManager.onMqttMessageReceived', event)
 }
 const _onDpDataChange = (event) => {
-  console.log('onDpDataChange', event)
+  console.log('TUNIDeviceControlManager.onDpDataChange', event)
 }
 
 const _onSocketMessageReceived = (event) => {
-  console.log('onSocketMessageReceived', event)
+  console.log('TUNIDeviceControlManager.onSocketMessageReceived', event)
 }
 const _onDeviceOnlineStatusUpdate = (event) => {
-  console.log('onDeviceOnlineStatusUpdate', event)
+  console.log('TUNIDeviceControlManager.onDeviceOnlineStatusUpdate', event)
 }
 const _onDeviceInfoUpdated = (event) => {
-  console.log('onDeviceInfoUpdated', event)
+  console.log('TUNIDeviceControlManager.onDeviceInfoUpdated', event)
 }
 const _onDeviceRemoved = (event) => {
-  console.log('onDeviceRemoved', event)
+  console.log('TUNIDeviceControlManager.onDeviceRemoved', event)
 }
 const _onMqttConnectState = (event) => {
-  console.log('onMqttConnectState', event)
+  console.log('TUNIDeviceControlManager.onMqttConnectState', event)
 }
 const _onSubDeviceDpUpdate = (event) => {
-  console.log('onSubDeviceDpUpdate', event)
+  console.log('TUNIDeviceControlManager.onSubDeviceDpUpdate', event)
 }
 const _onSubDeviceRemoved = (event) => {
-  console.log('onSubDeviceRemoved', event)
+  console.log('TUNIDeviceControlManager.onSubDeviceRemoved', event)
 }
 
 const _onSubDeviceAdded = (event) => {
-  console.log('onSubDeviceAdded', event)
+  console.log('TUNIDeviceControlManager.onSubDeviceAdded', event)
 }
 
 const _onSubDeviceInfoUpdate = (event) => {
-  console.log('onSubDeviceInfoUpdate', event)
+  console.log('TUNIDeviceControlManager.onSubDeviceInfoUpdate', event)
 }
-
-
 
 export default [
   {
@@ -110,10 +109,11 @@ export default [
     functionName: 'requestWifiSignal',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
-    func: () => {
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         ty.device.requestWifiSignal({
-          deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -151,10 +151,11 @@ export default [
     functionName: 'isYuDeviceOnline',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
-    func: () => {
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         ty.device.isYuDeviceOnline({
-          deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           dps: {},
           success: resolve,
           fail: reject,
@@ -167,14 +168,15 @@ export default [
     functionName: 'isYuDeviceOnlineSync',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
-    func: () => {
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         try {
           const result = ty.device.isYuDeviceOnlineSync({
-            deviceId,
+            deviceId: inputValue || getApp().deviceId || deviceId,
             dps: {},
           })
-          result(result)
+          resolve(result)
         } catch (error) {
           reject(error)
         }
@@ -187,11 +189,11 @@ export default [
     input: true,
     keys: ['deviceId', 'dps'],
     placeholder: [Strings.getLang('please_input_dev_id'), Strings.getLang('please_input_dps')],
-    func: () => {
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         ty.device.syncDeviceMeshDps({
-          deviceId,
-          dps: {},
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
+          dps: trans(inputValue.dps),
           success: resolve,
           fail: reject,
         })
@@ -211,13 +213,13 @@ export default [
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         console.log('-----toRenameDeviceName', inputValue, deviceId)
-        if (!inputValue.name) {
-          ty.showToast({ title: Strings.getLang('please_input_device_name'), icon: 'none' })
-          reject(Strings.getLang('please_input_device_name'))
-          return
-        }
+        // if (!inputValue.name) {
+        //   ty.showToast({ title: Strings.getLang('please_input_device_name'), icon: 'none' })
+        //   reject(Strings.getLang('please_input_device_name'))
+        //   return
+        // }
         renameDeviceName({
-          deviceId: inputValue?.deviceId || deviceId,
+          deviceId: inputValue?.deviceId || getApp().deviceId || deviceId,
           name: inputValue?.name,
           success: resolve,
           fail: reject,
@@ -230,10 +232,11 @@ export default [
     functionName: 'resetFactory',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue?) => {
       return new Promise((resolve, reject) => {
         resetFactory({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -245,10 +248,11 @@ export default [
     functionName: 'removeDevice',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         removeDevice({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -261,10 +265,11 @@ export default [
     functionName: 'registerGateWaySubDeviceListener',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         registerGateWaySubDeviceListener({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -277,10 +282,11 @@ export default [
     functionName: 'unregisterGateWaySubDeviceListener',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         unregisterGateWaySubDeviceListener({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -292,10 +298,11 @@ export default [
     functionName: 'registerZigbeeGateWaySubDeviceListener',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         registerZigbeeGateWaySubDeviceListener({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -308,10 +315,11 @@ export default [
     functionName: 'unregisterZigbeeGateWaySubDeviceListener',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         unregisterZigbeeGateWaySubDeviceListener({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -323,10 +331,11 @@ export default [
     functionName: 'getDeviceOnlineType',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         getDeviceOnlineType({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -339,10 +348,11 @@ export default [
     functionName: 'getDeviceInfo',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
-    func: () => {
+    key: 'deviceId',
+    func: (inputValue) => {
       return new Promise((resolve, reject) => {
         getDeviceInfo({
-          deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -362,7 +372,7 @@ export default [
           return
         }
         getDeviceListByDevIds({
-          deviceIds: inputValue,
+          deviceIds: inputValue.split(','),
           success: resolve,
           fail: reject,
         })
@@ -426,8 +436,23 @@ export default [
           return
         }
         validDeviceOnlineType({
-          deviceId: inputValue.deviceId || deviceId,
-          onlineType: inputValue.onlineType,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
+          onlineType: +inputValue.onlineType,
+          success: resolve,
+          fail: reject,
+        })
+      })
+    },
+  },
+  {
+    title: 'validDeviceOnline',
+    functionName: 'validDeviceOnline',
+    input: true,
+    key: 'deviceId',
+    func: (inputValue) => {
+      return new Promise((resolve, reject) => {
+        ty.device.validDeviceOnline({
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: resolve,
           fail: reject,
         })
@@ -453,11 +478,12 @@ export default [
           return
         }
         const dps = trans(inputValue.dps)
-        publishDps({
-          deviceId: inputValue.deviceId || deviceId,
+        console.log('-----dps', dps)
+        ty.device.publishDps({
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           dps: dps,
           mode: inputValue.mode || 2,
-          pipelines: inputValue.pipelines || [],
+          pipelines: inputValue.pipelines?.split(',').map(Number) || [],
           options: {},
           success: resolve,
           fail: reject,
@@ -486,10 +512,10 @@ export default [
         const dps = trans(inputValue.dps)
         console.log('dps', dps)
         publishCommands({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           dps: dps,
           mode: inputValue.mode || 2,
-          pipelines: inputValue.pipelines || [],
+          pipelines: inputValue.pipelines?.split(',').map(Number) || [],
           options: {},
           success: resolve,
           fail: reject,
@@ -518,10 +544,10 @@ export default [
         const dps = trans(inputValue.dps)
         console.log('dps', dps)
         publishDpsWithPipeType({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           dps: dps,
           mode: inputValue.mode || 2,
-          pipelines: inputValue.pipelines || [],
+          pipelines: inputValue.pipelines?.split(',').map(Number) || [],
           options: {},
           success: resolve,
           fail: reject,
@@ -548,12 +574,12 @@ export default [
           offDpDataChange(_onDpDataChange)
         }
         registerDeviceListListener({
-          deviceIdList: [inputValue.deviceId || deviceId],
+          deviceIdList: [inputValue.deviceId || getApp().deviceId || deviceId],
         })
         onDpDataChange(_onDpDataChange)
         queryDps({
-          deviceId: inputValue.deviceId || deviceId,
-          dpIds: inputValue.dpids,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
+          dpIds: inputValue.dpids.split(','),
           success: (e) => {
             resolve(e)
           },
@@ -590,7 +616,7 @@ export default [
         console.log(message)
 
         publishMqttMessage({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           protocol: inputValue.protocol,
           message: message,
           options: {},
@@ -630,7 +656,7 @@ export default [
         console.log(message)
 
         sendMqttMessage({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           protocol: inputValue.protocol,
           message: message,
           options: {},
@@ -670,9 +696,9 @@ export default [
         console.log(message)
 
         publishLanMessage({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           protocol: inputValue.protocol,
-          message: message,
+          message: JSON.stringify(message),
           options: {},
           success: (e) => {
             resolve(e)
@@ -710,7 +736,7 @@ export default [
         console.log(message)
 
         publishSocketMessage({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           type: +inputValue.type,
           message: message,
           options: {},
@@ -727,10 +753,11 @@ export default [
     functionName: 'getDeviceProperty',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         getDeviceProperty({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: (e) => {
             resolve(e)
           },
@@ -756,13 +783,13 @@ export default [
           reject(Strings.getLang('please_input_code'))
           return
         }
-        if (!isNumerical(inputValue.value)) {
+        if (typeof inputValue.value === 'undefined') {
           ty.showToast({ title: Strings.getLang('please_input_value'), icon: 'none' })
           reject(Strings.getLang('please_input_value'))
           return
         }
         setDeviceProperty({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue.deviceId || getApp().deviceId || deviceId,
           code: inputValue.code,
           value: inputValue.value,
           success: (e) => {
@@ -778,10 +805,11 @@ export default [
     functionName: 'syncDeviceInfo',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         syncDeviceInfo({
-          deviceId: inputValue.deviceId || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: (e) => {
             resolve(e)
           },
@@ -796,10 +824,11 @@ export default [
     functionName: 'subscribeDeviceRemoved',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         subscribeDeviceRemoved({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: (e) => {
             resolve(e)
           },
@@ -814,10 +843,11 @@ export default [
     functionName: 'unSubscribeDeviceRemoved',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         unSubscribeDeviceRemoved({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: (e) => {
             resolve(e)
           },
@@ -832,10 +862,11 @@ export default [
     functionName: 'registerMQTTDeviceListener',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         registerMQTTDeviceListener({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: (e) => {
             resolve(e)
           },
@@ -849,10 +880,11 @@ export default [
     functionName: 'unregisterMQTTDeviceListener',
     input: true,
     placeholder: Strings.getLang('please_input_dev_id'),
+    key: 'deviceId',
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         unregisterMQTTDeviceListener({
-          deviceId: inputValue || deviceId,
+          deviceId: inputValue || getApp().deviceId || deviceId,
           success: (e) => {
             resolve(e)
           },
@@ -977,7 +1009,7 @@ export default [
       })
     },
   },
-  
+
   {
     title: 'getMqttConnectState',
     functionName: 'getMqttConnectState',
@@ -996,7 +1028,8 @@ export default [
     title: Strings.getLang('requestAdvancedCapability'),
     functionName: 'requestAdvancedCapability',
     input: true,
-    placeholder: Strings.getLang('please_input_dp_code'),
+    keys: ['deviceId', 'dpCodes'],
+    placeholder: [Strings.getLang('please_input_dev_id'), Strings.getLang('please_input_dp_code')],
     func: async (inputValue?) => {
       const { homeId } = await home.getCurrentHomeInfo()
       return new Promise((resolve, reject) => {
@@ -1005,10 +1038,10 @@ export default [
           return
         }
         ty.device.requestAdvancedCapability({
-          resId: deviceId,
+          resId: inputValue.deviceId || getApp().deviceId || deviceId,
           type: '6',
           spaceId: homeId,
-          dpCodes: inputValue.split(','),
+          dpCodes: inputValue.dpCodes.split(','),
           success: resolve,
           fail: reject,
         })
@@ -1019,8 +1052,9 @@ export default [
     title: Strings.getLang('dpTranslateAdvancedCapability'),
     functionName: 'dpTranslateAdvancedCapability',
     input: true,
-    keys: ['dpCode', 'dpId', 'dpValue'],
+    keys: ['deviceId', 'dpCode', 'dpId', 'dpValue'],
     placeholder: [
+      Strings.getLang('please_input_dev_id'),
       Strings.getLang('please_input_dp_code'),
       Strings.getLang('please_input_dp_id'),
       Strings.getLang('please_input_dp_value'),
@@ -1033,7 +1067,7 @@ export default [
           return
         }
         ty.device.dpTranslateAdvancedCapability({
-          resId: deviceId,
+          resId: inputValue.deviceId || getApp().deviceId || deviceId,
           type: '6',
           dps: [
             {
@@ -1124,6 +1158,26 @@ export default [
     func: (inputValue) => {
       return new Promise((resolve, reject) => {
         offDeviceOnlineStatusUpdate(_onDeviceOnlineStatusUpdate)
+        resolve(true)
+      })
+    },
+  },
+  {
+    title: 'onDeviceInfoUpdated',
+    functionName: 'onDeviceInfoUpdated',
+    func: (inputValue) => {
+      return new Promise((resolve, reject) => {
+        onDeviceInfoUpdated(_onDeviceInfoUpdated)
+        resolve(true)
+      })
+    },
+  },
+  {
+    title: 'offDeviceInfoUpdated',
+    functionName: 'offDeviceInfoUpdated',
+    func: (inputValue) => {
+      return new Promise((resolve, reject) => {
+        offDeviceInfoUpdated(_onDeviceInfoUpdated)
         resolve(true)
       })
     },
