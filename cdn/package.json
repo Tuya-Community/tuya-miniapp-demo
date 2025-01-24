@@ -1,0 +1,8 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "license": "ISC",
+  "packageManager": "yarn@1.22.22"
+}

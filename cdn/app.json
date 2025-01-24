@@ -1,0 +1,17 @@
+{
+  "entryPagePath": "pages/home/index",
+  "themeLocation": "theme.json",
+  "pages": ["pages/home/index"],
+  "window": {
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "navigationBarTitleText": "miniprogram",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50,
+    "pageOrientation": "portrait"
+  }
+}

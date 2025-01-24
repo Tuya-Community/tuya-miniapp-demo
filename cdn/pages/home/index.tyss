@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+}
+.content-image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+}
