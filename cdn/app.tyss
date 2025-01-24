@@ -1,0 +1,9 @@
+:root {
+  --main-bg-color: rgb(254, 254, 254); /* 浅色背景 */
+  --main-text-color: rgb(54, 54, 54); /* 深色文字 */
+}
+
+:root[theme='dark'] {
+  --main-bg-color: rgb(47, 58, 68); /* 深色背景 */
+  --main-text-color: rgb(197, 197, 197); /* 浅色文字 */
+}

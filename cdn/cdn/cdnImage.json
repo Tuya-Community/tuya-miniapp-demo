@@ -1,0 +1,37 @@
+{
+  // 中国区
+  "AY": {
+    "/cdn/logo.png": "https://images.tuyacn.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://images.tuyacn.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  // 美国区
+  "AZ": {
+    "/cdn/logo.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  // 欧洲区
+  "EU": {
+    "/cdn/logo.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  // 印度区
+  "IN": {
+    "/cdn/logo.png": "https://inimagesd1jqokb9wptk2t.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://inimagesd1jqokb9wptk2t.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  // 美东
+  "UE": {
+    "/cdn/logo.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://usimagesd1448c85ulz2o4.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  // 西欧
+  "WE": {
+    "/cdn/logo.png": "https://d2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://d2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  },
+  // 俄罗斯
+  "RU": {
+    "/cdn/logo.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1664528993779f7997c9a.png",
+    "/cdn/1.png": "https://euimagesd2h2yqnfpu4gl5.cdn5th.com/smart/miniapp/static/1670384599c63a79781fd.png"
+  }
+}

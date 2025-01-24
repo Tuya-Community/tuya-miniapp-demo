@@ -1,0 +1,12 @@
+<view class="container">
+  <image 
+    class="logo-image"
+    src="{{cdn.url('/cdn/logo.png')}}"
+    mode="aspectFit">
+  </image>
+  <image 
+    class="content-image"
+    src="{{cdn.url('/cdn/1.png')}}"
+    mode="aspectFit">
+  </image>
+</view>
